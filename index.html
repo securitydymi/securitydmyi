@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proteção Máxima | Segurança Patrimonial</title>
+    <title>DMYI SECURITY | Proteção Completa</title>
     <style>
-        /* CONFIGURAÇÕES GERAIS */
+        /* RESET E VARIÁVEIS DE CORES SEGUNDO A IMAGEM */
         * {
             margin: 0;
             padding: 0;
@@ -13,226 +13,406 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
+        :root {
+            --bg-principal: #060b14;
+            --bg-card: #0f172a;
+            --azul-destaque: #00d2ff;
+            --texto-claro: #ffffff;
+            --texto-cinza: #94a3b8;
+            --borda-azul: rgba(0, 210, 255, 0.3);
+        }
+
         body {
-            background-color: #0b0f19;
-            color: #ffffff;
+            background-color: var(--bg-principal);
+            color: var(--texto-claro);
             line-height: 1.6;
         }
 
         /* CABEÇALHO */
         header {
-            background-color: #111827;
-            padding: 20px 5%;
+            background-color: rgba(15, 23, 42, 0.95);
+            padding: 15px 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 2px solid #fbbf24;
+            border-bottom: 2px solid var(--azul-destaque);
             position: sticky;
             top: 0;
             z-index: 100;
+            backdrop-filter: blur(10px);
         }
 
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-            color: #ffffff;
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
 
-        .logo span {
-            color: #fbbf24;
+        .logo-text {
+            font-size: 22px;
+            font-weight: 800;
+            letter-spacing: 1px;
         }
 
-        .btn-contato-topo {
-            background-color: #fbbf24;
-            color: #111827;
+        .logo-text span {
+            color: var(--azul-destaque);
+            font-weight: 400;
+        }
+
+        .btn-whats-topo {
+            background-color: var(--azul-destaque);
+            color: #000;
             padding: 10px 20px;
             text-decoration: none;
             font-weight: bold;
-            border-radius: 5px;
+            border-radius: 4px;
             transition: 0.3s;
+            box-shadow: 0 0 15px rgba(0, 210, 255, 0.4);
         }
 
-        .btn-contato-topo:hover {
-            background-color: #f59e0b;
+        .btn-whats-topo:hover {
+            background-color: #00b4db;
+            box-shadow: 0 0 25px rgba(0, 210, 255, 0.7);
         }
 
-        /* SEÇÃO PRINCIPAL (HERO) */
+        /* HERO SEÇÃO */
         .hero {
-            padding: 100px 5% 80px 5%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            padding: 100px 5% 60px 5%;
             text-align: center;
-            background: linear-gradient(180deg, #111827 0%, #0b0f19 100%);
+            background: radial-gradient(circle at top, #111e36 0%, #060b14 70%);
+            position: relative;
+        }
+
+        .badge-clientes {
+            background-color: #ff1f5a;
+            color: white;
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 10px rgba(255, 31, 90, 0.4);
         }
 
         .hero h1 {
-            font-size: 48px;
-            max-width: 800px;
+            font-size: 46px;
+            font-weight: 900;
             margin-bottom: 20px;
-            line-height: 1.2;
+            letter-spacing: 1px;
         }
 
         .hero h1 span {
-            color: #fbbf24;
+            color: var(--azul-destaque);
         }
 
-        .hero p {
+        .hero p.subtitulo {
             font-size: 18px;
-            color: #9ca3af;
-            max-width: 600px;
-            margin-bottom: 40px;
+            color: var(--texto-cinza);
+            max-width: 700px;
+            margin: 0 auto 40px auto;
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
 
-        .btn-principal {
-            background-color: #fbbf24;
-            color: #111827;
-            padding: 15px 40px;
-            font-size: 18px;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 5px;
-            box-shadow: 0 4px 15px rgba(251, 191, 36, 0.3);
-            transition: 0.3s;
+        /* PILARES RÁPIDOS */
+        .pilares {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 40px auto 0 auto;
         }
 
-        .btn-principal:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(251, 191, 36, 0.5);
+        .pilar-card {
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid var(--borda-azul);
+            padding: 20px;
+            border-radius: 8px;
+            text-align: left;
         }
 
-        /* SEÇÃO SERVIÇOS */
-        .servicos {
+        .pilar-card h3 {
+            color: var(--azul-destaque);
+            font-size: 16px;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .pilar-card p {
+            font-size: 14px;
+            color: var(--texto-cinza);
+        }
+
+        /* SEÇÃO AMBIENTES / SERVIÇOS */
+        .ambientes {
             padding: 80px 5%;
-            background-color: #111827;
+            background-color: #09101e;
         }
 
-        .servicos h2 {
+        .secao-titulo {
             text-align: center;
-            font-size: 36px;
+            font-size: 28px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .secao-titulo span {
+            color: var(--azul-destaque);
+        }
+
+        .secao-sub {
+            text-align: center;
+            color: var(--texto-cinza);
             margin-bottom: 50px;
         }
 
-        .servicos h2 span {
-            color: #fbbf24;
-        }
-
-        .grid-servicos {
+        .grid-ambientes {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
             max-width: 1200px;
             margin: 0 auto;
         }
 
-        .card-servico {
-            background-color: #1f2937;
-            padding: 40px 30px;
+        .card-ambiente {
+            background-color: var(--bg-card);
+            border: 1px solid #1e293b;
             border-radius: 8px;
-            border-top: 4px solid #fbbf24;
+            padding: 30px;
             transition: 0.3s;
         }
 
-        .card-servico:hover {
+        .card-ambiente:hover {
+            border-color: var(--azul-destaque);
             transform: translateY(-5px);
         }
 
-        .card-servico h3 {
-            font-size: 22px;
-            margin-bottom: 15px;
-            color: #ffffff;
+        .card-ambiente h4 {
+            font-size: 20px;
+            color: var(--azul-destaque);
+            margin-bottom: 12px;
+            text-transform: uppercase;
         }
 
-        .card-servico p {
-            color: #9ca3af;
-            font-size: 16px;
+        .card-ambiente p {
+            color: var(--texto-cinza);
+            font-size: 15px;
         }
 
-        /* SEÇÃO POR QUE NÓS? */
-        . diferenciais {
+        /* SEÇÃO MISSÃO E DIFERENCIAIS */
+        .institucional {
             padding: 80px 5%;
-            text-align: center;
-            max-width: 800px;
+            max-width: 1200px;
             margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 50px;
         }
 
-        .diferenciais h2 {
-            font-size: 36px;
-            margin-bottom: 20px;
+        .bloco-info {
+            background-color: var(--bg-card);
+            padding: 40px;
+            border-radius: 8px;
+            border-left: 4px solid var(--azul-destaque);
         }
 
-        .diferenciais p {
-            color: #9ca3af;
-            font-size: 18px;
+        .bloco-info h2 {
+            font-size: 24px;
+            margin-bottom: 25px;
+            color: var(--azul-destaque);
+        }
+
+        .lista-diferenciais {
+            list-style: none;
+        }
+
+        .lista-diferenciais li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .lista-diferenciais li::before {
+            content: "✓";
+            color: var(--azul-destaque);
+            font-weight: bold;
+        }
+
+        /* RODAPÉ / CONTATO */
+        footer {
+            background-color: #030712;
+            padding: 60px 5% 30px 5%;
+            border-top: 2px solid var(--azul-destaque);
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
             margin-bottom: 40px;
         }
 
-        /* RODAPÉ */
-        footer {
-            background-color: #030712;
-            padding: 40px 5%;
-            text-align: center;
-            border-top: 1px solid #1f2937;
-            color: #6b7280;
-            font-size: 14px;
+        .footer-dados h3 {
+            font-size: 22px;
+            margin-bottom: 20px;
+            color: var(--azul-destaque);
         }
 
-        /* RESPONSIVIDADE (CELULAR) */
+        .footer-dados p {
+            margin-bottom: 12px;
+            color: var(--texto-cinza);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-principal {
+            background-color: var(--azul-destaque);
+            color: #000;
+            padding: 15px 35px;
+            font-size: 16px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 4px;
+            display: inline-block;
+            box-shadow: 0 4px 15px rgba(0, 210, 255, 0.3);
+            transition: 0.3s;
+            text-align: center;
+        }
+
+        .btn-principal:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 210, 255, 0.5);
+        }
+
+        .copyright {
+            text-align: center;
+            color: #475569;
+            font-size: 14px;
+            border-top: 1px solid #1e293b;
+            padding-top: 30px;
+        }
+
+        /* RESPONSIVIDADE */
         @media (max-width: 768px) {
             .hero h1 { font-size: 32px; }
-            .hero p { font-size: 16px; }
-            .btn-contato-topo { display: none; } /* Esconde o botão do topo no celular para poupar espaço */
+            .institucional { grid-template-columns: 1fr; }
+            .btn-whats-topo { display: none; }
         }
     </style>
 </head>
 <body>
 
-    <!-- CABEÇALHO -->
     <header>
-        <div class="logo">🛡️ SEG<span>PATRIMONIAL</span></div>
-        <a href="https://wa.me/5500000000000" class="btn-contato-topo" target="_blank">Falar com Especialista</a>
+        <div class="brand">
+            <div class="logo-text">DMYI <span>SECURITY</span></div>
+        </div>
+        <a href="https://wa.me/5519981929593" class="btn-whats-topo" target="_blank">Orçamento via WhatsApp</a>
     </header>
 
-    <!-- SEÇÃO PRINCIPAL -->
     <section class="hero">
-        <h1>Sua tranquilidade é o nosso compromisso. Proteção <span>24h por dia</span>.</h1>
-        <p>Segurança inteligente, monitoramento avançado e vigilância tática humanizada para proteger o que realmente importa para você: sua empresa e sua família.</p>
-        <a href="https://wa.me/5500000000000" class="btn-principal" target="_blank">Solicitar Análise de Risco Gratuita</a>
-    </section>
-
-    <!-- SEÇÃO SERVIÇOS -->
-    <section class="servicos">
-        <h2>Nossas Soluções de <span>Segurança</span></h2>
+        <div class="badge-clientes">❤️ +1,5K Clientes Protegidos</div>
+        <h1>DMYI SECURITY: <span>PROTEÇÃO COMPLETA.</span></h1>
+        <p class="subtitulo">Segurança Inteligente. Tranquilidade para o que realmente importa.</p>
         
-        <div class="grid-servicos">
-            <div class="card-servico">
-                <h3>Vigilância Patrimonial</h3>
-                <p>Profissionais rigorosamente treinados e armados para garantir a integridade física de condomínios, indústrias e comércios.</p>
+        <a href="https://wa.me/5519981929593" class="btn-principal" target="_blank">SOLICITE UM ORÇAMENTO PERSONALIZADO</a>
+
+        <div class="pilares">
+            <div class="pilar-card">
+                <h3>🛡️ MONITORAMENTO 24H</h3>
+                <p>Acompanhamento constante para sua total segurança.</p>
             </div>
-            
-            <div class="card-servico">
-                <h3>Monitoramento 24h</h3>
-                <p>Central de inteligência conectada em tempo integral por câmeras, sensores de presença e alarmes de última geração.</p>
+            <div class="pilar-card">
+                <h3>🔒 CONTROLE DE ACESSO</h3>
+                <p>Tecnologia e eficiência no rigoroso controle de entradas e saídas.</p>
             </div>
-            
-            <div class="card-servico">
-                <h3>Ronda Motorizada</h3>
-                <p>Patrulhamento tático preventivo com veículos modernos para rápida resposta e cobertura perimetral completa.</p>
+            <div class="pilar-card">
+                <h3>🔔 PRONTA RESPOSTA</h3>
+                <p>Agilidade extrema e suporte tático sempre que você precisar.</p>
             </div>
         </div>
     </section>
 
-    <!-- SEÇÃO DIFERENCIAIS -->
-    <section class="diferenciais">
-        <h2>Pronto para agir em segundos</h2>
-        <p>Não espere o pior acontecer para descobrir se a sua segurança funciona. Nós atuamos na prevenção ativa para mitigar riscos antes que eles se tornem ameaças.</p>
-        <a href="https://wa.me/5500000000000" class="btn-principal" target="_blank">Falar no WhatsApp</a>
+    <section class="ambientes">
+        <h2 class="secao-titulo">Especialistas em Segurança para <span>Diferentes Ambientes</span></h2>
+        <p class="secao-sub">Soluções modulares feitas sob medida para a sua necessidade</p>
+
+        <div class="grid-ambientes">
+            <div class="card-ambiente">
+                <h4>🏢 Condomínios</h4>
+                <p>Segurança tática e controle de acesso rígido para moradores, visitantes e prestadores de serviço.</p>
+            </div>
+            <div class="card-ambiente">
+                <h4>🛎️ Recepção</h4>
+                <p>Atendimento altamente profissional, cordial e focado nas normas internas de segurança e organização.</p>
+            </div>
+            <div class="card-ambiente">
+                <h4>🏗️ Obras</h4>
+                <p>Controle severo de fluxo de colaboradores, maquinários, visitantes e veículos com total segurança perimetral.</p>
+            </div>
+            <div class="card-ambiente">
+                <h4>🖥️ Controle de Acesso</h4>
+                <p>Sistemas integrados, tecnologia de ponta e eficiência máxima no gerenciamento de portarias.</p>
+            </div>
+            <div class="card-ambiente">
+                <h4>👥 Eventos</h4>
+                <p>Planejamento estratégico, organização de público e segurança preventiva para eventos de todos os portes.</p>
+            </div>
+            <div class="card-ambiente">
+                <h4>🚘 Monitor Veicular</h4>
+                <p>Controle cirúrgico de entrada e saída, identificação precisa e organização ágil do fluxo de veículos.</p>
+            </div>
+        </div>
     </section>
 
-    <!-- RODAPÉ -->
+    <section class="institucional">
+        <div class="bloco-info">
+            <h2>NOSSOS DIFERENCIAIS</h2>
+            <ul class="lista-diferenciais">
+                <li>Profissionais rigorosamente treinados, capacitados e uniformizados</li>
+                <li>Atendimento personalizado e desenvolvimento de soluções sob medida</li>
+                <li>Tecnologia de ponta e processos rígidos que garantem mais segurança</li>
+                <li>Monitoramento ativo 24h com pronta resposta imediata</li>
+                <li>Atuação consolidada em condomínios, edifícios, obras e eventos</li>
+                <li>Compromisso inabalável com a qualidade, confiança e tranquilidade</li>
+            </ul>
+        </div>
+
+        <div class="bloco-info" style="display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+                <h2>NOSSA MISSÃO</h2>
+                <p style="color: var(--texto-cinza); font-size: 17px;">Oferecer soluções completas em segurança, aliando tecnologia avançada, profissionalismo e agilidade, garantindo proteção total e tranquilidade absoluta para nossos clientes.</p>
+            </div>
+            <div style="margin-top: 30px; text-align: center;">
+                <p style="margin-bottom: 15px; font-weight: bold; color: var(--azul-destaque);">MAIS QUE SEGURANÇA, TRANQUILIDADE PARA VOCÊ E SEU PATRIMÔNIO.</p>
+                <a href="https://wa.me/5519981929593" class="btn-principal" target="_blank">Falar com Especialista</a>
+            </div>
+        </div>
+    </section>
+
     <footer>
-        <p>&copy; 2026 SEG PATRIMONIAL. Todos os direitos reservados.</p>
-        <p>Desenvolvido com foco em segurança máxima.</p>
+        <div class="footer-container">
+            <div class="footer-dados">
+                <h3>FALE CONOSCO</h3>
+                <p>📞 <strong>(19) 98192-9593</strong></p>
+                <p>✉️ <strong>contato@securitydmyi.com.br</strong></p>
+                <p>📍 Atendimento na região de Campinas e cidades vizinhas.</p>
+            </div>
+            <div class="footer-dados" style="text-align: right;">
+                <div class="logo-text" style="margin-bottom: 15px;">DMYI <span>SECURITY</span></div>
+                <p style="justify-content: flex-end;">Proteção Inteligente.</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2026 DMYI SECURITY. Todos os direitos reservados.</p>
+        </div>
     </footer>
 
 </body>
