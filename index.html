@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proteção Máxima | Segurança Patrimonial</title>
+    <style>
+        /* CONFIGURAÇÕES GERAIS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #0b0f19;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        /* CABEÇALHO */
+        header {
+            background-color: #111827;
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #fbbf24;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ffffff;
+        }
+
+        .logo span {
+            color: #fbbf24;
+        }
+
+        .btn-contato-topo {
+            background-color: #fbbf24;
+            color: #111827;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .btn-contato-topo:hover {
+            background-color: #f59e0b;
+        }
+
+        /* SEÇÃO PRINCIPAL (HERO) */
+        .hero {
+            padding: 100px 5% 80px 5%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(180deg, #111827 0%, #0b0f19 100%);
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            max-width: 800px;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero h1 span {
+            color: #fbbf24;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #9ca3af;
+            max-width: 600px;
+            margin-bottom: 40px;
+        }
+
+        .btn-principal {
+            background-color: #fbbf24;
+            color: #111827;
+            padding: 15px 40px;
+            font-size: 18px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            box-shadow: 0 4px 15px rgba(251, 191, 36, 0.3);
+            transition: 0.3s;
+        }
+
+        .btn-principal:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(251, 191, 36, 0.5);
+        }
+
+        /* SEÇÃO SERVIÇOS */
+        .servicos {
+            padding: 80px 5%;
+            background-color: #111827;
+        }
+
+        .servicos h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 50px;
+        }
+
+        .servicos h2 span {
+            color: #fbbf24;
+        }
+
+        .grid-servicos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .card-servico {
+            background-color: #1f2937;
+            padding: 40px 30px;
+            border-radius: 8px;
+            border-top: 4px solid #fbbf24;
+            transition: 0.3s;
+        }
+
+        .card-servico:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-servico h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
+
+        .card-servico p {
+            color: #9ca3af;
+            font-size: 16px;
+        }
+
+        /* SEÇÃO POR QUE NÓS? */
+        . diferenciais {
+            padding: 80px 5%;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .diferenciais h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .diferenciais p {
+            color: #9ca3af;
+            font-size: 18px;
+            margin-bottom: 40px;
+        }
+
+        /* RODAPÉ */
+        footer {
+            background-color: #030712;
+            padding: 40px 5%;
+            text-align: center;
+            border-top: 1px solid #1f2937;
+            color: #6b7280;
+            font-size: 14px;
+        }
+
+        /* RESPONSIVIDADE (CELULAR) */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 32px; }
+            .hero p { font-size: 16px; }
+            .btn-contato-topo { display: none; } /* Esconde o botão do topo no celular para poupar espaço */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- CABEÇALHO -->
+    <header>
+        <div class="logo">🛡️ SEG<span>PATRIMONIAL</span></div>
+        <a href="https://wa.me/5500000000000" class="btn-contato-topo" target="_blank">Falar com Especialista</a>
+    </header>
+
+    <!-- SEÇÃO PRINCIPAL -->
+    <section class="hero">
+        <h1>Sua tranquilidade é o nosso compromisso. Proteção <span>24h por dia</span>.</h1>
+        <p>Segurança inteligente, monitoramento avançado e vigilância tática humanizada para proteger o que realmente importa para você: sua empresa e sua família.</p>
+        <a href="https://wa.me/5500000000000" class="btn-principal" target="_blank">Solicitar Análise de Risco Gratuita</a>
+    </section>
+
+    <!-- SEÇÃO SERVIÇOS -->
+    <section class="servicos">
+        <h2>Nossas Soluções de <span>Segurança</span></h2>
+        
+        <div class="grid-servicos">
+            <div class="card-servico">
+                <h3>Vigilância Patrimonial</h3>
+                <p>Profissionais rigorosamente treinados e armados para garantir a integridade física de condomínios, indústrias e comércios.</p>
+            </div>
+            
+            <div class="card-servico">
+                <h3>Monitoramento 24h</h3>
+                <p>Central de inteligência conectada em tempo integral por câmeras, sensores de presença e alarmes de última geração.</p>
+            </div>
+            
+            <div class="card-servico">
+                <h3>Ronda Motorizada</h3>
+                <p>Patrulhamento tático preventivo com veículos modernos para rápida resposta e cobertura perimetral completa.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO DIFERENCIAIS -->
+    <section class="diferenciais">
+        <h2>Pronto para agir em segundos</h2>
+        <p>Não espere o pior acontecer para descobrir se a sua segurança funciona. Nós atuamos na prevenção ativa para mitigar riscos antes que eles se tornem ameaças.</p>
+        <a href="https://wa.me/5500000000000" class="btn-principal" target="_blank">Falar no WhatsApp</a>
+    </section>
+
+    <!-- RODAPÉ -->
+    <footer>
+        <p>&copy; 2026 SEG PATRIMONIAL. Todos os direitos reservados.</p>
+        <p>Desenvolvido com foco em segurança máxima.</p>
+    </footer>
+
+</body>
+</html>
