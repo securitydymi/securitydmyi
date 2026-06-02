@@ -57,95 +57,24 @@ body{background:var(--black);color:var(--text);font-family:'Inter',sans-serif;fo
 }
 .tb-cta:hover{background:#2563eb}
 
-/* ─── HERO ─── */
-#hero{
-  position:relative;
-  min-height:100vh;
-  display:flex;align-items:flex-end;
-  overflow:hidden;
-  padding-top:64px;
+/* ─── NOVO BANNER TOPO REVOLUTION ─── */
+#main-banner {
+  padding-top: 64px; /* Evita que o topbar fixo cubra o banner */
+  background: var(--black);
+  width: 100%;
 }
-/* imagem de fundo full */
-.hero-img-wrap{
-  position:absolute;inset:0;
-  z-index:0;
+.banner-container {
+  width: 100%;
+  max-width: 100%;
+  line-height: 0; /* Remove espaçamentos fantasmas da tag img */
+  overflow: hidden;
 }
-.hero-img-wrap img{
-  width:100%;height:100%;
-  object-fit:cover;
-  object-position:center top;
-  display:block;
-  filter:brightness(.55) saturate(1.1);
-  image-rendering:high-quality;
+.banner-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+  image-rendering: high-quality;
 }
-/* gradientes sobre a imagem */
-.hero-img-wrap::after{
-  content:'';position:absolute;inset:0;
-  background:
-    linear-gradient(to right, rgba(4,6,8,.92) 0%, rgba(4,6,8,.6) 45%, rgba(4,6,8,.15) 100%),
-    linear-gradient(to top, rgba(4,6,8,1) 0%, transparent 40%);
-}
-/* linha vertical azul */
-.hero-rule{
-  position:absolute;left:6vw;top:64px;bottom:0;
-  width:1px;
-  background:linear-gradient(to bottom,transparent,var(--blue) 25%,var(--cyan) 75%,transparent);
-  opacity:.4;z-index:2;
-}
-.hero-content{
-  position:relative;z-index:3;
-  max-width:680px;
-  padding:0 6vw 6rem;
-  padding-left:calc(6vw + 2rem);
-}
-.hero-eyebrow{
-  display:inline-flex;align-items:center;gap:.6rem;
-  font-family:'Rajdhani',sans-serif;font-weight:600;
-  font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;
-  color:var(--cyan);margin-bottom:1.6rem;
-}
-.hero-eyebrow::before{content:'';width:24px;height:1px;background:var(--cyan)}
-.hero-h1{
-  font-family:'Rajdhani',sans-serif;
-  font-weight:700;font-size:clamp(3rem,6vw,5.5rem);
-  line-height:.95;letter-spacing:-.01em;text-transform:uppercase;
-  color:var(--white);margin-bottom:.8rem;text-shadow:0 2px 20px rgba(0,0,0,.5);
-}
-.hero-h1 .accent{color:var(--cyan)}
-.hero-sub{
-  font-size:.95rem;font-weight:300;color:rgba(226,232,240,.75);
-  max-width:420px;line-height:1.75;margin-bottom:2.5rem;
-  border-left:2px solid var(--blue-dim);padding-left:1.2rem;
-}
-.hero-btns{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:3.5rem}
-.btn-solid{
-  font-family:'Rajdhani',sans-serif;font-weight:700;
-  font-size:.85rem;letter-spacing:.14em;text-transform:uppercase;
-  background:var(--blue);color:#fff;
-  border:none;cursor:pointer;padding:.85rem 2.2rem;
-  text-decoration:none;transition:background .2s,transform .15s;display:inline-block;
-}
-.btn-solid:hover{background:#2563eb;transform:translateY(-2px)}
-.btn-ghost{
-  font-family:'Rajdhani',sans-serif;font-weight:600;
-  font-size:.85rem;letter-spacing:.14em;text-transform:uppercase;
-  background:transparent;color:var(--text);
-  border:1px solid rgba(255,255,255,.2);cursor:pointer;padding:.85rem 2.2rem;
-  text-decoration:none;transition:border-color .2s,color .2s;display:inline-block;
-}
-.btn-ghost:hover{border-color:var(--cyan);color:var(--cyan)}
-.hero-stats{
-  display:flex;gap:0;border-top:1px solid rgba(255,255,255,.1);
-  padding-top:2rem;
-}
-.hstat{padding-right:2.5rem;margin-right:2.5rem;border-right:1px solid rgba(255,255,255,.1)}
-.hstat:last-child{border-right:none}
-.hstat-n{
-  font-family:'Rajdhani',sans-serif;font-weight:700;
-  font-size:2.3rem;color:var(--white);line-height:1;
-}
-.hstat-n span{color:var(--cyan)}
-.hstat-l{font-size:.73rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:.2rem}
 
 /* ─── FEATURES BAR ─── */
 #fbar{
@@ -179,7 +108,7 @@ body{background:var(--black);color:var(--text);font-family:'Inter',sans-serif;fo
 /* ─── SERVICES ─── */
 #services{
   background:var(--black);
-  padding:7rem 0 0;
+  padding:5rem 0 0;
 }
 .srv-head{text-align:center;margin-bottom:3.5rem;padding:0 6vw}
 .srv-head .s-label{justify-content:center}
@@ -198,34 +127,11 @@ body{background:var(--black);color:var(--text);font-family:'Inter',sans-serif;fo
   letter-spacing:.02em;color:var(--white);line-height:1.1;
 }
 
-/* imagem panorâmica de serviços */
-.srv-photo-wrap{
-  position:relative;
-  width:100%;
-  max-height:420px;
-  overflow:hidden;
-  margin-bottom:0;
-}
-.srv-photo-wrap img{
-  width:100%;
-  display:block;
-  object-fit:cover;
-  object-position:center 30%;
-  filter:brightness(.65) saturate(1.05);
-  image-rendering:high-quality;
-}
-.srv-photo-wrap::after{
-  content:'';position:absolute;inset:0;
-  background:
-    linear-gradient(to bottom, rgba(4,6,8,.2) 0%, transparent 30%, transparent 60%, rgba(4,6,8,1) 100%),
-    linear-gradient(to right, rgba(4,6,8,.5) 0%, transparent 10%, transparent 90%, rgba(4,6,8,.5) 100%);
-}
-
-/* 6-col cards sobrepostos */
+/* 6-col cards */
 .srv-grid{
   display:grid;grid-template-columns:repeat(6,1fr);
   border-top:1px solid var(--line);
-  margin-top:-2px;
+  margin-top:2rem;
 }
 @media(max-width:900px){.srv-grid{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:500px){.srv-grid{grid-template-columns:repeat(2,1fr)}}
@@ -260,40 +166,18 @@ body{background:var(--black);color:var(--text);font-family:'Inter',sans-serif;fo
 #diff{
   position:relative;
   overflow:hidden;
-  padding:0;
+  background: var(--black);
+  padding: 5rem 0;
 }
-/* imagem de fundo */
-.diff-img-wrap{
-  position:relative;
-  width:100%;
-  min-height:520px;
-}
-.diff-img-wrap img{
-  width:100%;height:100%;
-  object-fit:cover;
-  object-position:center;
-  display:block;
-  filter:brightness(.35) saturate(.9);
-  image-rendering:high-quality;
-  min-height:520px;
-}
-.diff-img-wrap::after{
-  content:'';position:absolute;inset:0;
-  background:
-    linear-gradient(to right, rgba(4,6,8,.97) 0%, rgba(4,6,8,.85) 50%, rgba(4,6,8,.6) 100%),
-    linear-gradient(to bottom, rgba(4,6,8,.3) 0%, transparent 20%, transparent 80%, rgba(4,6,8,.8) 100%);
-}
-/* conteúdo sobre a imagem */
+/* conteúdo limpo sem imagem de fundo poluindo */
 .diff-content{
-  position:absolute;inset:0;
   display:grid;grid-template-columns:1fr 1fr;
   gap:5rem;align-items:center;
-  padding:5rem 6vw;
+  padding:0 6vw;
   z-index:2;
 }
 @media(max-width:800px){
-  .diff-content{grid-template-columns:1fr;position:relative;padding:4rem 6vw}
-  .diff-img-wrap img{min-height:900px}
+  .diff-content{grid-template-columns:1fr;gap:3rem;}
 }
 .diff-list{list-style:none;margin-top:2rem;display:flex;flex-direction:column;gap:.75rem}
 .diff-list li{
@@ -313,7 +197,7 @@ body{background:var(--black);color:var(--text);font-family:'Inter',sans-serif;fo
   margin-top:2rem;
   border-left:2px solid var(--blue);
   padding:1.2rem 1.5rem;
-  background:rgba(12,18,32,.8);
+  background:var(--deep);
 }
 .mission-box h3{
   font-family:'Rajdhani',sans-serif;font-weight:700;
@@ -323,8 +207,7 @@ body{background:var(--black);color:var(--text);font-family:'Inter',sans-serif;fo
 .mission-box p{font-size:.85rem;color:var(--muted);line-height:1.7}
 .brand-panel{
   border:1px solid var(--line);padding:2.5rem 2rem;
-  background:rgba(7,11,19,.85);
-  backdrop-filter:blur(10px);
+  background:var(--deep);
 }
 .brand-wordmark{
   font-family:'Rajdhani',sans-serif;font-weight:700;font-size:3.5rem;
@@ -441,37 +324,10 @@ footer{
   <a href="#contact" class="tb-cta">Solicitar Orçamento</a>
 </header>
 
-<!-- HERO — usa hero.jpg -->
-<section id="hero">
-  <div class="hero-img-wrap">
-    <img src="hero.jpeg" alt="Equipe DMYI Security — profissionais uniformizados"/>
-  </div>
-  <div class="hero-rule"></div>
-  <div class="hero-content">
-    <div class="hero-eyebrow rv">Segurança Profissional · Campinas e Região</div>
-    <h1 class="hero-h1 rv">
-      DMYI<br>Security:<br>
-      <span class="accent">Proteção<br>Completa.</span>
-    </h1>
-    <p class="hero-sub rv">Segurança inteligente. Tranquilidade para o que realmente importa.</p>
-    <div class="hero-btns rv">
-      <a href="#contact" class="btn-solid">Solicitar Orçamento</a>
-      <a href="#services" class="btn-ghost">Nossos Serviços</a>
-    </div>
-    <div class="hero-stats rv">
-      <div class="hstat">
-        <div class="hstat-n">24<span>h</span></div>
-        <div class="hstat-l">Monitoramento</div>
-      </div>
-      <div class="hstat">
-        <div class="hstat-n">+1<span>,5K</span></div>
-        <div class="hstat-l">Clientes Protegidos</div>
-      </div>
-      <div class="hstat">
-        <div class="hstat-n">100<span>%</span></div>
-        <div class="hstat-l">Comprometimento</div>
-      </div>
-    </div>
+<!-- NOVO BANNER DO TOPO ENCAIXADO PERFEITAMENTE -->
+<section id="main-banner">
+  <div class="banner-container rv">
+    <img src="Gemini_Generated_Image_vw7ng8vw7ng8vw7n.png" alt="DMYI Security - Banner de Proteção Inteligente"/>
   </div>
 </section>
 
@@ -507,16 +363,11 @@ footer{
   </div>
 </div>
 
-<!-- SERVICES — usa servicos.jpg como banner + grid de cards -->
+<!-- SERVICES — Grid de cards limpo e moderno -->
 <section id="services">
   <div class="srv-head rv">
     <div class="s-label">Especialidades</div>
     <h2 class="s-title">Especialistas em Segurança para<br>Diferentes Ambientes</h2>
-  </div>
-
-  <!-- foto panorâmica dos 6 profissionais -->
-  <div class="srv-photo-wrap rv">
-    <img src="servicos.jpeg" alt="Profissionais DMYI Security em diferentes ambientes"/>
   </div>
 
   <!-- cards descritivos abaixo da foto -->
@@ -560,11 +411,8 @@ footer{
   </div>
 </section>
 
-<!-- DIFFERENTIALS — usa diferenciais.jpg como fundo -->
+<!-- DIFFERENTIALS -->
 <section id="diff">
-  <div class="diff-img-wrap">
-    <img src="diferenciais.jpeg" alt="DMYI Security — câmera de segurança e diferenciais"/>
-  </div>
   <div class="diff-content">
     <div>
       <div class="s-label rv">Por que nos escolher</div>
@@ -635,7 +483,6 @@ footer{
   </div>
   <div class="qr-side rv">
     <div class="qr-title">Escaneie e fale conosco</div>
-    <!-- Substitua pelo seu QR real: <img src="qrcode.png" style="width:140px;height:140px;display:block;margin-bottom:1.5rem"> -->
     <div class="qr-box">
       <div class="qp"></div><div class="qp"></div><div class="qp"></div><div class="qp"></div><div class="qp"></div><div class="qp"></div><div class="qp"></div>
       <div class="qp"></div><div class="qe"></div><div class="qe"></div><div class="qe"></div><div class="qe"></div><div class="qe"></div><div class="qp"></div>
