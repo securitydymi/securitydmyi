@@ -16,6 +16,13 @@
             50% { transform: scale(1.03); box-shadow: 0 20px 30px -5px rgba(16, 185, 129, 0.6); }
         }
         .btn-premium { animation: pulse-subtle 3s infinite ease-in-out; }
+        
+        /* Força o carregamento seguro da imagem de fundo local */
+        .bg-tactical {
+            background-image: url('bg-seguranca.jpg');
+            background-size: cover;
+            background-position: center;
+        }
     </style>
 </head>
 <body class="bg-slate-950 text-slate-100 font-sans antialiased min-h-screen selection:bg-amber-500 selection:text-black">
@@ -33,12 +40,10 @@
         </div>
     </header>
 
-    <!-- HERO SECTION COM NOVA IMAGEM ABSTRATA E MODERNA -->
-    <section class="relative py-24 md:py-36 max-w-7xl mx-auto px-6 text-center overflow-hidden rounded-b-3xl">
-        <!-- Nova imagem de fundo: Linhas tecnológicas abstratas e sutis -->
-        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80')] bg-cover bg-center opacity-10 pointer-events-none"></div>
-        <!-- Mistura perfeita com o fundo escuro -->
-        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-slate-950/90 to-slate-950 pointer-events-none"></div>
+    <!-- HERO SECTION COM IMAGEM LOCAL PROTEGIDA -->
+    <section class="relative bg-tactical py-24 md:py-36 max-w-7xl mx-auto px-6 text-center overflow-hidden rounded-b-3xl">
+        <!-- Camada escura para dar contraste e sumir com as bordas da imagem -->
+        <div class="absolute inset-0 bg-gradient-to-b from-slate-950/40 via-slate-950/85 to-slate-950 pointer-events-none"></div>
         <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-amber-500/5 blur-[120px] rounded-full pointer-events-none"></div>
 
         <div class="relative z-10">
