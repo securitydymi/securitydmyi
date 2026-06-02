@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Security Dymi | Segurança Privada em Campinas e Região</title>
     <!-- Favicon: Usa a sua logo como ícone da aba do navegador -->
-    <link rel="icon" type="image/png" href="logo.png">
+    <link class="rounded-full" rel="icon" type="image/png" href="logo.png">
     <!-- Tailwind CSS para design avançado -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <!-- Ícones e Animações -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         @keyframes pulse-subtle {
-            0%, 100% { transform: scale(1); box-shadow: 0 10px 25px -5px rgba(16, 185, 129, 0.4); }
+            0%, 100 { transform: scale(1); box-shadow: 0 10px 25px -5px rgba(16, 185, 129, 0.4); }
             50% { transform: scale(1.03); box-shadow: 0 20px 30px -5px rgba(16, 185, 129, 0.6); }
         }
         .btn-premium { animation: pulse-subtle 3s infinite ease-in-out; }
@@ -25,7 +25,7 @@
         }
     </style>
 </head>
-<body class="bg-slate-950 text-slate-100 font-sans antialiased min-h-screen selection:bg-amber-500 selection:text-black">
+<body class="bg-slate-950 text-slate-100 font-sans antialiased min-h-screen selection:bg-amber-500 selection:text-black scroll-smooth">
 
     <!-- TOPO PREMIUM COM A LOGO AMPLIADA -->
     <header class="border-b border-slate-800/60 bg-slate-950/80 sticky top-0 z-50 backdrop-blur-xl">
@@ -40,7 +40,7 @@
         </div>
     </header>
 
-    <!-- HERO SECTION COM OPACIDADE DA IMAGEM AJUSTADA (MAIS VISÍVEL) -->
+    <!-- HERO SECTION COM CORREÇÃO DE TEXTO E EFEITOS -->
     <section class="relative bg-tactical py-24 md:py-36 max-w-7xl mx-auto px-6 text-center overflow-hidden rounded-b-3xl">
         <!-- Máscara de gradiente ajustada para 40% de opacidade inicial para destacar a foto -->
         <div class="absolute inset-0 bg-gradient-to-b from-slate-950/40 via-slate-950/85 to-slate-950 pointer-events-none"></div>
@@ -48,7 +48,7 @@
 
         <div class="relative z-10">
             <span class="inline-flex items-center gap-2 text-xs font-bold tracking-widest text-amber-500 uppercase bg-amber-500/10 px-4 py-2 rounded-full border border-amber-500/20 mb-8 backdrop-blur-sm">
-                <i class="fa-solid fa-shield text-[10px]"></i> Alta Performance Operacional
+                <i class="fa-solid fa-shield text-[10px] animate-pulse"></i> Alta Performance Operacional
             </span>
             
             <h1 class="text-4xl md:text-7xl font-black tracking-tight mb-6 leading-none max-w-5xl mx-auto bg-gradient-to-b from-white via-slate-200 to-slate-500 bg-clip-text text-transparent">
@@ -59,21 +59,22 @@
                 Atuando de forma estratégica em <span class="text-amber-500 border-b border-amber-500/30 pb-0.5">Campinas e Região</span>.
             </p>
             
+            <!-- CORRIGIDO: "mitigamos risks" para "Mitigamos riscos" -->
             <p class="text-slate-400 text-sm md:text-base mb-12 max-w-xl mx-auto leading-relaxed">
-                Mitigamos risks, invasões e quebras de protocolo antes que virem prejuízo. Segurança sob medida para empresas, condomínios e eventos de alto padrão.
+                Mitigamos riscos, invasões e quebras de protocolo antes que virem prejuízo. Segurança sob medida para empresas, condomínios e eventos de alto padrão.
             </p>
             
             <div class="flex justify-center">
                 <a href="https://wa.me/5519994539764?text=Olá!%20Acessei%20o%20site%20da%20Security%20Dymi.%20Gostaria%20de%20agendar%20uma%20análise%20de%20risco%20e%20solicitar%20um%20orçamento%20para%20Campinas%20e%20região." 
                    target="_blank" 
-                   class="btn-premium inline-flex items-center gap-3 bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold text-sm md:text-base tracking-wide px-8 py-4.5 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-emerald-500/20">
-                    <i class="fa-brands fa-whatsapp text-2xl"></i> FALAR COM O PLANTÃO OPERACIONAL
+                   class="btn-premium inline-flex items-center gap-3 bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold text-sm md:text-base tracking-wide px-8 py-4.5 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-emerald-500/30">
+                    <i class="fa-brands fa-whatsapp text-2xl animate-bounce"></i> FALAR COM O PLANTÃO OPERACIONAL
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- SEÇÃO DE SERVIÇOS EM GRID AVANÇADO -->
+    <!-- SEÇÃO DE SERVIÇOS EM GRID AVANÇADO COM ANIMAÇÕES INTERATIVAS -->
     <section class="py-20 bg-slate-950/60 border-t border-b border-slate-900 backdrop-blur-md relative">
         <div class="max-w-6xl mx-auto px-6">
             <div class="text-center mb-16">
@@ -83,8 +84,8 @@
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Card 1 -->
-                <div class="group bg-slate-900/40 border border-slate-800/80 p-8 rounded-2xl hover:border-amber-500/40 hover:bg-slate-900/60 transition-all duration-300 shadow-xl">
-                    <div class="w-12 h-12 bg-amber-500/10 rounded-xl flex items-center justify-center text-amber-500 text-xl mb-6 border border-amber-500/20 group-hover:bg-amber-500 group-hover:text-black transition-all duration-300">
+                <div class="group bg-slate-900/40 border border-slate-800/80 p-8 rounded-2xl hover:border-amber-500/40 hover:bg-slate-900/60 transition-all duration-300 shadow-xl hover:-translate-y-2">
+                    <div class="w-12 h-12 bg-amber-500/10 rounded-xl flex items-center justify-center text-amber-500 text-xl mb-6 border border-amber-500/20 group-hover:bg-amber-500 group-hover:text-black group-hover:rotate-6 transition-all duration-300">
                         <i class="fa-solid fa-building-shield"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-3 group-hover:text-amber-400 transition-colors">Segurança Patrimonial</h3>
@@ -92,8 +93,8 @@
                 </div>
 
                 <!-- Card 2 -->
-                <div class="group bg-slate-900/40 border border-slate-800/80 p-8 rounded-2xl hover:border-amber-500/40 hover:bg-slate-900/60 transition-all duration-300 shadow-xl">
-                    <div class="w-12 h-12 bg-amber-500/10 rounded-xl flex items-center justify-center text-amber-500 text-xl mb-6 border border-amber-500/20 group-hover:bg-amber-500 group-hover:text-black transition-all duration-300">
+                <div class="group bg-slate-900/40 border border-slate-800/80 p-8 rounded-2xl hover:border-amber-500/40 hover:bg-slate-900/60 transition-all duration-300 shadow-xl hover:-translate-y-2">
+                    <div class="w-12 h-12 bg-amber-500/10 rounded-xl flex items-center justify-center text-amber-500 text-xl mb-6 border border-amber-500/20 group-hover:bg-amber-500 group-hover:text-black group-hover:rotate-6 transition-all duration-300">
                         <i class="fa-solid fa-users-gear"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-3 group-hover:text-amber-400 transition-colors">Segurança para Eventos</h3>
@@ -101,8 +102,8 @@
                 </div>
 
                 <!-- Card 3 -->
-                <div class="group bg-slate-900/40 border border-slate-800/80 p-8 rounded-2xl hover:border-amber-500/40 hover:bg-slate-900/60 transition-all duration-300 shadow-xl">
-                    <div class="w-12 h-12 bg-amber-500/10 rounded-xl flex items-center justify-center text-amber-500 text-xl mb-6 border border-amber-500/20 group-hover:bg-amber-500 group-hover:text-black transition-all duration-300">
+                <div class="group bg-slate-900/40 border border-slate-800/80 p-8 rounded-2xl hover:border-amber-500/40 hover:bg-slate-900/60 transition-all duration-300 shadow-xl hover:-translate-y-2">
+                    <div class="w-12 h-12 bg-amber-500/10 rounded-xl flex items-center justify-center text-amber-500 text-xl mb-6 border border-amber-500/20 group-hover:bg-amber-500 group-hover:text-black group-hover:rotate-6 transition-all duration-300">
                         <i class="fa-solid fa-user-check"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-3 group-hover:text-amber-400 transition-colors">Controle de Acesso</h3>
@@ -114,10 +115,10 @@
 
     <!-- SEÇÃO FINAL INTIMIDADORA -->
     <section class="py-24 max-w-4xl mx-auto px-6 text-center relative">
-        <h2 class="text-3xl md:text-5xl font-black mb-4 tracking-tight">Não espere a vulnerabilidade <br><span class="text-red-500">virar um prejuízo real</span>.</h2>
+        <h2 class="text-3xl md:text-5xl font-black mb-4 tracking-tight">Não espere a vulnerabilidade <br><span class="text-red-500 animate-pulse">virar um prejuízo real</span>.</h2>
         <p class="text-slate-400 text-base mb-10 max-w-xl mx-auto">Clique abaixo para iniciar um diagnóstico gratuito de vulnerabilidade com a nossa equipe.</p>
-        <a href="https://wa.me/5519994539764?text=Olá!%20Acessei%20o%20site%20da%20Security%20Dymi.%20Gostaria%20de%20agendar%20uma%20análise%20de%20risco%20e%20solicitar%20um%20orçamento%20para%20Campinas%20e%20região." target="_blank" class="inline-flex items-center gap-3 bg-slate-900 hover:bg-slate-800 text-amber-500 font-bold border border-slate-700 hover:border-amber-500/50 px-8 py-4 rounded-xl transition-all duration-300 shadow-2xl">
-            <i class="fa-brands fa-whatsapp text-xl text-emerald-500"></i> SOLICITAR ANÁLISE DE RISCO
+        <a href="https://wa.me/5519994539764?text=Olá!%20Acessei%20o%20site%20da%20Security%20Dymi.%20Gostaria%20de%20agendar%20uma%20análise%20de%20risco%20e%20solicitar%20um%20orçamento%20para%20Campinas%20e%20região." target="_blank" class="inline-flex items-center gap-3 bg-slate-900 hover:bg-amber-500 hover:text-black text-amber-500 font-bold border border-slate-700 hover:border-amber-500 px-8 py-4 rounded-xl transition-all duration-300 shadow-2xl transform hover:scale-105">
+            <i class="fa-brands fa-whatsapp text-xl text-emerald-500 group-hover:text-black"></i> SOLICITAR ANÁLISE DE RISCO
         </a>
     </section>
 
@@ -125,7 +126,7 @@
     <section class="py-12 bg-slate-950 border-t border-slate-900">
         <div class="max-w-4xl mx-auto px-6 grid md:grid-cols-2 gap-8 text-center md:text-left">
             <!-- Bloco de E-mail -->
-            <div class="bg-slate-900/30 border border-slate-800/50 p-6 rounded-xl flex flex-col md:flex-row items-center gap-4">
+            <div class="bg-slate-900/30 border border-slate-800/50 p-6 rounded-xl flex flex-col md:flex-row items-center gap-4 hover:border-slate-700 transition-all">
                 <div class="w-12 h-12 bg-amber-500/10 text-amber-500 border border-amber-500/20 rounded-full flex items-center justify-center text-lg shrink-0">
                     <i class="fa-solid fa-envelope"></i>
                 </div>
@@ -136,7 +137,7 @@
             </div>
 
             <!-- Bloco de Telefone -->
-            <div class="bg-slate-900/30 border border-slate-800/50 p-6 rounded-xl flex flex-col md:flex-row items-center gap-4">
+            <div class="bg-slate-900/30 border border-slate-800/50 p-6 rounded-xl flex flex-col md:flex-row items-center gap-4 hover:border-slate-700 transition-all">
                 <div class="w-12 h-12 bg-amber-500/10 text-amber-500 border border-amber-500/20 rounded-full flex items-center justify-center text-lg shrink-0">
                     <i class="fa-solid fa-phone"></i>
                 </div>
