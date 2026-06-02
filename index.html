@@ -18,12 +18,11 @@
         .btn-premium { animation: pulse-subtle 3s infinite ease-in-out; }
     </style>
 </head>
-<body class="bg-radial from-slate-900 via-slate-950 to-black text-slate-100 font-sans antialiased min-h-screen selection:bg-amber-500 selection:text-black">
+<body class="bg-slate-950 text-slate-100 font-sans antialiased min-h-screen selection:bg-amber-500 selection:text-black">
 
     <!-- TOPO PREMIUM COM A LOGO AMPLIADA -->
     <header class="border-b border-slate-800/60 bg-slate-950/80 sticky top-0 z-50 backdrop-blur-xl">
         <div class="max-w-6xl mx-auto px-6 py-2 flex justify-between items-center">
-            <!-- Logo aumentada com h-20 (altura ideal para o escudo) -->
             <div class="flex items-center gap-4">
                 <img src="logo.png" alt="Logo Security Dymi" class="h-20 md:h-24 w-auto object-contain drop-shadow-[0_0_10px_rgba(245,158,11,0.2)]">
                 <span class="text-xl font-black tracking-widest text-white hidden md:inline">SECURITY <span class="text-amber-500 font-light">DYMI</span></span>
@@ -34,13 +33,15 @@
         </div>
     </header>
 
-    <!-- HERO SECTION PREMIUM -->
-    <section class="relative py-20 md:py-32 max-w-6xl mx-auto px-6 text-center overflow-hidden">
+    <!-- HERO SECTION COM IMAGEM TÁTICA DE FUNDO -->
+    <section class="relative py-24 md:py-36 max-w-7xl mx-auto px-6 text-center overflow-hidden rounded-b-3xl">
+        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=1200&q=80')] bg-cover bg-center opacity-10 pointer-events-none"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-slate-950/80 to-slate-950 pointer-events-none"></div>
         <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-amber-500/5 blur-[120px] rounded-full pointer-events-none"></div>
 
         <div class="relative z-10">
             <span class="inline-flex items-center gap-2 text-xs font-bold tracking-widest text-amber-500 uppercase bg-amber-500/10 px-4 py-2 rounded-full border border-amber-500/20 mb-8 backdrop-blur-sm">
-                <i class="fa-solid fa-lock text-[10px]"></i> Alta Performance Operacional
+                <i class="fa-solid fa-shield text-[10px]"></i> Alta Performance Operacional
             </span>
             
             <h1 class="text-4xl md:text-7xl font-black tracking-tight mb-6 leading-none max-w-5xl mx-auto bg-gradient-to-b from-white via-slate-200 to-slate-500 bg-clip-text text-transparent">
@@ -55,12 +56,11 @@
                 Mitigamos riscos, invasões e quebras de protocolo antes que virem prejuízo. Segurança sob medida para empresas, condomínios e eventos de alto padrão.
             </p>
             
-            <!-- BOTÃO PREMIUM WHATSAPP -->
             <div class="flex justify-center">
-                <a href="https://wa.me/5519994539764?text=Olá!%20Acessei%20o%20site%20da%20Security%20Dymi%20e%20gostaria%20de%20solicitar%20um%20orçamento%20para%20Campinas%20e%20região." 
+                <a href="https://wa.me/5519994539764?text=Olá!%20Acessei%20o%20site%20da%20Security%20Dymi.%20Gostaria%20de%20agendar%20uma%20análise%20de%20risco%20e%20solicitar%20um%20orçamento%20para%20Campinas%20e%20região." 
                    target="_blank" 
                    class="btn-premium inline-flex items-center gap-3 bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold text-sm md:text-base tracking-wide px-8 py-4.5 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-emerald-500/20">
-                    <i class="fa-brands fa-whatsapp text-2xl"></i> FALAR COM O PLANTÃO DE VENDAS
+                    <i class="fa-brands fa-whatsapp text-2xl"></i> FALAR COM O PLANTÃO OPERACIONAL
                 </a>
             </div>
         </div>
@@ -108,10 +108,37 @@
     <!-- SEÇÃO FINAL INTIMIDADORA -->
     <section class="py-24 max-w-4xl mx-auto px-6 text-center relative">
         <h2 class="text-3xl md:text-5xl font-black mb-4 tracking-tight">Não espere a vulnerabilidade <br><span class="text-red-500">virar um prejuízo real</span>.</h2>
-        <p class="text-slate-400 text-base mb-10 max-w-xl mx-auto">Clique abaixo para iniciar um diagnóstico gratuito de vulnerabilidade com o nosso especialista.</p>
-        <a href="https://wa.me/5519994539764?text=Olá!%20Acessei%20o%20site%20da%20Security%20Dymi%20e%20gostaria%20de%20solicitar%20um%20orçamento%20para%20Campinas%20e%20região." target="_blank" class="inline-flex items-center gap-3 bg-slate-900 hover:bg-slate-800 text-amber-500 font-bold border border-slate-700 hover:border-amber-500/50 px-8 py-4 rounded-xl transition-all duration-300 shadow-2xl">
-            <i class="fa-brands fa-whatsapp text-xl text-emerald-500"></i> ENTRAR EM CONTATO AGORA
+        <p class="text-slate-400 text-base mb-10 max-w-xl mx-auto">Clique abaixo para iniciar um diagnóstico gratuito de vulnerabilidade com a nossa equipe.</p>
+        <a href="https://wa.me/5519994539764?text=Olá!%20Acessei%20o%20site%20da%20Security%20Dymi.%20Gostaria%20de%20agendar%20uma%20análise%20de%20risco%20e%20solicitar%20um%20orçamento%20para%20Campinas%20e%20região." target="_blank" class="inline-flex items-center gap-3 bg-slate-900 hover:bg-slate-800 text-amber-500 font-bold border border-slate-700 hover:border-amber-500/50 px-8 py-4 rounded-xl transition-all duration-300 shadow-2xl">
+            <i class="fa-brands fa-whatsapp text-xl text-emerald-500"></i> SOLICITAR ANÁLISE DE RISCO
         </a>
+    </section>
+
+    <!-- NOVA SEÇÃO: CANAIS DE ATENDIMENTO DIRETOS -->
+    <section class="py-12 bg-slate-950 border-t border-slate-900">
+        <div class="max-w-4xl mx-auto px-6 grid md:grid-cols-2 gap-8 text-center md:text-left">
+            <!-- Bloco de E-mail -->
+            <div class="bg-slate-900/30 border border-slate-800/50 p-6 rounded-xl flex flex-col md:flex-row items-center gap-4">
+                <div class="w-12 h-12 bg-amber-500/10 text-amber-500 border border-amber-500/20 rounded-full flex items-center justify-center text-lg shrink-0">
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div>
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-slate-500 mb-1">E-mail Corporativo</h4>
+                    <a href="mailto:contato@securitydmyi.com.br" class="text-sm font-semibold text-slate-200 hover:text-amber-400 transition-colors break-all">contato@securitydmyi.com.br</a>
+                </div>
+            </div>
+
+            <!-- Bloco de Telefone -->
+            <div class="bg-slate-900/30 border border-slate-800/50 p-6 rounded-xl flex flex-col md:flex-row items-center gap-4">
+                <div class="w-12 h-12 bg-amber-500/10 text-amber-500 border border-amber-500/20 rounded-full flex items-center justify-center text-lg shrink-0">
+                    <i class="fa-solid fa-phone"></i>
+                </div>
+                <div>
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-slate-500 mb-1">Central de Atendimento</h4>
+                    <a href="tel:+5519994539764" class="text-sm font-bold text-slate-200 hover:text-amber-400 transition-colors">(19) 99453-9764</a>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- RODAPÉ CLEAN -->
@@ -120,7 +147,7 @@
     </footer>
 
     <!-- BOTÃO FLUTUANTE PREMIUM -->
-    <a href="https://wa.me/5519994539764?text=Olá!%20Acessei%20o%20site%20da%20Security%20Dymi%20e%20gostaria%20de%20solicitar%20um%20orçamento%20para%20Campinas%20e%20região." target="_blank" class="fixed bottom-6 right-6 bg-emerald-500 hover:bg-emerald-400 text-white p-4 rounded-full shadow-2xl transition-all duration-300 z-50 flex items-center justify-center text-2xl hover:scale-110 shadow-emerald-500/20" title="Chamar no WhatsApp">
+    <a href="https://wa.me/5519994539764?text=Olá!%20Acessei%20o%20site%20da%20Security%20Dymi.%20Gostaria%20de%20agendar%20uma%20análise%20de%20risco%20e%20solicitar%20um%20orçamento%20para%20Campinas%20e%20região." target="_blank" class="fixed bottom-6 right-6 bg-emerald-500 hover:bg-emerald-400 text-white p-4 rounded-full shadow-2xl transition-all duration-300 z-50 flex items-center justify-center text-2xl hover:scale-110 shadow-emerald-500/20" title="Chamar no WhatsApp">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
