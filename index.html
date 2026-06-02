@@ -17,7 +17,7 @@
         }
         .btn-premium { animation: pulse-subtle 3s infinite ease-in-out; }
         
-        /* Força o carregamento seguro da imagem de fundo local */
+        /* Carrega a imagem local de forma segura */
         .bg-tactical {
             background-image: url('bg-seguranca.jpg');
             background-size: cover;
@@ -40,9 +40,9 @@
         </div>
     </header>
 
-    <!-- HERO SECTION COM IMAGEM LOCAL PROTEGIDA -->
+    <!-- HERO SECTION COM OPACIDADE DA IMAGEM AJUSTADA (MAIS VISÍVEL) -->
     <section class="relative bg-tactical py-24 md:py-36 max-w-7xl mx-auto px-6 text-center overflow-hidden rounded-b-3xl">
-        <!-- Camada escura para dar contraste e sumir com as bordas da imagem -->
+        <!-- Máscara de gradiente ajustada para 40% de opacidade inicial para destacar a foto -->
         <div class="absolute inset-0 bg-gradient-to-b from-slate-950/40 via-slate-950/85 to-slate-950 pointer-events-none"></div>
         <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-amber-500/5 blur-[120px] rounded-full pointer-events-none"></div>
 
@@ -60,7 +60,7 @@
             </p>
             
             <p class="text-slate-400 text-sm md:text-base mb-12 max-w-xl mx-auto leading-relaxed">
-                Mitigamos riscos, invasões e quebras de protocolo antes que virem prejuízo. Segurança sob medida para empresas, condomínios e eventos de alto padrão.
+                Mitigamos risks, invasões e quebras de protocolo antes que virem prejuízo. Segurança sob medida para empresas, condomínios e eventos de alto padrão.
             </p>
             
             <div class="flex justify-center">
