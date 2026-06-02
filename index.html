@@ -1,513 +1,107 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>DMYI Security — Proteção Completa</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
-<style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{
-  --black:#040608;
-  --deep:#070b13;
-  --card:#0c1220;
-  --surface:#111827;
-  --line:rgba(255,255,255,.08);
-  --blue:#1d4ed8;
-  --blue-dim:#1e3a6e;
-  --cyan:#38bdf8;
-  --text:#e2e8f0;
-  --muted:#64748b;
-  --white:#f8fafc;
-}
-html{scroll-behavior:smooth}
-body{background:var(--black);color:var(--text);font-family:'Inter',sans-serif;font-size:15px;line-height:1.6;overflow-x:hidden}
-
-/* ─── TOPBAR ─── */
-#topbar{
-  position:fixed;top:0;left:0;right:0;z-index:200;
-  height:64px;
-  background:rgba(4,6,8,.95);
-  border-bottom:1px solid var(--line);
-  backdrop-filter:blur(20px);
-  display:flex;align-items:center;justify-content:space-between;
-  padding:0 6vw;
-}
-.tb-logo{
-  font-family:'Rajdhani',sans-serif;
-  font-weight:700;font-size:1.35rem;letter-spacing:.12em;
-  text-transform:uppercase;color:var(--white);
-}
-.tb-logo b{color:var(--cyan)}
-.tb-nav{display:flex;gap:2.5rem}
-.tb-nav a{
-  font-family:'Rajdhani',sans-serif;font-weight:600;
-  font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;
-  color:var(--muted);text-decoration:none;transition:color .2s;
-}
-.tb-nav a:hover{color:var(--white)}
-.tb-cta{
-  font-family:'Rajdhani',sans-serif;font-weight:700;
-  font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;
-  background:var(--blue);color:#fff;
-  border:none;cursor:pointer;padding:.6rem 1.6rem;
-  text-decoration:none;transition:background .2s;
-}
-.tb-cta:hover{background:#2563eb}
-
-/* ─── NOVO BANNER TOPO REVOLUTION ─── */
-#main-banner {
-  padding-top: 64px; /* Evita que o topbar fixo cubra o banner */
-  background: var(--black);
-  width: 100%;
-}
-.banner-container {
-  width: 100%;
-  max-width: 100%;
-  line-height: 0; /* Remove espaçamentos fantasmas da tag img */
-  overflow: hidden;
-}
-.banner-container img {
-  width: 100%;
-  height: auto;
-  display: block;
-  image-rendering: high-quality;
-}
-
-/* ─── FEATURES BAR ─── */
-#fbar{
-  background:var(--deep);
-  border-top:1px solid var(--line);
-  border-bottom:1px solid var(--line);
-  display:grid;grid-template-columns:repeat(4,1fr);
-}
-.fbar-item{
-  padding:1.8rem 2rem;
-  border-right:1px solid var(--line);
-  display:flex;align-items:flex-start;gap:1rem;
-}
-.fbar-item:last-child{border-right:none;background:var(--blue)}
-.fbar-item:last-child .fbar-title{color:#fff}
-.fbar-item:last-child .fbar-desc{color:rgba(255,255,255,.65)}
-.fbar-item:last-child .fbar-icon svg{stroke:#fff}
-.fbar-icon{
-  width:38px;height:38px;flex-shrink:0;
-  border:1px solid rgba(255,255,255,.1);
-  display:flex;align-items:center;justify-content:center;
-}
-.fbar-icon svg{width:18px;height:18px;stroke:var(--cyan);fill:none;stroke-width:1.5}
-.fbar-title{
-  font-family:'Rajdhani',sans-serif;font-weight:700;
-  font-size:.88rem;letter-spacing:.1em;text-transform:uppercase;
-  color:var(--white);margin-bottom:.2rem;
-}
-.fbar-desc{font-size:.8rem;color:var(--muted);line-height:1.5}
-
-/* ─── SERVICES ─── */
-#services{
-  background:var(--black);
-  padding:5rem 0 0;
-}
-.srv-head{text-align:center;margin-bottom:3.5rem;padding:0 6vw}
-.srv-head .s-label{justify-content:center}
-.srv-head .s-label::before{display:none}
-
-.s-label{
-  font-family:'Rajdhani',sans-serif;font-weight:600;
-  font-size:.76rem;letter-spacing:.22em;text-transform:uppercase;
-  color:var(--cyan);margin-bottom:.6rem;
-  display:flex;align-items:center;gap:.6rem;
-}
-.s-label::before{content:'';width:20px;height:1px;background:var(--cyan)}
-.s-title{
-  font-family:'Rajdhani',sans-serif;font-weight:700;
-  font-size:clamp(1.9rem,3.5vw,3rem);text-transform:uppercase;
-  letter-spacing:.02em;color:var(--white);line-height:1.1;
-}
-
-/* 6-col cards */
-.srv-grid{
-  display:grid;grid-template-columns:repeat(6,1fr);
-  border-top:1px solid var(--line);
-  margin-top:2rem;
-}
-@media(max-width:900px){.srv-grid{grid-template-columns:repeat(3,1fr)}}
-@media(max-width:500px){.srv-grid{grid-template-columns:repeat(2,1fr)}}
-.srv-card{
-  padding:2rem 1.5rem;
-  border-right:1px solid var(--line);
-  border-bottom:1px solid var(--line);
-  background:var(--deep);
-  transition:background .25s;
-  cursor:default;
-}
-.srv-card:hover{background:var(--card)}
-.srv-num{
-  font-family:'Rajdhani',sans-serif;font-weight:700;
-  font-size:.72rem;letter-spacing:.18em;color:var(--blue);
-  margin-bottom:1rem;
-}
-.srv-icon{
-  width:40px;height:40px;border:1px solid var(--blue-dim);
-  display:flex;align-items:center;justify-content:center;
-  margin-bottom:1rem;
-}
-.srv-icon svg{width:18px;height:18px;stroke:var(--cyan);fill:none;stroke-width:1.5}
-.srv-title{
-  font-family:'Rajdhani',sans-serif;font-weight:700;
-  font-size:.95rem;letter-spacing:.08em;text-transform:uppercase;
-  color:var(--white);margin-bottom:.5rem;
-}
-.srv-desc{font-size:.8rem;color:var(--muted);line-height:1.6}
-
-/* ─── DIFFERENTIALS ─── */
-#diff{
-  position:relative;
-  overflow:hidden;
-  background: var(--black);
-  padding: 5rem 0;
-}
-/* conteúdo limpo sem imagem de fundo poluindo */
-.diff-content{
-  display:grid;grid-template-columns:1fr 1fr;
-  gap:5rem;align-items:center;
-  padding:0 6vw;
-  z-index:2;
-}
-@media(max-width:800px){
-  .diff-content{grid-template-columns:1fr;gap:3rem;}
-}
-.diff-list{list-style:none;margin-top:2rem;display:flex;flex-direction:column;gap:.75rem}
-.diff-list li{
-  display:flex;align-items:flex-start;gap:.9rem;
-  font-size:.88rem;color:rgba(226,232,240,.75);line-height:1.55;
-  padding-bottom:.75rem;border-bottom:1px solid var(--line);
-}
-.diff-list li:last-child{border-bottom:none}
-.diff-check{
-  flex-shrink:0;width:20px;height:20px;
-  border:1px solid var(--blue);
-  display:flex;align-items:center;justify-content:center;
-  margin-top:.1rem;
-}
-.diff-check svg{width:11px;height:11px;stroke:var(--cyan);fill:none;stroke-width:2.5}
-.mission-box{
-  margin-top:2rem;
-  border-left:2px solid var(--blue);
-  padding:1.2rem 1.5rem;
-  background:var(--deep);
-}
-.mission-box h3{
-  font-family:'Rajdhani',sans-serif;font-weight:700;
-  font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;
-  color:var(--cyan);margin-bottom:.5rem;
-}
-.mission-box p{font-size:.85rem;color:var(--muted);line-height:1.7}
-.brand-panel{
-  border:1px solid var(--line);padding:2.5rem 2rem;
-  background:var(--deep);
-}
-.brand-wordmark{
-  font-family:'Rajdhani',sans-serif;font-weight:700;font-size:3.5rem;
-  text-transform:uppercase;letter-spacing:.08em;color:var(--white);line-height:1;
-}
-.brand-sub{
-  font-family:'Rajdhani',sans-serif;font-weight:600;
-  font-size:.78rem;letter-spacing:.25em;text-transform:uppercase;
-  color:var(--cyan);margin-bottom:.2rem;
-}
-.brand-date{font-size:.73rem;letter-spacing:.12em;color:var(--muted);margin-bottom:2rem;text-transform:uppercase}
-.brand-features{display:flex;flex-direction:column;gap:.5rem}
-.bf-row{
-  display:flex;align-items:center;gap:.8rem;
-  padding:.7rem 1rem;border:1px solid var(--line);background:var(--surface);
-}
-.bf-row span{
-  font-family:'Rajdhani',sans-serif;font-weight:600;
-  font-size:.85rem;letter-spacing:.1em;text-transform:uppercase;color:var(--white);
-}
-.bf-icon svg{width:15px;height:15px;stroke:var(--cyan);fill:none;stroke-width:1.5}
-
-/* ─── CONTACT ─── */
-#contact{
-  background:var(--deep);
-  border-top:1px solid var(--line);
-  padding:7rem 6vw;
-  display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;
-}
-@media(max-width:800px){#contact{grid-template-columns:1fr;gap:3rem}}
-.ct-label{
-  font-family:'Rajdhani',sans-serif;font-weight:700;
-  font-size:.76rem;letter-spacing:.22em;text-transform:uppercase;
-  color:var(--cyan);margin-bottom:1.5rem;
-  display:flex;align-items:center;gap:.6rem;
-}
-.ct-label::before{content:'';width:20px;height:1px;background:var(--cyan)}
-.ct-phone{
-  font-family:'Rajdhani',sans-serif;font-weight:700;
-  font-size:2.8rem;color:var(--white);line-height:1;margin-bottom:.4rem;
-}
-.ct-rows{margin-top:2rem;display:flex;flex-direction:column;gap:1.2rem}
-.ct-row{
-  display:flex;align-items:flex-start;gap:.9rem;
-  padding-bottom:1.2rem;border-bottom:1px solid var(--line);
-}
-.ct-row:last-child{border-bottom:none}
-.ct-row-icon{
-  width:36px;height:36px;flex-shrink:0;border:1px solid var(--line);
-  display:flex;align-items:center;justify-content:center;
-}
-.ct-row-icon svg{width:15px;height:15px;stroke:var(--cyan);fill:none;stroke-width:1.5}
-.ct-row-label{font-size:.73rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:.15rem}
-.ct-row-val{font-size:.9rem;color:var(--white)}
-.ct-whats{
-  display:inline-flex;align-items:center;gap:.8rem;margin-top:2rem;
-  font-family:'Rajdhani',sans-serif;font-weight:700;
-  font-size:.85rem;letter-spacing:.14em;text-transform:uppercase;
-  background:#16a34a;color:#fff;padding:.85rem 2rem;
-  text-decoration:none;transition:background .2s;
-}
-.ct-whats:hover{background:#15803d}
-.ct-whats svg{width:18px;height:18px;fill:#fff;flex-shrink:0}
-.qr-side{border:1px solid var(--line);padding:2.5rem;background:var(--card)}
-.qr-title{
-  font-family:'Rajdhani',sans-serif;font-weight:700;
-  font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;
-  color:var(--muted);margin-bottom:1.5rem;
-}
-.qr-box{
-  width:140px;height:140px;background:#fff;padding:10px;
-  display:grid;grid-template-columns:repeat(7,1fr);gap:2px;margin-bottom:1.5rem;
-}
-.qp{background:#111}.qe{background:#fff}
-.qr-note{font-size:.82rem;color:var(--muted);line-height:1.6}
-.qr-note strong{color:var(--cyan)}
-
-/* ─── FOOTER ─── */
-footer{
-  background:var(--black);border-top:1px solid var(--line);
-  padding:1.8rem 6vw;
-  display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;
-}
-.ft-logo{
-  font-family:'Rajdhani',sans-serif;font-weight:700;
-  font-size:1.15rem;letter-spacing:.12em;text-transform:uppercase;color:var(--white);
-}
-.ft-logo b{color:var(--cyan)}
-.ft-tag{font-size:.8rem;color:var(--muted);letter-spacing:.06em;text-align:center;flex:1}
-.ft-tag strong{color:var(--white)}
-.ft-copy{font-size:.75rem;color:var(--muted);letter-spacing:.08em}
-
-/* ─── REVEAL ─── */
-.rv{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s ease}
-.rv.in{opacity:1;transform:translateY(0)}
-
-@media(max-width:640px){
-  .tb-nav{display:none}
-  #fbar{grid-template-columns:1fr 1fr}
-  .fbar-item:last-child{grid-column:1/-1}
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security Dymi | Segurança Privada e Patrimonial</title>
+    <!-- Tailwind CSS para um design moderno e ultra rápido -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Ícones profissionais -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased">
 
-<!-- TOPBAR -->
-<header id="topbar">
-  <div class="tb-logo">DMYI <b>Security</b></div>
-  <nav class="tb-nav">
-    <a href="#services">Serviços</a>
-    <a href="#diff">Diferenciais</a>
-    <a href="#contact">Contato</a>
-  </nav>
-  <a href="#contact" class="tb-cta">Solicitar Orçamento</a>
-</header>
-
-<!-- NOVO BANNER DO TOPO ENCAIXADO PERFEITAMENTE -->
-<section id="main-banner">
-  <div class="banner-container rv">
-    <img src="Gemini_Generated_Image_vw7ng8vw7ng8vw7n.png" alt="DMYI Security - Banner de Proteção Inteligente"/>
-  </div>
-</section>
-
-<!-- FEATURES BAR -->
-<div id="fbar">
-  <div class="fbar-item rv">
-    <div class="fbar-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-    <div>
-      <div class="fbar-title">Monitoramento 24h</div>
-      <div class="fbar-desc">Acompanhamento contínuo para sua segurança.</div>
-    </div>
-  </div>
-  <div class="fbar-item rv">
-    <div class="fbar-icon"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
-    <div>
-      <div class="fbar-title">Controle de Acesso</div>
-      <div class="fbar-desc">Tecnologia e eficiência em entradas e saídas.</div>
-    </div>
-  </div>
-  <div class="fbar-item rv">
-    <div class="fbar-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
-    <div>
-      <div class="fbar-title">Pronta Resposta</div>
-      <div class="fbar-desc">Agilidade e suporte sempre que precisar.</div>
-    </div>
-  </div>
-  <div class="fbar-item rv">
-    <div class="fbar-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
-    <div>
-      <div class="fbar-title">Solicite um Orçamento</div>
-      <div class="fbar-desc">Soluções personalizadas para sua necessidade.</div>
-    </div>
-  </div>
-</div>
-
-<!-- SERVICES — Grid de cards limpo e moderno -->
-<section id="services">
-  <div class="srv-head rv">
-    <div class="s-label">Especialidades</div>
-    <h2 class="s-title">Especialistas em Segurança para<br>Diferentes Ambientes</h2>
-  </div>
-
-  <!-- cards descritivos abaixo da foto -->
-  <div class="srv-grid">
-    <div class="srv-card rv">
-      <div class="srv-num">01</div>
-      <div class="srv-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
-      <div class="srv-title">Condomínios</div>
-      <div class="srv-desc">Segurança e controle de acesso para moradores, visitantes e prestadores de serviço.</div>
-    </div>
-    <div class="srv-card rv">
-      <div class="srv-num">02</div>
-      <div class="srv-icon"><svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
-      <div class="srv-title">Recepção</div>
-      <div class="srv-desc">Atendimento profissional e cordial, com foco em segurança e organização.</div>
-    </div>
-    <div class="srv-card rv">
-      <div class="srv-num">03</div>
-      <div class="srv-icon"><svg viewBox="0 0 24 24"><polygon points="2 20 22 20 12 4"/><line x1="12" y1="10" x2="12" y2="14"/></svg></div>
-      <div class="srv-title">Obras</div>
-      <div class="srv-desc">Controle de acesso de colaboradores, visitantes e veículos com total segurança.</div>
-    </div>
-    <div class="srv-card rv">
-      <div class="srv-num">04</div>
-      <div class="srv-icon"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 9.9-1"/></svg></div>
-      <div class="srv-title">Controle de Acesso</div>
-      <div class="srv-desc">Tecnologia e eficiência no gerenciamento de todas as entradas e saídas.</div>
-    </div>
-    <div class="srv-card rv">
-      <div class="srv-num">05</div>
-      <div class="srv-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
-      <div class="srv-title">Eventos</div>
-      <div class="srv-desc">Organização, controle de público e segurança para eventos de todos os portes.</div>
-    </div>
-    <div class="srv-card rv">
-      <div class="srv-num">06</div>
-      <div class="srv-icon"><svg viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13" rx="2"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
-      <div class="srv-title">Monitor Veicular</div>
-      <div class="srv-desc">Controle de entrada e saída, identificação e organização do fluxo de veículos.</div>
-    </div>
-  </div>
-</section>
-
-<!-- DIFFERENTIALS -->
-<section id="diff">
-  <div class="diff-content">
-    <div>
-      <div class="s-label rv">Por que nos escolher</div>
-      <h2 class="s-title rv">Nossos<br>Diferenciais</h2>
-      <ul class="diff-list">
-        <li class="rv"><div class="diff-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Profissionais treinados, capacitados e uniformizados</li>
-        <li class="rv"><div class="diff-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Atendimento personalizado e soluções sob medida</li>
-        <li class="rv"><div class="diff-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Tecnologia e processos que garantem mais segurança</li>
-        <li class="rv"><div class="diff-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Monitoramento 24h com pronta resposta</li>
-        <li class="rv"><div class="diff-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Atuação em condomínios, edifícios, obras e eventos</li>
-        <li class="rv"><div class="diff-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Compromisso com qualidade, confiança e tranquilidade</li>
-      </ul>
-      <div class="mission-box rv">
-        <h3>Nossa Missão</h3>
-        <p>Oferecer soluções completas em segurança, com tecnologia, profissionalismo e agilidade, garantindo proteção e tranquilidade para nossos clientes.</p>
-      </div>
-    </div>
-    <div class="brand-panel rv">
-      <div class="brand-wordmark">DMYI</div>
-      <div class="brand-sub">Security</div>
-      <div class="brand-date">— Desde 25/06/2026 —</div>
-      <div class="brand-features">
-        <div class="bf-row">
-          <div class="bf-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-          <span>Monitoramento 24H</span>
+    <!-- TOPO / HEADER -->
+    <header class="border-b border-slate-800 bg-slate-900/80 sticky top-0 z-50 backdrop-blur">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="text-xl font-black tracking-widest text-amber-500">
+                SECURITY <span class="text-white">DYMI</span>
+            </div>
+            <span class="text-xs font-semibold bg-red-500/10 text-red-400 px-3 py-1 rounded-full border border-red-500/20 flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span> Pronta Resposta
+            </span>
         </div>
-        <div class="bf-row">
-          <div class="bf-icon"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
-          <span>Controle de Acesso</span>
-        </div>
-        <div class="bf-row">
-          <div class="bf-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
-          <span>Pronta Resposta</span>
-        </div>
-        <div class="bf-row" style="justify-content:center;border-color:var(--blue-dim);background:rgba(29,78,216,.15)">
-          <span style="color:var(--cyan);font-size:.8rem;letter-spacing:.14em">+1,5K Clientes Protegidos</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+    </header>
 
-<!-- CONTACT -->
-<section id="contact">
-  <div>
-    <div class="ct-label rv">Fale Conosco</div>
-    <div class="ct-phone rv">(19) 98192-9593</div>
-    <div class="ct-rows">
-      <div class="ct-row rv">
-        <div class="ct-row-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
-        <div>
-          <div class="ct-row-label">E-mail</div>
-          <div class="ct-row-val">contato@securitydmyi.com.br</div>
+    <!-- HERO (A primeira dobra que o cliente vê) -->
+    <section class="py-16 md:py-24 max-w-6xl mx-auto px-4 text-center">
+        <span class="text-xs font-bold tracking-widest text-amber-500 uppercase bg-amber-500/10 px-4 py-1.5 rounded-full border border-amber-500/20">
+            Segurança Patrimonial e Eventos
+        </span>
+        <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mt-6 mb-6 leading-tight max-w-4xl mx-auto">
+            Proteção Inteligente e <span class="text-amber-500">Vigilância Rigorosa</span> para o seu Patrimônio.
+        </h1>
+        <p class="text-slate-400 text-base md:text-lg mb-10 max-w-2xl mx-auto">
+            Evite prejuízos, invasões e dores de cabeça. Fornecemos soluções sob medida em segurança privada para empresas, eventos, comércios e condomínios.
+        </p>
+        
+        <!-- BOTÃO WHATSAPP CENTRAL -->
+        <div class="flex justify-center">
+            <a href="https://wa.me/55COLOQUE_SEU_NUMERO_AQUI?text=Olá,%20vi%20o%20site%20e%20gostaria%20de%20um%20orçamento." 
+               target="_blank" 
+               class="inline-flex items-center gap-3 bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-8 py-4 rounded-xl shadow-xl shadow-emerald-900/30 transition-all transform hover:-translate-y-0.5 text-center">
+                <i class="fa-brands fa-whatsapp text-2xl"></i> SOLICITAR ORÇAMENTO NO WHATSAPP
+            </a>
         </div>
-      </div>
-      <div class="ct-row rv">
-        <div class="ct-row-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-        <div>
-          <div class="ct-row-label">Atendimento</div>
-          <div class="ct-row-val">Campinas e cidades vizinhas</div>
+    </section>
+
+    <!-- NOSSOS SERVIÇOS -->
+    <section class="py-16 bg-slate-900/50 border-t border-b border-slate-900">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-2xl md:text-3xl font-bold">Soluções em Segurança Operacional</h2>
+                <p class="text-slate-400 text-sm mt-2">Profissionais treinados para mitigar riscos de ponta a ponta.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-slate-900 border border-slate-800 p-6 rounded-xl hover:border-amber-500/30 transition">
+                    <div class="w-12 h-12 bg-amber-500/10 rounded-lg flex items-center justify-center text-amber-500 text-xl mb-4">
+                        <i class="fa-solid fa-building-shield"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Segurança Patrimonial</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Vigilância estática e preventiva para proteger comércios, indústrias, galpões e propriedades privadas contra ações criminosas.</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-slate-900 border border-slate-800 p-6 rounded-xl hover:border-amber-500/30 transition">
+                    <div class="w-12 h-12 bg-amber-500/10 rounded-lg flex items-center justify-center text-amber-500 text-xl mb-4">
+                        <i class="fa-solid fa-users-gear"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Segurança para Eventos</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Planejamento logístico e controle de público para eventos corporativos, shows e festas privadas, garantindo a ordem do início ao fim.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-slate-900 border border-slate-800 p-6 rounded-xl hover:border-amber-500/30 transition">
+                    <div class="w-12 h-12 bg-amber-500/10 rounded-lg flex items-center justify-center text-amber-500 text-xl mb-4">
+                        <i class="fa-solid fa-user-check"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Controle de Acesso</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Triagem rigorosa de fluxo de pessoas, prestadores de serviço e veículos em portarias e recepções estratégicas.</p>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-    <a href="https://wa.me/5519981929593" target="_blank" rel="noopener" class="ct-whats rv">
-      <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M11.999 2C6.477 2 2 6.477 2 12c0 1.89.525 3.659 1.438 5.168L2 22l4.985-1.41A9.959 9.959 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2z" fill-rule="evenodd" clip-rule="evenodd"/></svg>
-      Conversar pelo WhatsApp
+    </section>
+
+    <!-- SEÇÃO DE FECHAMENTO (Última chamada antes do clique) -->
+    <section class="py-16 max-w-4xl mx-auto px-4 text-center">
+        <h2 class="text-2xl md:text-3xl font-bold mb-4">Fale diretamente com quem entende de proteção</h2>
+        <p class="text-slate-400 text-sm md:text-base mb-8">Não deixe a vulnerabilidade da sua propriedade virar um prejuízo real. Clique abaixo e monte seu plano de segurança hoje mesmo.</p>
+        <a href="https://wa.me/55COLOQUE_SEU_NUMERO_AQUI" target="_blank" class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-6 py-3.5 rounded-lg transition">
+            <i class="fa-brands fa-whatsapp text-xl"></i> FALE COM UM ESPECIALISTA
+        </a>
+    </section>
+
+    <!-- RODAPÉ -->
+    <footer class="border-t border-slate-900 py-8 text-center text-xs text-slate-600">
+        <p>&copy; 2026 Security Dymi. Todos os direitos reservados. Foco total em proteção patrimonial.</p>
+    </footer>
+
+    <!-- BOTÃO FLUTUANTE DO WHATSAPP -->
+    <a href="https://wa.me/55COLOQUE_SEU_NUMERO_AQUI" target="_blank" class="fixed bottom-6 right-6 bg-emerald-500 hover:bg-emerald-400 text-white p-4 rounded-full shadow-2xl transition z-50 flex items-center justify-center text-2xl animate-bounce hover:animate-none" title="Chamar no WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
     </a>
-  </div>
-  <div class="qr-side rv">
-    <div class="qr-title">Escaneie e fale conosco</div>
-    <div class="qr-box">
-      <div class="qp"></div><div class="qp"></div><div class="qp"></div><div class="qp"></div><div class="qp"></div><div class="qp"></div><div class="qp"></div>
-      <div class="qp"></div><div class="qe"></div><div class="qe"></div><div class="qe"></div><div class="qe"></div><div class="qe"></div><div class="qp"></div>
-      <div class="qp"></div><div class="qe"></div><div class="qp"></div><div class="qp"></div><div class="qp"></div><div class="qe"></div><div class="qp"></div>
-      <div class="qp"></div><div class="qe"></div><div class="qp"></div><div class="qe"></div><div class="qp"></div><div class="qe"></div><div class="qp"></div>
-      <div class="qp"></div><div class="qe"></div><div class="qp"></div><div class="qp"></div><div class="qp"></div><div class="qe"></div><div class="qp"></div>
-      <div class="qp"></div><div class="qe"></div><div class="qe"></div><div class="qe"></div><div class="qe"></div><div class="qe"></div><div class="qp"></div>
-      <div class="qp"></div><div class="qp"></div><div class="qp"></div><div class="qp"></div><div class="qp"></div><div class="qp"></div><div class="qp"></div>
-    </div>
-    <div class="qr-note">Aponte a câmera do celular para o QR Code e inicie uma conversa pelo <strong>WhatsApp</strong>.</div>
-  </div>
-</section>
 
-<!-- FOOTER -->
-<footer>
-  <div class="ft-logo">DMYI <b>Security</b></div>
-  <p class="ft-tag">Mais que segurança — <strong>tranquilidade para você e seu patrimônio.</strong></p>
-  <div class="ft-copy">© 2026 DMYI Security</div>
-</footer>
-
-<script>
-const obs=new IntersectionObserver(e=>{
-  e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');obs.unobserve(x.target)}})
-},{threshold:.1});
-document.querySelectorAll('.rv').forEach(el=>obs.observe(el));
-</script>
 </body>
 </html>
