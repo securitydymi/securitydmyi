@@ -4,106 +4,122 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Security Dymi | Segurança Privada em Campinas e Região</title>
-    <!-- Tailwind CSS para design tático e carregamento ultra rápido -->
+    <!-- Tailwind CSS para design avançado -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <!-- Ícones de alta qualidade -->
+    <!-- Ícones e Animações -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Efeito de pulso suave no botão para atrair o olhar sem ser brega */
+        @keyframes pulse-subtle {
+            0%, 100% { transform: scale(1); box-shadow: 0 10px 25px -5px rgba(16, 185, 129, 0.4); }
+            50% { transform: scale(1.03); box-shadow: 0 20px 30px -5px rgba(16, 185, 129, 0.6); }
+        }
+        .btn-premium { animation: pulse-subtle 3s infinite ease-in-out; }
+    </style>
 </head>
-<body class="bg-slate-950 text-slate-100 font-sans antialiased">
+<body class="bg-radial from-slate-900 via-slate-950 to-black text-slate-100 font-sans antialiased min-h-screen selection:bg-amber-500 selection:text-black">
 
-    <!-- TOPO DO SITE -->
-    <header class="border-b border-slate-800 bg-slate-900/80 sticky top-0 z-50 backdrop-blur">
-        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-            <div class="text-xl font-black tracking-widest text-amber-500">
-                SECURITY <span class="text-white">DYMI</span>
+    <!-- TOPO PREMIUM -->
+    <header class="border-b border-slate-800/60 bg-slate-950/70 sticky top-0 z-50 backdrop-blur-xl">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-xl font-black tracking-widest text-amber-500 flex items-center gap-2">
+                <i class="fa-solid fa-shield-halved text-amber-500 animate-pulse"></i>
+                <span>SECURITY <span class="text-white font-light">DYMI</span></span>
             </div>
-            <span class="text-xs font-semibold bg-red-500/10 text-red-400 px-3 py-1 rounded-full border border-red-500/20 flex items-center gap-2">
-                <span class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span> Pronta Resposta
+            <span class="text-xs font-semibold bg-emerald-500/10 text-emerald-400 px-3 py-1 rounded-full border border-emerald-500/20 flex items-center gap-2 shadow-sm">
+                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span> Operação Ativa 24h
             </span>
         </div>
     </header>
 
-    <!-- DOBRA PRINCIPAL (Regra dos 3 segundos) -->
-    <section class="py-16 md:py-24 max-w-6xl mx-auto px-4 text-center">
-        <span class="text-xs font-bold tracking-widest text-amber-500 uppercase bg-amber-500/10 px-4 py-1.5 rounded-full border border-amber-500/20">
-            Segurança Patrimonial e Eventos
-        </span>
-        <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mt-6 mb-6 leading-tight max-w-4xl mx-auto">
-            Proteção Inteligente e <span class="text-amber-500">Vigilância Rigorosa</span> para o seu Patrimônio.
-        </h1>
-        <!-- Região inserida aqui para gerar autoridade local -->
-        <p class="text-slate-300 text-base md:text-xl font-medium mb-2 max-w-2xl mx-auto">
-            Atuando com excelência em <span class="text-amber-500 font-semibold">Campinas e Região</span>.
-        </p>
-        <p class="text-slate-400 text-sm md:text-base mb-10 max-w-2xl mx-auto">
-            Evite prejuízos, invasões e dores de cabeça. Fornecemos soluções sob medida em segurança privada para empresas, eventos, comércios e condomínios.
-        </p>
-        
-        <!-- LINK DO WHATSAPP COM MENSAGEM AUTOMÁTICA -->
-        <div class="flex justify-center">
-            <a href="https://wa.me/5519994539764?text=Olá!%20Acessei%20o%20site%20da%20Security%20Dymi%20e%20gostaria%20de%20solicitar%20um%20orçamento%20para%20Campinas%20e%20região." 
-               target="_blank" 
-               class="inline-flex items-center gap-3 bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-8 py-4 rounded-xl shadow-xl shadow-emerald-900/30 transition-all text-center">
-                <i class="fa-brands fa-whatsapp text-2xl"></i> SOLICITAR ORÇAMENTO NO WHATSAPP
-            </a>
+    <!-- HERO SECTION PREMIUM -->
+    <section class="relative py-20 md:py-32 max-w-6xl mx-auto px-6 text-center overflow-hidden">
+        <!-- Detalhe decorativo de fundo (Luz tática) -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-amber-500/5 blur-[120px] rounded-full pointer-events-none"></div>
+
+        <div class="relative z-10">
+            <span class="inline-flex items-center gap-2 text-xs font-bold tracking-widest text-amber-500 uppercase bg-amber-500/10 px-4 py-2 rounded-full border border-amber-500/20 mb-8 backdrop-blur-sm">
+                <i class="fa-solid fa-lock text-[10px]"></i> Alta Performance Operacional
+            </span>
+            
+            <h1 class="text-4xl md:text-7xl font-black tracking-tight mb-6 leading-none max-w-5xl mx-auto bg-gradient-to-b from-white via-slate-200 to-slate-500 bg-clip-text text-transparent">
+                Proteção Inteligente e <br class="hidden md:block"><span class="bg-gradient-to-r from-amber-400 to-amber-600 bg-clip-text text-transparent">Vigilância Rigorosa</span>.
+            </h1>
+
+            <p class="text-slate-300 text-lg md:text-xl font-medium mb-3 max-w-2xl mx-auto">
+                Atuando de forma estratégica em <span class="text-amber-500 border-b border-amber-500/30 pb-0.5">Campinas e Região</span>.
+            </p>
+            
+            <p class="text-slate-400 text-sm md:text-base mb-12 max-w-xl mx-auto leading-relaxed">
+                Mitigamos riscos, invasões e quebras de protocolo antes que virem prejuízo. Segurança sob medida para empresas, condomínios e eventos de alto padrão.
+            </p>
+            
+            <!-- BOTÃO PREMIUM WHATSAPP -->
+            <div class="flex justify-center">
+                <a href="https://wa.me/5519994539764?text=Olá!%20Acessei%20o%20site%20da%20Security%20Dymi%20e%20gostaria%20de%20solicitar%20um%20orçamento%20para%20Campinas%20e%20região." 
+                   target="_blank" 
+                   class="btn-premium inline-flex items-center gap-3 bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold text-sm md:text-base tracking-wide px-8 py-4.5 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-emerald-500/20">
+                    <i class="fa-brands fa-whatsapp text-2xl"></i> FALAR COM O PLANTÃO DE VENDAS
+                </a>
+            </div>
         </div>
     </section>
 
-    <!-- SEÇÃO DE SERVIÇOS -->
-    <section class="py-16 bg-slate-900/50 border-t border-b border-slate-900">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-2xl md:text-3xl font-bold">Soluções em Segurança Operacional</h2>
-                <p class="text-slate-400 text-sm mt-2">Profissionais preparados para mitigar riscos de ponta a ponta.</p>
+    <!-- SEÇÃO DE SERVIÇOS EM GRID AVANÇADO -->
+    <section class="py-20 bg-slate-950/60 border-t border-b border-slate-900 backdrop-blur-md relative">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-2xl md:text-4xl font-bold tracking-tight">Soluções em Segurança Operacional</h2>
+                <div class="w-12 h-1 bg-amber-500 mx-auto mt-4 rounded-full"></div>
             </div>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Card 1 -->
-                <div class="bg-slate-900 border border-slate-800 p-6 rounded-xl">
-                    <div class="w-12 h-12 bg-amber-500/10 rounded-lg flex items-center justify-center text-amber-500 text-xl mb-4">
+                <div class="group bg-slate-900/40 border border-slate-800/80 p-8 rounded-2xl hover:border-amber-500/40 hover:bg-slate-900/60 transition-all duration-300 shadow-xl">
+                    <div class="w-12 h-12 bg-amber-500/10 rounded-xl flex items-center justify-center text-amber-500 text-xl mb-6 border border-amber-500/20 group-hover:bg-amber-500 group-hover:text-black transition-all duration-300">
                         <i class="fa-solid fa-building-shield"></i>
                     </div>
-                    <h3 class="text-lg font-bold mb-2">Segurança Patrimonial</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">Vigilância estática e preventiva para proteger comércios, indústrias, galpões e propriedades privadas contra ações criminosas em toda a região de Campinas.</p>
+                    <h3 class="text-xl font-bold mb-3 group-hover:text-amber-400 transition-colors">Segurança Patrimonial</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Vigilância estática e rondas preventivas desenhadas para proteger comércios, indústrias e galpões contra ações criminosas.</p>
                 </div>
 
                 <!-- Card 2 -->
-                <div class="bg-slate-900 border border-slate-800 p-6 rounded-xl">
-                    <div class="w-12 h-12 bg-amber-500/10 rounded-lg flex items-center justify-center text-amber-500 text-xl mb-4">
+                <div class="group bg-slate-900/40 border border-slate-800/80 p-8 rounded-2xl hover:border-amber-500/40 hover:bg-slate-900/60 transition-all duration-300 shadow-xl">
+                    <div class="w-12 h-12 bg-amber-500/10 rounded-xl flex items-center justify-center text-amber-500 text-xl mb-6 border border-amber-500/20 group-hover:bg-amber-500 group-hover:text-black transition-all duration-300">
                         <i class="fa-solid fa-users-gear"></i>
                     </div>
-                    <h3 class="text-lg font-bold mb-2">Segurança para Eventos</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">Planejamento logístico e controle de público para eventos corporativos, shows e festas privadas, garantindo a ordem do início ao fim.</p>
+                    <h3 class="text-xl font-bold mb-3 group-hover:text-amber-400 transition-colors">Segurança para Eventos</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Planejamento tático, contenção e controle de público para eventos corporativos e sociais, mantendo a integridade total do local.</p>
                 </div>
 
                 <!-- Card 3 -->
-                <div class="bg-slate-900 border border-slate-800 p-6 rounded-xl">
-                    <div class="w-12 h-12 bg-amber-500/10 rounded-lg flex items-center justify-center text-amber-500 text-xl mb-4">
+                <div class="group bg-slate-900/40 border border-slate-800/80 p-8 rounded-2xl hover:border-amber-500/40 hover:bg-slate-900/60 transition-all duration-300 shadow-xl">
+                    <div class="w-12 h-12 bg-amber-500/10 rounded-xl flex items-center justify-center text-amber-500 text-xl mb-6 border border-amber-500/20 group-hover:bg-amber-500 group-hover:text-black transition-all duration-300">
                         <i class="fa-solid fa-user-check"></i>
                     </div>
-                    <h3 class="text-lg font-bold mb-2">Controle de Acesso</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">Triagem rigorosa de fluxo de pessoas, prestadores de serviço e veículos em portarias e recepções estratégicas.</p>
+                    <h3 class="text-xl font-bold mb-3 group-hover:text-amber-400 transition-colors">Controle de Acesso</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Triagem técnica e rigorosa de fluxo de pedestres e veículos para portarias empresariais e condomínios residenciais.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SEÇÃO FINAL -->
-    <section class="py-16 max-w-4xl mx-auto px-4 text-center">
-        <h2 class="text-2xl md:text-3xl font-bold mb-4">Fale diretamente com quem entende de proteção</h2>
-        <p class="text-slate-400 text-sm md:text-base mb-8">Não deixe a vulnerabilidade da sua propriedade virar um prejuízo real. Clique abaixo e monte seu plano de segurança hoje mesmo.</p>
-        <a href="https://wa.me/5519994539764?text=Olá!%20Acessei%20o%20site%20da%20Security%20Dymi%20e%20gostaria%20de%20solicitar%20um%20orçamento%20para%20Campinas%20e%20região." target="_blank" class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-6 py-3.5 rounded-lg transition">
-            <i class="fa-brands fa-whatsapp text-xl"></i> FALE COM UM ESPECIALISTA
+    <!-- SEÇÃO FINAL INTIMIDADORA (Foco comercial) -->
+    <section class="py-24 max-w-4xl mx-auto px-6 text-center relative">
+        <h2 class="text-3xl md:text-5xl font-black mb-4 tracking-tight">Não espere a vulnerabilidade <br><span class="text-red-500">virar um prejuízo real</span>.</h2>
+        <p class="text-slate-400 text-base mb-10 max-w-xl mx-auto">Clique abaixo para iniciar um diagnóstico gratuito de vulnerabilidade com o nosso especialista.</p>
+        <a href="https://wa.me/5519994539764?text=Olá!%20Acessei%20o%20site%20da%20Security%20Dymi%20e%20gostaria%20de%20solicitar%20um%20orçamento%20para%20Campinas%20e%20região." target="_blank" class="inline-flex items-center gap-3 bg-slate-900 hover:bg-slate-800 text-amber-500 font-bold border border-slate-700 hover:border-amber-500/50 px-8 py-4 rounded-xl transition-all duration-300 shadow-2xl">
+            <i class="fa-brands fa-whatsapp text-xl text-emerald-500"></i> ENTRAR EM CONTATO AGORA
         </a>
     </section>
 
-    <!-- RODAPÉ -->
-    <footer class="border-t border-slate-900 py-8 text-center text-xs text-slate-600">
-        <p>&copy; 2026 Security Dymi. Todos os direitos reservados. Atuação em Campinas e Região.</p>
+    <!-- RODAPÉ CLEAN -->
+    <footer class="border-t border-slate-900/80 bg-black/40 py-8 text-center text-xs text-slate-500 backdrop-blur-sm">
+        <p>&copy; 2026 Security Dymi. Todos os direitos reservados. Atuação estratégica em Campinas e Região.</p>
     </footer>
 
-    <!-- BOTÃO FLUTUANTE -->
-    <a href="https://wa.me/5519994539764?text=Olá!%20Acessei%20o%20site%20da%20Security%20Dymi%20e%20gostaria%20de%20solicitar%20um%20orçamento%20para%20Campinas%20e%20região." target="_blank" class="fixed bottom-6 right-6 bg-emerald-500 hover:bg-emerald-400 text-white p-4 rounded-full shadow-2xl transition z-50 flex items-center justify-center text-2xl animate-bounce hover:animate-none">
+    <!-- BOTÃO FLUTUANTE PREMIUM -->
+    <a href="https://wa.me/5519994539764?text=Olá!%20Acessei%20o%20site%20da%20Security%20Dymi%20e%20gostaria%20de%20solicitar%20um%20orçamento%20para%20Campinas%20e%20região." target="_blank" class="fixed bottom-6 right-6 bg-emerald-500 hover:bg-emerald-400 text-white p-4 rounded-full shadow-2xl transition-all duration-300 z-50 flex items-center justify-center text-2xl hover:scale-110 shadow-emerald-500/20" title="Chamar no WhatsApp">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
