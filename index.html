@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Security Dymi | Segurança Privada em Campinas e Região</title>
     <!-- Favicon: Usa a sua logo como ícone da aba do navegador -->
-    <link class="rounded-full" rel="icon" type="image/png" href="logo.png">
+    <link rel="icon" type="image/png" href="logo.png">
     <!-- Tailwind CSS para design avançado -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <!-- Ícones e Animações -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         @keyframes pulse-subtle {
-            0%, 100 { transform: scale(1); box-shadow: 0 10px 25px -5px rgba(16, 185, 129, 0.4); }
+            0%, 100% { transform: scale(1); box-shadow: 0 10px 25px -5px rgba(16, 185, 129, 0.4); }
             50% { transform: scale(1.03); box-shadow: 0 20px 30px -5px rgba(16, 185, 129, 0.6); }
         }
         .btn-premium { animation: pulse-subtle 3s infinite ease-in-out; }
@@ -27,22 +27,41 @@
 </head>
 <body class="bg-slate-950 text-slate-100 font-sans antialiased min-h-screen selection:bg-amber-500 selection:text-black scroll-smooth">
 
-    <!-- TOPO PREMIUM COM A LOGO AMPLIADA -->
-    <header class="border-b border-slate-800/60 bg-slate-950/80 sticky top-0 z-50 backdrop-blur-xl">
-        <div class="max-w-6xl mx-auto px-6 py-2 flex justify-between items-center">
-            <div class="flex items-center gap-4">
-                <img src="logo.png" alt="Logo Security Dymi" class="h-20 md:h-24 w-auto object-contain drop-shadow-[0_0_10px_rgba(245,158,11,0.2)]">
-                <span class="text-xl font-black tracking-widest text-white hidden md:inline">SECURITY <span class="text-amber-500 font-light">DYMI</span></span>
+    <!-- TOPO PREMIUM PREENCHIDO E ROBUSTO -->
+    <header class="border-b border-slate-800/80 bg-slate-950/90 sticky top-0 z-50 backdrop-blur-xl shadow-lg">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex flex-col sm:flex-row justify-between items-center gap-3">
+            
+            <!-- Logo e Nome da Empresa -->
+            <div class="flex items-center gap-3">
+                <img src="logo.png" alt="Logo Security Dymi" class="h-14 w-auto object-contain drop-shadow-[0_0_8px_rgba(245,158,11,0.2)]">
+                <div class="flex flex-col">
+                    <span class="text-sm font-black tracking-widest text-white leading-none">SECURITY <span class="text-amber-500 font-medium">DYMI</span></span>
+                    <span class="text-[10px] text-slate-500 uppercase tracking-wider font-semibold mt-0.5">Grupo Operacional</span>
+                </div>
             </div>
-            <span class="text-xs font-semibold bg-emerald-500/10 text-emerald-400 px-3 py-1 rounded-full border border-emerald-500/20 flex items-center gap-2 shadow-sm">
-                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span> Operação Ativa 24h
-            </span>
+
+            <!-- Links Rápidos de Navegação Tática -->
+            <nav class="flex items-center gap-5 text-xs font-bold tracking-wide text-slate-400">
+                <a href="#" class="hover:text-amber-500 transition-colors flex items-center gap-1.5"><i class="fa-solid fa-house text-[10px]"></i> Início</a>
+                <a href="#servicos" class="hover:text-amber-400 transition-colors flex items-center gap-1.5"><i class="fa-solid fa-shield-halved text-[10px]"></i> Serviços</a>
+                <a href="#contato" class="hover:text-amber-400 transition-colors flex items-center gap-1.5"><i class="fa-solid fa-headset text-[10px]"></i> Contato</a>
+            </nav>
+
+            <!-- Status Operacional e Telefone Rápido -->
+            <div class="flex items-center gap-3">
+                <a href="tel:+5519994539764" class="text-xs font-bold text-slate-300 hover:text-amber-400 transition-colors hidden md:flex items-center gap-1.5 bg-slate-900/60 px-3 py-1.5 rounded-lg border border-slate-800">
+                    <i class="fa-solid fa-phone text-amber-500 text-[10px]"></i> (19) 99453-9764
+                </a>
+                <span class="text-[11px] font-bold bg-emerald-500/10 text-emerald-400 px-3 py-1.5 rounded-full border border-emerald-500/20 flex items-center gap-2 shadow-sm">
+                    <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span> QAP 24h
+                </span>
+            </div>
+
         </div>
     </header>
 
-    <!-- HERO SECTION COM CORREÇÃO DE TEXTO E EFEITOS -->
+    <!-- HERO SECTION COM IMAGEM LOCAL PROTEGIDA -->
     <section class="relative bg-tactical py-24 md:py-36 max-w-7xl mx-auto px-6 text-center overflow-hidden rounded-b-3xl">
-        <!-- Máscara de gradiente ajustada para 40% de opacidade inicial para destacar a foto -->
         <div class="absolute inset-0 bg-gradient-to-b from-slate-950/40 via-slate-950/85 to-slate-950 pointer-events-none"></div>
         <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-amber-500/5 blur-[120px] rounded-full pointer-events-none"></div>
 
@@ -59,7 +78,6 @@
                 Atuando de forma estratégica em <span class="text-amber-500 border-b border-amber-500/30 pb-0.5">Campinas e Região</span>.
             </p>
             
-            <!-- CORRIGIDO: "mitigamos risks" para "Mitigamos riscos" -->
             <p class="text-slate-400 text-sm md:text-base mb-12 max-w-xl mx-auto leading-relaxed">
                 Mitigamos riscos, invasões e quebras de protocolo antes que virem prejuízo. Segurança sob medida para empresas, condomínios e eventos de alto padrão.
             </p>
@@ -74,8 +92,8 @@
         </div>
     </section>
 
-    <!-- SEÇÃO DE SERVIÇOS EM GRID AVANÇADO COM ANIMAÇÕES INTERATIVAS -->
-    <section class="py-20 bg-slate-950/60 border-t border-b border-slate-900 backdrop-blur-md relative">
+    <!-- SEÇÃO DE SERVIÇOS EM GRID AVANÇADO -->
+    <section id="servicos" class="py-20 bg-slate-950/60 border-t border-b border-slate-900 backdrop-blur-md relative">
         <div class="max-w-6xl mx-auto px-6">
             <div class="text-center mb-16">
                 <h2 class="text-2xl md:text-4xl font-bold tracking-tight">Soluções em Segurança Operacional</h2>
@@ -118,12 +136,12 @@
         <h2 class="text-3xl md:text-5xl font-black mb-4 tracking-tight">Não espere a vulnerabilidade <br><span class="text-red-500 animate-pulse">virar um prejuízo real</span>.</h2>
         <p class="text-slate-400 text-base mb-10 max-w-xl mx-auto">Clique abaixo para iniciar um diagnóstico gratuito de vulnerabilidade com a nossa equipe.</p>
         <a href="https://wa.me/5519994539764?text=Olá!%20Acessei%20o%20site%20da%20Security%20Dymi.%20Gostaria%20de%20agendar%20uma%20análise%20de%20risco%20e%20solicitar%20um%20orçamento%20para%20Campinas%20e%20região." target="_blank" class="inline-flex items-center gap-3 bg-slate-900 hover:bg-amber-500 hover:text-black text-amber-500 font-bold border border-slate-700 hover:border-amber-500 px-8 py-4 rounded-xl transition-all duration-300 shadow-2xl transform hover:scale-105">
-            <i class="fa-brands fa-whatsapp text-xl text-emerald-500 group-hover:text-black"></i> SOLICITAR ANÁLISE DE RISCO
+            <i class="fa-brands fa-whatsapp text-xl text-emerald-500"></i> SOLICITAR ANÁLISE DE RISCO
         </a>
     </section>
 
     <!-- SEÇÃO: CANAIS DE ATENDIMENTO DIRETOS -->
-    <section class="py-12 bg-slate-950 border-t border-slate-900">
+    <section id="contato" class="py-12 bg-slate-950 border-t border-slate-900">
         <div class="max-w-4xl mx-auto px-6 grid md:grid-cols-2 gap-8 text-center md:text-left">
             <!-- Bloco de E-mail -->
             <div class="bg-slate-900/30 border border-slate-800/50 p-6 rounded-xl flex flex-col md:flex-row items-center gap-4 hover:border-slate-700 transition-all">
