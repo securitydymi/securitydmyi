@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DMYI Security | Segurança Privada em Campinas e Região</title>
-    <!-- Favicon: Usa a sua logo como ícone da aba do navegador -->
-    <link class="flex" rel="icon" type="image/png" href="logo.png">
-    <!-- Tailwind CSS para design avançado -->
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="logo.png">
+    <!-- Tailwind CSS (v3 Estável via CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <!-- Ícones e Animações -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -126,17 +126,16 @@
                 Atuando de forma estratégica em <span class="text-blue-500 border-b border-blue-500/30 pb-0.5">Campinas e Região</span>.
             </p>
             
-            <!-- CORREÇÃO AQUI: flex-col no celular evita que o texto quebre ou fique cortado -->
             <div class="flex flex-col md:flex-row justify-center items-center gap-3 md:gap-6 text-[11px] font-bold uppercase tracking-wider text-slate-400 my-6 bg-slate-900/30 px-6 py-3 rounded-xl border border-slate-900 w-fit mx-auto">
                 <span class="flex items-center gap-1.5"><i class="fa-solid fa-user-shield text-blue-500"></i> Profissionalismo</span>
-                <span class="hidden md:inline text-slate-700">|</span> <!-- Divisor visual apenas no PC -->
+                <span class="hidden md:inline text-slate-700">|</span> 
                 <span class="flex items-center gap-1.5"><i class="fa-solid fa-lock text-blue-500"></i> Confiança</span>
-                <span class="hidden md:inline text-slate-700">|</span> <!-- Divisor visual apenas no PC -->
+                <span class="hidden md:inline text-slate-700">|</span> 
                 <span class="flex items-center gap-1.5"><i class="fa-solid fa-handshake text-blue-500"></i> Compromisso</span>
             </div>
             
             <p class="text-slate-400 text-xs md:text-base mb-12 max-w-2xl mx-auto leading-relaxed px-2">
-                A DMYI Security oferece soluções completas em portaria e controle de acesso para condomínios, empresas, obras e eventos. Profissionalismo, tecnologia e compromisso total com a sua segurança.
+                A DMYI Security oferece soluções completas in portaria e controle de acesso para condomínios, empresas, obras e eventos. Profissionalismo, tecnologia e compromisso total com a sua segurança.
             </p>
             
             <div class="flex justify-center">
@@ -158,10 +157,11 @@
                 <div class="w-12 h-1 bg-blue-600 mx-auto mt-4 rounded-full"></div>
             </div>
 
-            <div class="flex md:grid md:grid-cols-2 lg:grid-cols-3 gap-6 overflow-x-auto md:overflow-x-visible hide-scrollbar snap-x snap-mandatory pt-6 pb-8 px-2 md:px-0 -mx-6 md:mx-0">
+            <!-- Ajustado padding lateral no mobile para perfeito encaixe do snap effect -->
+            <div class="flex md:grid md:grid-cols-2 lg:grid-cols-3 gap-6 overflow-x-auto md:overflow-x-visible hide-scrollbar snap-x snap-mandatory pt-6 pb-8 px-6 md:px-0 -mx-6 md:mx-0">
                 
                 <!-- Card 1: Portaria Profissional -->
-                <div onclick="toggleCard(this)" class="snap-center shrink-0 w-[85%] sm:w-[60%] md:w-auto bg-slate-900/40 border border-slate-800/80 p-6 md:p-8 rounded-2xl hover:border-blue-500/40 hover:bg-slate-900/60 transition-all duration-300 shadow-xl cursor-pointer select-none relative ml-4 md:ml-0">
+                <div onclick="toggleCard(this)" onkeydown="if(event.key === 'Enter') toggleCard(this);" role="button" tabindex="0" class="snap-start shrink-0 w-[85%] sm:w-[60%] md:w-auto bg-slate-900/40 border border-slate-800/80 p-6 md:p-8 rounded-2xl hover:border-blue-500/40 hover:bg-slate-900/60 transition-all duration-300 shadow-xl cursor-pointer select-none relative">
                     <div class="flex justify-between items-start">
                         <div class="w-11 h-11 bg-blue-500/10 rounded-xl flex items-center justify-center text-blue-400 text-lg mb-6 border border-blue-500/20">
                             <i class="fa-solid fa-user-tie"></i>
@@ -179,7 +179,7 @@
                 </div>
 
                 <!-- Card 2: Controle de Acesso -->
-                <div onclick="toggleCard(this)" class="snap-center shrink-0 w-[85%] sm:w-[60%] md:w-auto bg-slate-900/40 border border-slate-800/80 p-6 md:p-8 rounded-2xl hover:border-blue-500/40 hover:bg-slate-900/60 transition-all duration-300 shadow-xl cursor-pointer select-none relative">
+                <div onclick="toggleCard(this)" onkeydown="if(event.key === 'Enter') toggleCard(this);" role="button" tabindex="0" class="snap-start shrink-0 w-[85%] sm:w-[60%] md:w-auto bg-slate-900/40 border border-slate-800/80 p-6 md:p-8 rounded-2xl hover:border-blue-500/40 hover:bg-slate-900/60 transition-all duration-300 shadow-xl cursor-pointer select-none relative">
                     <div class="flex justify-between items-start">
                         <div class="w-11 h-11 bg-blue-500/10 rounded-xl flex items-center justify-center text-blue-400 text-lg mb-6 border border-blue-500/20">
                             <i class="fa-solid fa-id-card-clip"></i>
@@ -197,7 +197,7 @@
                 </div>
 
                 <!-- Card 3: Controle para Obras -->
-                <div onclick="toggleCard(this)" class="snap-center shrink-0 w-[85%] sm:w-[60%] md:w-auto bg-slate-900/40 border border-slate-800/80 p-6 md:p-8 rounded-2xl hover:border-blue-500/40 hover:bg-slate-900/60 transition-all duration-300 shadow-xl cursor-pointer select-none relative">
+                <div onclick="toggleCard(this)" onkeydown="if(event.key === 'Enter') toggleCard(this);" role="button" tabindex="0" class="snap-start shrink-0 w-[85%] sm:w-[60%] md:w-auto bg-slate-900/40 border border-slate-800/80 p-6 md:p-8 rounded-2xl hover:border-blue-500/40 hover:bg-slate-900/60 transition-all duration-300 shadow-xl cursor-pointer select-none relative">
                     <div class="flex justify-between items-start">
                         <div class="w-11 h-11 bg-blue-500/10 rounded-xl flex items-center justify-center text-blue-400 text-lg mb-6 border border-blue-500/20">
                             <i class="fa-solid fa-helmet-safety"></i>
@@ -215,7 +215,7 @@
                 </div>
 
                 <!-- Card 4: Portaria para Condomínios -->
-                <div onclick="toggleCard(this)" class="snap-center shrink-0 w-[85%] sm:w-[60%] md:w-auto bg-slate-900/40 border border-slate-800/80 p-6 md:p-8 rounded-2xl hover:border-blue-500/40 hover:bg-slate-900/60 transition-all duration-300 shadow-xl cursor-pointer select-none relative">
+                <div onclick="toggleCard(this)" onkeydown="if(event.key === 'Enter') toggleCard(this);" role="button" tabindex="0" class="snap-start shrink-0 w-[85%] sm:w-[60%] md:w-auto bg-slate-900/40 border border-slate-800/80 p-6 md:p-8 rounded-2xl hover:border-blue-500/40 hover:bg-slate-900/60 transition-all duration-300 shadow-xl cursor-pointer select-none relative">
                     <div class="flex justify-between items-start">
                         <div class="w-11 h-11 bg-blue-500/10 rounded-xl flex items-center justify-center text-blue-400 text-lg mb-6 border border-blue-500/20">
                             <i class="fa-solid fa-building"></i>
@@ -233,7 +233,7 @@
                 </div>
 
                 <!-- Card 5: Segurança para Eventos -->
-                <div onclick="toggleCard(this)" class="snap-center shrink-0 w-[85%] sm:w-[60%] md:w-auto bg-slate-900/40 border border-slate-800/80 p-6 md:p-8 rounded-2xl hover:border-blue-500/40 hover:bg-slate-900/60 transition-all duration-300 shadow-xl cursor-pointer select-none relative mr-4 md:mr-0">
+                <div onclick="toggleCard(this)" onkeydown="if(event.key === 'Enter') toggleCard(this);" role="button" tabindex="0" class="snap-start shrink-0 w-[85%] sm:w-[60%] md:w-auto bg-slate-900/40 border border-slate-800/80 p-6 md:p-8 rounded-2xl hover:border-blue-500/40 hover:bg-slate-900/60 transition-all duration-300 shadow-xl cursor-pointer select-none relative">
                     <div class="flex justify-between items-start">
                         <div class="w-11 h-11 bg-blue-500/10 rounded-xl flex items-center justify-center text-blue-400 text-lg mb-6 border border-blue-500/20">
                             <i class="fa-solid fa-calendar-check"></i>
@@ -254,7 +254,7 @@
         </div>
     </section>
 
-    <!-- SEÇÃO: RECURSOS E DIFERENCIAIS INTERATIVOS COM SETAS -->
+    <!-- SEÇÃO: RECURSOS E DIFERENCIAIS INTERATIVOS -->
     <section id="recursos" class="py-20 bg-slate-950 max-w-6xl mx-auto px-6">
         <div class="grid md:grid-cols-2 gap-12 items-center">
             
@@ -265,7 +265,7 @@
                 
                 <div class="space-y-3">
                     <!-- Diferencial 1 -->
-                    <div onclick="toggleCard(this)" class="group bg-slate-900/50 p-4 rounded-xl border border-slate-800/60 cursor-pointer transition-all hover:border-blue-500/40 select-none">
+                    <div onclick="toggleCard(this)" onkeydown="if(event.key === 'Enter') toggleCard(this);" role="button" tabindex="0" class="group bg-slate-900/50 p-4 rounded-xl border border-slate-800/60 cursor-pointer transition-all hover:border-blue-500/40 select-none">
                         <div class="flex justify-between items-center">
                             <span class="flex items-center gap-3 text-xs md:text-sm font-semibold text-slate-200 group-hover:text-blue-400 transition-colors">
                                 <i class="fa-solid fa-user-shield text-blue-500"></i> Profissionais treinados e uniformizados
@@ -278,7 +278,7 @@
                     </div>
 
                     <!-- Diferencial 2 -->
-                    <div onclick="toggleCard(this)" class="group bg-slate-900/50 p-4 rounded-xl border border-slate-800/60 cursor-pointer transition-all hover:border-blue-500/40 select-none">
+                    <div onclick="toggleCard(this)" onkeydown="if(event.key === 'Enter') toggleCard(this);" role="button" tabindex="0" class="group bg-slate-900/50 p-4 rounded-xl border border-slate-800/60 cursor-pointer transition-all hover:border-blue-500/40 select-none">
                         <div class="flex justify-between items-center">
                             <span class="flex items-center gap-3 text-xs md:text-sm font-semibold text-slate-200 group-hover:text-blue-400 transition-colors">
                                 <i class="fa-solid fa-headset text-blue-500"></i> Atendimento personalizado
@@ -291,7 +291,7 @@
                     </div>
 
                     <!-- Diferencial 3 -->
-                    <div onclick="toggleCard(this)" class="group bg-slate-900/50 p-4 rounded-xl border border-slate-800/60 cursor-pointer transition-all hover:border-blue-500/40 select-none">
+                    <div onclick="toggleCard(this)" onkeydown="if(event.key === 'Enter') toggleCard(this);" role="button" tabindex="0" class="group bg-slate-900/50 p-4 rounded-xl border border-slate-800/60 cursor-pointer transition-all hover:border-blue-500/40 select-none">
                         <div class="flex justify-between items-center">
                             <span class="flex items-center gap-3 text-xs md:text-sm font-semibold text-slate-200 group-hover:text-blue-400 transition-colors">
                                 <i class="fa-solid fa-eye text-blue-500"></i> Supervisão operacional e relatórios
