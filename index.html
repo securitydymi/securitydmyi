@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DMYI Security | Segurança Privada em Campinas e Região</title>
     <!-- Favicon: Usa a sua logo como ícone da aba do navegador -->
-    <link rel="icon" type="image/png" href="logo.png">
+    <link class="flex" rel="icon" type="image/png" href="logo.png">
     <!-- Tailwind CSS para design avançado -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <!-- Ícones e Animações -->
@@ -78,7 +78,7 @@
     <header class="border-b border-slate-800/80 bg-slate-950/90 sticky top-0 z-50 backdrop-blur-xl shadow-lg">
         <div class="max-w-6xl mx-auto px-4 py-3 flex flex-col md:flex-row justify-between items-center gap-4">
             
-            <!-- Logo e Nome da Empresa - Alinhados à esquerda no celular (justify-start) -->
+            <!-- Logo e Nome da Empresa - Alinhados à esquerda no celular -->
             <div class="flex items-center gap-3 w-full md:w-auto justify-start">
                 <img src="logo.png" alt="Logo DMYI Security" class="h-12 md:h-14 w-auto object-contain drop-shadow-[0_0_8px_rgba(59,130,246,0.3)]">
                 <div class="flex flex-col">
@@ -108,7 +108,7 @@
         </div>
     </header>
 
-    <!-- HERO SECTION MODERNA (PRETO E AZUL) -->
+    <!-- HERO SECTION REAJUSTADA PARA NÃO CORTAR NO CELULAR -->
     <section class="relative bg-tactical py-24 md:py-36 max-w-7xl mx-auto px-6 text-center overflow-hidden rounded-b-3xl">
         <div class="absolute inset-0 bg-gradient-to-b from-slate-950/40 via-slate-950/90 to-slate-950 pointer-events-none"></div>
         <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-blue-500/5 blur-[120px] rounded-full pointer-events-none"></div>
@@ -126,9 +126,12 @@
                 Atuando de forma estratégica em <span class="text-blue-500 border-b border-blue-500/30 pb-0.5">Campinas e Região</span>.
             </p>
             
-            <div class="flex justify-center gap-6 text-[11px] font-bold uppercase tracking-wider text-slate-400 my-6 bg-slate-900/30 inline-flex px-6 py-3 rounded-xl border border-slate-900">
+            <!-- CORREÇÃO AQUI: flex-col no celular evita que o texto quebre ou fique cortado -->
+            <div class="flex flex-col md:flex-row justify-center items-center gap-3 md:gap-6 text-[11px] font-bold uppercase tracking-wider text-slate-400 my-6 bg-slate-900/30 px-6 py-3 rounded-xl border border-slate-900 w-fit mx-auto">
                 <span class="flex items-center gap-1.5"><i class="fa-solid fa-user-shield text-blue-500"></i> Profissionalismo</span>
+                <span class="hidden md:inline text-slate-700">|</span> <!-- Divisor visual apenas no PC -->
                 <span class="flex items-center gap-1.5"><i class="fa-solid fa-lock text-blue-500"></i> Confiança</span>
+                <span class="hidden md:inline text-slate-700">|</span> <!-- Divisor visual apenas no PC -->
                 <span class="flex items-center gap-1.5"><i class="fa-solid fa-handshake text-blue-500"></i> Compromisso</span>
             </div>
             
@@ -146,7 +149,7 @@
         </div>
     </section>
 
-    <!-- SEÇÃO DE SERVIÇOS (SCROLL LATERAL EM AZUL PREMIUM) -->
+    <!-- SEÇÃO DE SERVIÇOS -->
     <section id="servicos" class="py-20 bg-slate-950/60 border-t border-b border-slate-900 backdrop-blur-md relative overflow-hidden">
         <div class="max-w-6xl mx-auto px-6">
             <div class="text-center mb-6">
@@ -155,7 +158,6 @@
                 <div class="w-12 h-1 bg-blue-600 mx-auto mt-4 rounded-full"></div>
             </div>
 
-            <!-- Carrossel no Mobile / Grid no Desktop -->
             <div class="flex md:grid md:grid-cols-2 lg:grid-cols-3 gap-6 overflow-x-auto md:overflow-x-visible hide-scrollbar snap-x snap-mandatory pt-6 pb-8 px-2 md:px-0 -mx-6 md:mx-0">
                 
                 <!-- Card 1: Portaria Profissional -->
@@ -256,7 +258,7 @@
     <section id="recursos" class="py-20 bg-slate-950 max-w-6xl mx-auto px-6">
         <div class="grid md:grid-cols-2 gap-12 items-center">
             
-            <!-- Diferenciais Operacionais Interativos com Dropdown (Setas) -->
+            <!-- Diferenciais Operacionais Interativos com Dropdown -->
             <div class="space-y-6">
                 <h3 class="text-2xl md:text-3xl font-bold tracking-tight text-white">Nossos Diferenciais</h3>
                 <p class="text-slate-400 text-xs md:text-sm">Clique em cada diferencial abaixo para conferir o resumo técnico da nossa operação.</p>
@@ -365,7 +367,7 @@
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
-    <!-- SCRIPT DE EXPANSÃO DOS CARDS (SERVIÇOS E DIFERENCIAIS) -->
+    <!-- SCRIPT DE EXPANSÃO DOS CARDS -->
     <script>
         function toggleCard(element) {
             element.classList.toggle('card-expanded');
