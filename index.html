@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Security Dymi | Segurança Privada em Campinas e Região</title>
     <!-- Favicon: Usa a sua logo como ícone da aba do navegador -->
-    <link rel="icon" type="image/png" href="logo.png">
+    <link class="flex" rel="icon" type="image/png" href="logo.png">
     <!-- Tailwind CSS para design avançado -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <!-- Ícones e Animações -->
@@ -74,12 +74,12 @@
 </head>
 <body class="bg-slate-950 text-slate-100 font-sans antialiased min-h-screen selection:bg-amber-500 selection:text-black">
 
-    <!-- TOPO PREMIUM AJUSTADO (DESIGN ADAPTÁVEL PARA CELULAR) -->
+    <!-- TOPO PREMIUM AJUSTADO (LOGO FIXADA À ESQUERDA NO CELULAR) -->
     <header class="border-b border-slate-800/80 bg-slate-950/90 sticky top-0 z-50 backdrop-blur-xl shadow-lg">
         <div class="max-w-6xl mx-auto px-4 py-3 flex flex-col md:flex-row justify-between items-center gap-4">
             
-            <!-- Logo e Nome da Empresa (Sempre alinhado) -->
-            <div class="flex items-center gap-3 w-full md:w-auto justify-center md:justify-start">
+            <!-- Logo e Nome da Empresa - Alinhados estritamente à esquerda no celular (justify-start) -->
+            <div class="flex items-center gap-3 w-full md:w-auto justify-start">
                 <img src="logo.png" alt="Logo Security Dymi" class="h-12 md:h-14 w-auto object-contain drop-shadow-[0_0_8px_rgba(245,158,11,0.2)]">
                 <div class="flex flex-col">
                     <span class="text-sm font-black tracking-widest text-white leading-none">SECURITY <span class="text-amber-500 font-medium">DYMI</span></span>
@@ -96,7 +96,7 @@
             </nav>
 
             <!-- Status Operacional e Link de Telefone Direto -->
-            <div class="flex items-center justify-center gap-3 w-full md:w-auto">
+            <div class="flex items-center justify-center md:justify-end gap-3 w-full md:w-auto">
                 <a href="tel:+5519994539764" class="text-xs font-bold text-slate-300 hover:text-amber-400 transition-colors flex items-center gap-1.5 bg-slate-900/60 px-3 py-1.5 rounded-lg border border-slate-800 shadow-inner">
                     <i class="fa-solid fa-phone text-amber-500 text-[10px]"></i> (19) 99453-9764
                 </a>
@@ -130,9 +130,8 @@
                 ⭐ A melhor solução de segurança da cidade e região
             </p>
             
-            <!-- Texto modificado e aprimorado com os recursos coletados -->
             <p class="text-slate-400 text-xs md:text-base mb-12 max-w-2xl mx-auto leading-relaxed px-2">
-                Mitigamos riscos, invasões e quebras de protocolo antes que virem prejuízo. Oferecemos <span class="text-slate-200 font-semibold">serviço especializado 24 horas por dia</span> com soluções robustas prontas para proteger com máxima eficiência <span class="text-slate-200 font-semibold">condomínios residenciais, canteiros de obras, empresas e eventos</span> de alto padrão sob medida.
+                Mitigamos risks, invasões e quebras de protocolo antes que virem prejuízo. Oferecemos <span class="text-slate-200 font-semibold">serviço especializado 24 horas por dia</span> com soluções robustas prontas para proteger com máxima eficiência <span class="text-slate-200 font-semibold">condomínios residenciais, canteiros de obras, empresas e eventos</span> de alto padrão sob medida.
             </p>
             
             <div class="flex justify-center">
@@ -145,7 +144,7 @@
         </div>
     </section>
 
-    <!-- SEÇÃO DE SERVIÇOS (COM SCROLL LATERAL INTELIGENTE NO CELULAR) -->
+    <!-- SEÇÃO DE SERVIÇOS (CARROSSEL HORIZONTAL INTELIGENTE) -->
     <section id="servicos" class="py-20 bg-slate-950/60 border-t border-b border-slate-900 backdrop-blur-md relative overflow-hidden">
         <div class="max-w-6xl mx-auto px-6">
             <div class="text-center mb-6">
@@ -154,13 +153,12 @@
                 <div class="w-12 h-1 bg-amber-500 mx-auto mt-4 rounded-full"></div>
             </div>
 
-            <!-- Container adaptável: Rolagem horizontal móvel / Grade estável em telas grandes -->
             <div class="flex md:grid md:grid-cols-2 lg:grid-cols-3 gap-6 overflow-x-auto md:overflow-x-visible hide-scrollbar snap-x snap-mandatory pt-6 pb-8 px-2 md:px-0 -mx-6 md:mx-0">
                 
                 <!-- Card 1: Segurança Patrimonial -->
                 <div onclick="toggleCard(this)" class="snap-center shrink-0 w-[85%] sm:w-[60%] md:w-auto bg-slate-900/40 border border-slate-800/80 p-6 md:p-8 rounded-2xl hover:border-amber-500/40 hover:bg-slate-900/60 transition-all duration-300 shadow-xl cursor-pointer select-none relative ml-4 md:ml-0">
                     <div class="flex justify-between items-start">
-                        <div class="w-11 h-11 bg-amber-500/10 rounded-xl flex items-center justify-center text-amber-500 text-lg mb-6 border border-amber-500/20 group-hover:bg-amber-500 group-hover:text-black transition-all duration-300">
+                        <div class="w-11 h-11 bg-amber-500/10 rounded-xl flex items-center justify-center text-amber-500 text-lg mb-6 border border-amber-500/20">
                             <i class="fa-solid fa-building-shield"></i>
                         </div>
                         <i class="fa-solid fa-chevron-down arrow-icon text-slate-600 transition-transform duration-300 mt-2 text-xs"></i>
@@ -220,7 +218,7 @@
                         <i class="fa-solid fa-chevron-down arrow-icon text-slate-600 transition-transform duration-300 mt-2 text-xs"></i>
                     </div>
                     <h3 class="text-lg md:text-xl font-bold mb-3 text-slate-100">Portaria de Condomínios</h3>
-                    <p class="text-slate-400 text-xs md:text-sm leading-relaxed">Gestão operacional de portarias com foco na fiscalização ativa, registro de visitantes e proteção de perímetros residenciais.</p>
+                    <p class="text-slate-400 text-xs md:text-sm leading-relaxed">Gestão operacional de portarias com foco na fiscalização activa, registro de visitantes e proteção de perímetros residenciais.</p>
                     
                     <div class="card-content border-t border-slate-800/60 pt-4 text-xs text-slate-400 space-y-1.5">
                         <div class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-500 text-[10px]"></i> Controle de entrada/saída (Visitantes e Moradores)</div>
