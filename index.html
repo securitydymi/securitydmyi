@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Security Dymi | Segurança Privada em Campinas e Região</title>
+    <title>DMYI Security | Segurança Privada em Campinas e Região</title>
     <!-- Favicon: Usa a sua logo como ícone da aba do navegador -->
-    <link class="flex" rel="icon" type="image/png" href="logo.png">
+    <link rel="icon" type="image/png" href="logo.png">
     <!-- Tailwind CSS para design avançado -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <!-- Ícones e Animações -->
@@ -17,14 +17,14 @@
         }
         .btn-premium { animation: pulse-subtle 3s infinite ease-in-out; }
         
-        /* Carrega a imagem local de forma segura */
+        /* Carrega a imagem de fundo tática */
         .bg-tactical {
             background-image: url('bg-seguranca.jpg');
             background-size: cover;
             background-position: center;
         }
 
-        /* Animação suave para os links do menu */
+        /* Animação suave para os links do menu baseado na nova paleta azul */
         .nav-link {
             position: relative;
             transition: color 0.3s ease;
@@ -37,7 +37,7 @@
             height: 2px;
             bottom: -4px;
             left: 0;
-            background-color: #f59e0b; /* Cor Amber-500 */
+            background-color: #3b82f6; /* Cor Blue-500 em sintonia com a logo */
             transform-origin: bottom right;
             transition: transform 0.25s ease-out;
         }
@@ -46,7 +46,7 @@
             transform-origin: bottom left;
         }
 
-        /* Estilos para expansão dos cards */
+        /* Estilos universais de expansão (para Serviços e Diferenciais) */
         .card-content {
             max-height: 0;
             overflow: hidden;
@@ -62,7 +62,7 @@
             transform: rotate(180deg);
         }
 
-        /* Remove a barra de rolagem visual do carrossel mas mantém a função nativa */
+        /* Remove a barra de rolagem visual do carrossel mantendo a funcionalidade */
         .hide-scrollbar::-webkit-scrollbar {
             display: none;
         }
@@ -72,70 +72,72 @@
         }
     </style>
 </head>
-<body class="bg-slate-950 text-slate-100 font-sans antialiased min-h-screen selection:bg-amber-500 selection:text-black">
+<body class="bg-slate-950 text-slate-100 font-sans antialiased min-h-screen selection:bg-blue-600 selection:text-white">
 
-    <!-- TOPO PREMIUM AJUSTADO (LOGO FIXADA À ESQUERDA NO CELULAR) -->
+    <!-- TOPO COMPACTO COM ALINHAMENTO À ESQUERDA NO CELULAR -->
     <header class="border-b border-slate-800/80 bg-slate-950/90 sticky top-0 z-50 backdrop-blur-xl shadow-lg">
         <div class="max-w-6xl mx-auto px-4 py-3 flex flex-col md:flex-row justify-between items-center gap-4">
             
-            <!-- Logo e Nome da Empresa - Alinhados estritamente à esquerda no celular (justify-start) -->
+            <!-- Logo e Nome da Empresa - Alinhados à esquerda no celular (justify-start) -->
             <div class="flex items-center gap-3 w-full md:w-auto justify-start">
-                <img src="logo.png" alt="Logo Security Dymi" class="h-12 md:h-14 w-auto object-contain drop-shadow-[0_0_8px_rgba(245,158,11,0.2)]">
+                <img src="logo.png" alt="Logo DMYI Security" class="h-12 md:h-14 w-auto object-contain drop-shadow-[0_0_8px_rgba(59,130,246,0.3)]">
                 <div class="flex flex-col">
-                    <span class="text-sm font-black tracking-widest text-white leading-none">SECURITY <span class="text-amber-500 font-medium">DYMI</span></span>
+                    <span class="text-sm font-black tracking-widest text-white leading-none">DMYI <span class="text-blue-500 font-bold">SECURITY</span></span>
                     <span class="text-[10px] text-slate-500 uppercase tracking-wider font-semibold mt-0.5">Grupo Operacional</span>
                 </div>
             </div>
 
-            <!-- Links de Navegação Enquadrados e Organizados no Celular -->
-            <nav class="grid grid-cols-4 md:flex items-center justify-center gap-2 md:gap-x-6 w-full md:w-auto bg-slate-900/30 md:bg-transparent p-1.5 md:p-0 rounded-xl border border-slate-800/50 md:border-0 text-[11px] md:text-xs font-bold tracking-wide text-slate-400 text-center">
-                <a href="#" class="nav-link py-1 md:py-0 hover:text-amber-500 focus:text-amber-500 flex flex-col md:flex-row items-center justify-center gap-1"><i class="fa-solid fa-house text-[10px]"></i> Início</a>
-                <a href="#servicos" class="nav-link py-1 md:py-0 hover:text-amber-500 focus:text-amber-500 flex flex-col md:flex-row items-center justify-center gap-1"><i class="fa-solid fa-shield-halved text-[10px]"></i> Serviços</a>
-                <a href="#diferenciais" class="nav-link py-1 md:py-0 hover:text-amber-500 focus:text-amber-500 flex flex-col md:flex-row items-center justify-center gap-1"><i class="fa-solid fa-star text-[10px]"></i> Recursos</a>
-                <a href="#contato" class="nav-link py-1 md:py-0 hover:text-amber-500 focus:text-amber-500 flex flex-col md:flex-row items-center justify-center gap-1"><i class="fa-solid fa-headset text-[10px]"></i> Contato</a>
+            <!-- Links de Navegação Harmônicos -->
+            <nav class="grid grid-cols-4 md:flex items-center justify-center gap-2 md:gap-x-6 w-full md:w-auto bg-slate-900/40 md:bg-transparent p-1.5 md:p-0 rounded-xl border border-slate-800/60 md:border-0 text-[11px] md:text-xs font-bold tracking-wide text-slate-400 text-center">
+                <a href="#" class="nav-link py-1 md:py-0 hover:text-blue-400 focus:text-blue-400 flex flex-col md:flex-row items-center justify-center gap-1"><i class="fa-solid fa-house text-[10px]"></i> Início</a>
+                <a href="#servicos" class="nav-link py-1 md:py-0 hover:text-blue-400 focus:text-blue-400 flex flex-col md:flex-row items-center justify-center gap-1"><i class="fa-solid fa-shield-halved text-[10px]"></i> Serviços</a>
+                <a href="#recursos" class="nav-link py-1 md:py-0 hover:text-blue-400 focus:text-blue-400 flex flex-col md:flex-row items-center justify-center gap-1"><i class="fa-solid fa-star text-[10px]"></i> Recursos</a>
+                <a href="#contato" class="nav-link py-1 md:py-0 hover:text-blue-400 focus:text-blue-400 flex flex-col md:flex-row items-center justify-center gap-1"><i class="fa-solid fa-headset text-[10px]"></i> Contato</a>
             </nav>
 
-            <!-- Status Operacional e Link de Telefone Direto -->
+            <!-- Status Operacional em Azul Corporativo -->
             <div class="flex items-center justify-center md:justify-end gap-3 w-full md:w-auto">
-                <a href="tel:+5519994539764" class="text-xs font-bold text-slate-300 hover:text-amber-400 transition-colors flex items-center gap-1.5 bg-slate-900/60 px-3 py-1.5 rounded-lg border border-slate-800 shadow-inner">
-                    <i class="fa-solid fa-phone text-amber-500 text-[10px]"></i> (19) 99453-9764
+                <a href="tel:+5519994539764" class="text-xs font-bold text-slate-300 hover:text-blue-400 transition-colors flex items-center gap-1.5 bg-slate-900/60 px-3 py-1.5 rounded-lg border border-slate-800 shadow-inner">
+                    <i class="fa-solid fa-phone text-blue-500 text-[10px]"></i> (19) 99453-9764
                 </a>
-                <span class="text-[11px] font-bold bg-emerald-500/10 text-emerald-400 px-3 py-1.5 rounded-full border border-emerald-500/20 flex items-center gap-2 shadow-sm">
-                    <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span> QAP 24h
+                <span class="text-[11px] font-bold bg-blue-500/10 text-blue-400 px-3 py-1.5 rounded-full border border-blue-500/20 flex items-center gap-2 shadow-sm">
+                    <span class="w-2 h-2 rounded-full bg-blue-500 animate-ping"></span> QAP 24h
                 </span>
             </div>
 
         </div>
     </header>
 
-    <!-- HERO SECTION -->
+    <!-- HERO SECTION MODERNA (PRETO E AZUL) -->
     <section class="relative bg-tactical py-24 md:py-36 max-w-7xl mx-auto px-6 text-center overflow-hidden rounded-b-3xl">
-        <div class="absolute inset-0 bg-gradient-to-b from-slate-950/40 via-slate-950/85 to-slate-950 pointer-events-none"></div>
-        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-amber-500/5 blur-[120px] rounded-full pointer-events-none"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-slate-950/40 via-slate-950/90 to-slate-950 pointer-events-none"></div>
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-blue-500/5 blur-[120px] rounded-full pointer-events-none"></div>
 
         <div class="relative z-10">
-            <span class="inline-flex items-center gap-2 text-xs font-bold tracking-widest text-amber-500 uppercase bg-amber-500/10 px-4 py-2 rounded-full border border-amber-500/20 mb-8 backdrop-blur-sm">
-                <i class="fa-solid fa-shield text-[10px] animate-pulse"></i> Alta Performance Operacional
+            <span class="inline-flex items-center gap-2 text-xs font-bold tracking-widest text-blue-400 uppercase bg-blue-500/10 px-4 py-2 rounded-full border border-blue-500/20 mb-8 backdrop-blur-sm">
+                <i class="fa-solid fa-shield text-[10px] animate-pulse"></i> Segurança que Você Pode Confiar
             </span>
             
-            <h1 class="text-4xl md:text-7xl font-black tracking-tight mb-6 leading-none max-w-5xl mx-auto bg-gradient-to-b from-white via-slate-200 to-slate-500 bg-clip-text text-transparent">
-                Proteção Inteligente e <br class="hidden md:block"><span class="bg-gradient-to-r from-amber-400 to-amber-600 bg-clip-text text-transparent">Vigilância Rigorosa</span>.
+            <h1 class="text-4xl md:text-7xl font-black tracking-tight mb-6 leading-none max-w-5xl mx-auto bg-gradient-to-b from-white via-slate-200 to-slate-400 bg-clip-text text-transparent">
+                Proteção Inteligente e <br class="hidden md:block"><span class="bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">Vigilância Rigorosa</span>.
             </h1>
 
             <p class="text-slate-300 text-base md:text-xl font-medium mb-2 max-w-2xl mx-auto">
-                Atuando de forma estratégica em <span class="text-amber-500 border-b border-amber-500/30 pb-0.5">Campinas e Região</span>.
+                Atuando de forma estratégica em <span class="text-blue-500 border-b border-blue-500/30 pb-0.5">Campinas e Região</span>.
             </p>
             
-            <p class="text-amber-400 text-[10px] md:text-xs font-bold tracking-widest uppercase mb-12 max-w-2xl mx-auto bg-slate-900/40 inline-block px-3 py-1.5 rounded-md border border-slate-800">
-                ⭐ A melhor solução de segurança da cidade e região
-            </p>
+            <div class="flex justify-center gap-6 text-[11px] font-bold uppercase tracking-wider text-slate-400 my-6 bg-slate-900/30 inline-flex px-6 py-3 rounded-xl border border-slate-900">
+                <span class="flex items-center gap-1.5"><i class="fa-solid fa-user-shield text-blue-500"></i> Profissionalismo</span>
+                <span class="flex items-center gap-1.5"><i class="fa-solid fa-lock text-blue-500"></i> Confiança</span>
+                <span class="flex items-center gap-1.5"><i class="fa-solid fa-handshake text-blue-500"></i> Compromisso</span>
+            </div>
             
             <p class="text-slate-400 text-xs md:text-base mb-12 max-w-2xl mx-auto leading-relaxed px-2">
-                Mitigamos risks, invasões e quebras de protocolo antes que virem prejuízo. Oferecemos <span class="text-slate-200 font-semibold">serviço especializado 24 horas por dia</span> com soluções robustas prontas para proteger com máxima eficiência <span class="text-slate-200 font-semibold">condomínios residenciais, canteiros de obras, empresas e eventos</span> de alto padrão sob medida.
+                A DMYI Security oferece soluções completas em portaria e controle de acesso para condomínios, empresas, obras e eventos. Profissionalismo, tecnologia e compromisso total com a sua segurança.
             </p>
             
             <div class="flex justify-center">
-                <a href="https://wa.me/5519994539764?text=Olá!%20Acessei%20o%20site%20da%20Security%20Dymi.%20Gostaria%20de%20agendar%20uma%20análise%20de%20risco%20e%20solicitar%20um%20orçamento%20para%20Campinas%20e%20região." 
+                <a href="https://wa.me/5519994539764?text=Olá!%20Acessei%20o%20site%20da%20DMYI%20Security.%20Gostaria%20de%20agendar%20uma%20análise%20de%20risco." 
                    target="_blank" 
                    class="btn-premium inline-flex items-center gap-3 bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold text-xs md:text-base tracking-wide px-6 md:px-8 py-4 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-emerald-500/30">
                     <i class="fa-brands fa-whatsapp text-xl md:text-2xl animate-bounce"></i> FALAR COM O PLANTÃO OPERACIONAL
@@ -144,104 +146,105 @@
         </div>
     </section>
 
-    <!-- SEÇÃO DE SERVIÇOS (CARROSSEL HORIZONTAL INTELIGENTE) -->
+    <!-- SEÇÃO DE SERVIÇOS (SCROLL LATERAL EM AZUL PREMIUM) -->
     <section id="servicos" class="py-20 bg-slate-950/60 border-t border-b border-slate-900 backdrop-blur-md relative overflow-hidden">
         <div class="max-w-6xl mx-auto px-6">
             <div class="text-center mb-6">
-                <h2 class="text-2xl md:text-4xl font-bold tracking-tight">Soluções em Segurança Operacional</h2>
-                <p class="text-slate-500 text-xs mt-2">Clique em um serviço para expandir os detalhes. Deslize para o lado no celular <i class="fa-solid fa-arrow-right text-[10px] animate-pulse ml-1"></i></p>
-                <div class="w-12 h-1 bg-amber-500 mx-auto mt-4 rounded-full"></div>
+                <h2 class="text-2xl md:text-4xl font-bold tracking-tight text-white">Nossos Serviços</h2>
+                <p class="text-slate-500 text-xs mt-2">Clique em um card para expandir detalhes. Deslize para o lado no celular <i class="fa-solid fa-arrow-right text-[10px] animate-pulse ml-1 text-blue-500"></i></p>
+                <div class="w-12 h-1 bg-blue-600 mx-auto mt-4 rounded-full"></div>
             </div>
 
+            <!-- Carrossel no Mobile / Grid no Desktop -->
             <div class="flex md:grid md:grid-cols-2 lg:grid-cols-3 gap-6 overflow-x-auto md:overflow-x-visible hide-scrollbar snap-x snap-mandatory pt-6 pb-8 px-2 md:px-0 -mx-6 md:mx-0">
                 
-                <!-- Card 1: Segurança Patrimonial -->
-                <div onclick="toggleCard(this)" class="snap-center shrink-0 w-[85%] sm:w-[60%] md:w-auto bg-slate-900/40 border border-slate-800/80 p-6 md:p-8 rounded-2xl hover:border-amber-500/40 hover:bg-slate-900/60 transition-all duration-300 shadow-xl cursor-pointer select-none relative ml-4 md:ml-0">
+                <!-- Card 1: Portaria Profissional -->
+                <div onclick="toggleCard(this)" class="snap-center shrink-0 w-[85%] sm:w-[60%] md:w-auto bg-slate-900/40 border border-slate-800/80 p-6 md:p-8 rounded-2xl hover:border-blue-500/40 hover:bg-slate-900/60 transition-all duration-300 shadow-xl cursor-pointer select-none relative ml-4 md:ml-0">
                     <div class="flex justify-between items-start">
-                        <div class="w-11 h-11 bg-amber-500/10 rounded-xl flex items-center justify-center text-amber-500 text-lg mb-6 border border-amber-500/20">
-                            <i class="fa-solid fa-building-shield"></i>
+                        <div class="w-11 h-11 bg-blue-500/10 rounded-xl flex items-center justify-center text-blue-400 text-lg mb-6 border border-blue-500/20">
+                            <i class="fa-solid fa-user-tie"></i>
                         </div>
                         <i class="fa-solid fa-chevron-down arrow-icon text-slate-600 transition-transform duration-300 mt-2 text-xs"></i>
                     </div>
-                    <h3 class="text-lg md:text-xl font-bold mb-3 text-slate-100">Segurança Patrimonial</h3>
-                    <p class="text-slate-400 text-xs md:text-sm leading-relaxed">Vigilância estática e rondas preventivas desenhadas para proteger comércios, indústrias e galpões contra ações criminosas.</p>
+                    <h3 class="text-lg md:text-xl font-bold mb-3 text-white">Portaria Profissional</h3>
+                    <p class="text-slate-400 text-xs md:text-sm leading-relaxed">Controle inteligente e estratégico de fluxos de acesso aplicados de maneira personalizada para a sua planta corporativa.</p>
                     
                     <div class="card-content border-t border-slate-800/60 pt-4 text-xs text-slate-400 space-y-1.5">
-                        <div class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-500 text-[10px]"></i> Proteção contínua de perímetros corporativos</div>
-                        <div class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-500 text-[10px]"></i> Rondas táticas com relatórios de ocorrências</div>
-                        <div class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-500 text-[10px]"></i> Equipe comprometida com a integridade do local</div>
+                        <div class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-500 text-[10px]"></i> Controle de entrada e saída de moradores e visitantes</div>
+                        <div class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-500 text-[10px]"></i> Atendimento presencial e remoto altamente qualificado</div>
+                        <div class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-500 text-[10px]"></i> Cadastro, monitoramento ativo e registro de ocorrências</div>
                     </div>
                 </div>
 
-                <!-- Card 2: Segurança para Eventos -->
-                <div onclick="toggleCard(this)" class="snap-center shrink-0 w-[85%] sm:w-[60%] md:w-auto bg-slate-900/40 border border-slate-800/80 p-6 md:p-8 rounded-2xl hover:border-amber-500/40 hover:bg-slate-900/60 transition-all duration-300 shadow-xl cursor-pointer select-none relative">
+                <!-- Card 2: Controle de Acesso -->
+                <div onclick="toggleCard(this)" class="snap-center shrink-0 w-[85%] sm:w-[60%] md:w-auto bg-slate-900/40 border border-slate-800/80 p-6 md:p-8 rounded-2xl hover:border-blue-500/40 hover:bg-slate-900/60 transition-all duration-300 shadow-xl cursor-pointer select-none relative">
                     <div class="flex justify-between items-start">
-                        <div class="w-11 h-11 bg-amber-500/10 rounded-xl flex items-center justify-center text-amber-500 text-lg mb-6 border border-amber-500/20">
-                            <i class="fa-solid fa-users-gear"></i>
+                        <div class="w-11 h-11 bg-blue-500/10 rounded-xl flex items-center justify-center text-blue-400 text-lg mb-6 border border-blue-500/20">
+                            <i class="fa-solid fa-id-card-clip"></i>
                         </div>
                         <i class="fa-solid fa-chevron-down arrow-icon text-slate-600 transition-transform duration-300 mt-2 text-xs"></i>
                     </div>
-                    <h3 class="text-lg md:text-xl font-bold mb-3 text-slate-100">Segurança para Eventos</h3>
-                    <p class="text-slate-400 text-xs md:text-sm leading-relaxed">Planejamento tático, contenção e controle de público para eventos corporativos e sociais, mantendo a integridade total do local.</p>
+                    <h3 class="text-lg md:text-xl font-bold mb-3 text-white">Controle de Acesso</h3>
+                    <p class="text-slate-400 text-xs md:text-sm leading-relaxed">Identificação rigorosa e triagem minuciosa de pessoas e veículos alinhados às normas de segurança patrimonial.</p>
                     
                     <div class="card-content border-t border-slate-800/60 pt-4 text-xs text-slate-400 space-y-1.5">
-                        <div class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-500 text-[10px]"></i> Controle rigoroso de acesso de convidados</div>
-                        <div class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-500 text-[10px]"></i> Organização tática de filas e fluxo de pessoas</div>
-                        <div class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-500 text-[10px]"></i> Equipe uniformizada, treinada e sob supervisão</div>
+                        <div class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-500 text-[10px]"></i> Identificação técnica detalhada de pessoas e veículos</div>
+                        <div class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-500 text-[10px]"></i> Liberação estrita conforme os procedimentos internos</div>
+                        <div class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-500 text-[10px]"></i> Controle absoluto de chaves e fiscalização de áreas restritas</div>
                     </div>
                 </div>
 
-                <!-- Card 3: Controle de Acesso -->
-                <div onclick="toggleCard(this)" class="snap-center shrink-0 w-[85%] sm:w-[60%] md:w-auto bg-slate-900/40 border border-slate-800/80 p-6 md:p-8 rounded-2xl hover:border-amber-500/40 hover:bg-slate-900/60 transition-all duration-300 shadow-xl cursor-pointer select-none relative">
+                <!-- Card 3: Controle para Obras -->
+                <div onclick="toggleCard(this)" class="snap-center shrink-0 w-[85%] sm:w-[60%] md:w-auto bg-slate-900/40 border border-slate-800/80 p-6 md:p-8 rounded-2xl hover:border-blue-500/40 hover:bg-slate-900/60 transition-all duration-300 shadow-xl cursor-pointer select-none relative">
                     <div class="flex justify-between items-start">
-                        <div class="w-11 h-11 bg-amber-500/10 rounded-xl flex items-center justify-center text-amber-500 text-lg mb-6 border border-amber-500/20">
-                            <i class="fa-solid fa-user-check"></i>
-                        </div>
-                        <i class="fa-solid fa-chevron-down arrow-icon text-slate-600 transition-transform duration-300 mt-2 text-xs"></i>
-                    </div>
-                    <h3 class="text-lg md:text-xl font-bold mb-3 text-slate-100">Controle de Acesso</h3>
-                    <p class="text-slate-400 text-xs md:text-sm leading-relaxed">Triagem técnica e rigorosa de fluxo de pedestres e veículos para portarias empresariais e condomínios residenciais.</p>
-                    
-                    <div class="card-content border-t border-slate-800/60 pt-4 text-xs text-slate-400 space-y-1.5">
-                        <div class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-500 text-[10px]"></i> Identificação precisa de pessoas e veículos</div>
-                        <div class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-500 text-[10px]"></i> Liberação técnica conforme normas internas</div>
-                        <div class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-500 text-[10px]"></i> Fiscalização rígida de chaves e áreas restritas</div>
-                    </div>
-                </div>
-
-                <!-- Card 4: Portaria para Condomínios -->
-                <div onclick="toggleCard(this)" class="snap-center shrink-0 w-[85%] sm:w-[60%] md:w-auto bg-slate-900/40 border border-slate-800/80 p-6 md:p-8 rounded-2xl hover:border-amber-500/40 hover:bg-slate-900/60 transition-all duration-300 shadow-xl cursor-pointer select-none relative">
-                    <div class="flex justify-between items-start">
-                        <div class="w-11 h-11 bg-amber-500/10 rounded-xl flex items-center justify-center text-amber-500 text-lg mb-6 border border-amber-500/20">
-                            <i class="fa-solid fa-door-closed"></i>
-                        </div>
-                        <i class="fa-solid fa-chevron-down arrow-icon text-slate-600 transition-transform duration-300 mt-2 text-xs"></i>
-                    </div>
-                    <h3 class="text-lg md:text-xl font-bold mb-3 text-slate-100">Portaria de Condomínios</h3>
-                    <p class="text-slate-400 text-xs md:text-sm leading-relaxed">Gestão operacional de portarias com foco na fiscalização activa, registro de visitantes e proteção de perímetros residenciais.</p>
-                    
-                    <div class="card-content border-t border-slate-800/60 pt-4 text-xs text-slate-400 space-y-1.5">
-                        <div class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-500 text-[10px]"></i> Controle de entrada/saída (Visitantes e Moradores)</div>
-                        <div class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-500 text-[10px]"></i> Atendimento qualificado presencial ou remoto</div>
-                        <div class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-500 text-[10px]"></i> Monitoramento de áreas comuns e correspondências</div>
-                    </div>
-                </div>
-
-                <!-- Card 5: Controle em Obras -->
-                <div onclick="toggleCard(this)" class="snap-center shrink-0 w-[85%] sm:w-[60%] md:w-auto bg-slate-900/40 border border-slate-800/80 p-6 md:p-8 rounded-2xl hover:border-amber-500/40 hover:bg-slate-900/60 transition-all duration-300 shadow-xl cursor-pointer select-none relative mr-4 md:mr-0">
-                    <div class="flex justify-between items-start">
-                        <div class="w-11 h-11 bg-amber-500/10 rounded-xl flex items-center justify-center text-amber-500 text-lg mb-6 border border-amber-500/20">
+                        <div class="w-11 h-11 bg-blue-500/10 rounded-xl flex items-center justify-center text-blue-400 text-lg mb-6 border border-blue-500/20">
                             <i class="fa-solid fa-helmet-safety"></i>
                         </div>
                         <i class="fa-solid fa-chevron-down arrow-icon text-slate-600 transition-transform duration-300 mt-2 text-xs"></i>
                     </div>
-                    <h3 class="text-lg md:text-xl font-bold mb-3 text-slate-100">Controle em Obras</h3>
-                    <p class="text-slate-400 text-xs md:text-sm leading-relaxed">Segurança especializada para canteiros de obras, prevenindo furtos de materiais, vandalismo e invasões ao patrimônio.</p>
+                    <h3 class="text-lg md:text-xl font-bold mb-3 text-white">Controle para Obras</h3>
+                    <p class="text-slate-400 text-xs md:text-sm leading-relaxed">Mitigação de quebras operacionais e proteção ativa contra sinistros e desvios de materiais em canteiros.</p>
                     
                     <div class="card-content border-t border-slate-800/60 pt-4 text-xs text-slate-400 space-y-1.5">
-                        <div class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-500 text-[10px]"></i> Cadastro tático de colaboradores e prestadores</div>
-                        <div class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-500 text-[10px]"></i> Controle minucioso de entrada e saída de materiais</div>
-                        <div class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-500 text-[10px]"></i> Apoio direto na organização e segurança interna</div>
+                        <div class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-500 text-[10px]"></i> Cadastro completo de colaboradores e prestadores</div>
+                        <div class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-500 text-[10px]"></i> Controle rígido de entrada e saída de materiais</div>
+                        <div class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-500 text-[10px]"></i> Fiscalização rigorosa de documentos trabalhistas obrigatórios</div>
+                    </div>
+                </div>
+
+                <!-- Card 4: Portaria para Condomínios -->
+                <div onclick="toggleCard(this)" class="snap-center shrink-0 w-[85%] sm:w-[60%] md:w-auto bg-slate-900/40 border border-slate-800/80 p-6 md:p-8 rounded-2xl hover:border-blue-500/40 hover:bg-slate-900/60 transition-all duration-300 shadow-xl cursor-pointer select-none relative">
+                    <div class="flex justify-between items-start">
+                        <div class="w-11 h-11 bg-blue-500/10 rounded-xl flex items-center justify-center text-blue-400 text-lg mb-6 border border-blue-500/20">
+                            <i class="fa-solid fa-building"></i>
+                        </div>
+                        <i class="fa-solid fa-chevron-down arrow-icon text-slate-600 transition-transform duration-300 mt-2 text-xs"></i>
+                    </div>
+                    <h3 class="text-lg md:text-xl font-bold mb-3 text-white">Portaria para Condomínios</h3>
+                    <p class="text-slate-400 text-xs md:text-sm leading-relaxed">Atendimento focado em normas internas, monitoramento de áreas periféricas e gestão de fluxo residencial urbano.</p>
+                    
+                    <div class="card-content border-t border-slate-800/60 pt-4 text-xs text-slate-400 space-y-1.5">
+                        <div class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-500 text-[10px]"></i> Atendimento humanizado e focado a moradores/visitantes</div>
+                        <div class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-500 text-[10px]"></i> Controle e triagem técnica de encomendas e correspondências</div>
+                        <div class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-500 text-[10px]"></i> Monitoramento integrado visual das áreas comuns</div>
+                    </div>
+                </div>
+
+                <!-- Card 5: Segurança para Eventos -->
+                <div onclick="toggleCard(this)" class="snap-center shrink-0 w-[85%] sm:w-[60%] md:w-auto bg-slate-900/40 border border-slate-800/80 p-6 md:p-8 rounded-2xl hover:border-blue-500/40 hover:bg-slate-900/60 transition-all duration-300 shadow-xl cursor-pointer select-none relative mr-4 md:mr-0">
+                    <div class="flex justify-between items-start">
+                        <div class="w-11 h-11 bg-blue-500/10 rounded-xl flex items-center justify-center text-blue-400 text-lg mb-6 border border-blue-500/20">
+                            <i class="fa-solid fa-calendar-check"></i>
+                        </div>
+                        <i class="fa-solid fa-chevron-down arrow-icon text-slate-600 transition-transform duration-300 mt-2 text-xs"></i>
+                    </div>
+                    <h3 class="text-lg md:text-xl font-bold mb-3 text-white">Segurança para Eventos</h3>
+                    <p class="text-slate-400 text-xs md:text-sm leading-relaxed">Controle tático de público e organização do perímetro operacional para eventos corporativos e sociais privados.</p>
+                    
+                    <div class="card-content border-t border-slate-800/60 pt-4 text-xs text-slate-400 space-y-1.5">
+                        <div class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-500 text-[10px]"></i> Controle minucioso de acesso de listas de convidados</div>
+                        <div class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-500 text-[10px]"></i> Organização tática de filas e direcionamento de fluxos</div>
+                        <div class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-500 text-[10px]"></i> Corpo operacional uniformizado e rigorosamente treinado</div>
                     </div>
                 </div>
                 
@@ -249,68 +252,104 @@
         </div>
     </section>
 
-    <!-- DIFERENCIAIS E DOCUMENTAÇÃO REGULAR -->
-    <section id="diferenciais" class="py-20 bg-slate-950 max-w-6xl mx-auto px-6">
+    <!-- SEÇÃO: RECURSOS E DIFERENCIAIS INTERATIVOS COM SETAS -->
+    <section id="recursos" class="py-20 bg-slate-950 max-w-6xl mx-auto px-6">
         <div class="grid md:grid-cols-2 gap-12 items-center">
             
-            <!-- Diferenciais Operacionais -->
+            <!-- Diferenciais Operacionais Interativos com Dropdown (Setas) -->
             <div class="space-y-6">
-                <h3 class="text-2xl md:text-3xl font-bold tracking-tight text-white">Diferenciais DMYI Security</h3>
-                <p class="text-slate-400 text-xs md:text-sm">Compromisso, profissionalismo e segurança rígida para o seu patrimônio.</p>
-                <div class="grid gap-3 text-xs md:text-sm">
-                    <div class="flex items-center gap-3 bg-slate-900/50 p-3 rounded-xl border border-slate-800/60"><i class="fa-solid fa-circle-check text-emerald-500"></i> Profissionais rigorosamente treinados e uniformizados</div>
-                    <div class="flex items-center gap-3 bg-slate-900/50 p-3 rounded-xl border border-slate-800/60"><i class="fa-solid fa-circle-check text-emerald-500"></i> Supervisionamento operacional ativo e relatórios</div>
-                    <div class="flex items-center gap-3 bg-slate-900/50 p-3 rounded-xl border border-slate-800/60"><i class="fa-solid fa-circle-check text-emerald-500"></i> Atendimento altamente personalizado e dedicado</div>
+                <h3 class="text-2xl md:text-3xl font-bold tracking-tight text-white">Nossos Diferenciais</h3>
+                <p class="text-slate-400 text-xs md:text-sm">Clique em cada diferencial abaixo para conferir o resumo técnico da nossa operação.</p>
+                
+                <div class="space-y-3">
+                    <!-- Diferencial 1 -->
+                    <div onclick="toggleCard(this)" class="group bg-slate-900/50 p-4 rounded-xl border border-slate-800/60 cursor-pointer transition-all hover:border-blue-500/40 select-none">
+                        <div class="flex justify-between items-center">
+                            <span class="flex items-center gap-3 text-xs md:text-sm font-semibold text-slate-200 group-hover:text-blue-400 transition-colors">
+                                <i class="fa-solid fa-user-shield text-blue-500"></i> Profissionais treinados e uniformizados
+                            </span>
+                            <i class="fa-solid fa-chevron-down arrow-icon text-slate-500 transition-transform text-xs"></i>
+                        </div>
+                        <div class="card-content text-xs text-slate-400 leading-relaxed pl-7">
+                            Nossos colaboradores passam por reciclagem constante, testes psicológicos e operacionais rígidos. Atuam 100% integrados às diretrizes do cliente, portando uniformes táticos de identificação clara e intimidadora.
+                        </div>
+                    </div>
+
+                    <!-- Diferencial 2 -->
+                    <div onclick="toggleCard(this)" class="group bg-slate-900/50 p-4 rounded-xl border border-slate-800/60 cursor-pointer transition-all hover:border-blue-500/40 select-none">
+                        <div class="flex justify-between items-center">
+                            <span class="flex items-center gap-3 text-xs md:text-sm font-semibold text-slate-200 group-hover:text-blue-400 transition-colors">
+                                <i class="fa-solid fa-headset text-blue-500"></i> Atendimento personalizado
+                            </span>
+                            <i class="fa-solid fa-chevron-down arrow-icon text-slate-500 transition-transform text-xs"></i>
+                        </div>
+                        <div class="card-content text-xs text-slate-400 leading-relaxed pl-7">
+                            Cada empresa, obra ou condomínio residencial possui vulnerabilidades distintas. Desenvolvemos manuais de procedimentos operacionais customizados para sanar os pontos fracos específicos do seu perímetro.
+                        </div>
+                    </div>
+
+                    <!-- Diferencial 3 -->
+                    <div onclick="toggleCard(this)" class="group bg-slate-900/50 p-4 rounded-xl border border-slate-800/60 cursor-pointer transition-all hover:border-blue-500/40 select-none">
+                        <div class="flex justify-between items-center">
+                            <span class="flex items-center gap-3 text-xs md:text-sm font-semibold text-slate-200 group-hover:text-blue-400 transition-colors">
+                                <i class="fa-solid fa-eye text-blue-500"></i> Supervisão operacional e relatórios
+                            </span>
+                            <i class="fa-solid fa-chevron-down arrow-icon text-slate-500 transition-transform text-xs"></i>
+                        </div>
+                        <div class="card-content text-xs text-slate-400 leading-relaxed pl-7">
+                            Inspeções surpresas são realizadas de forma intermitente por supervisores motorizados. Todas as ocorrências, rondas e registros táticos são consolidados em relatórios gerenciais transparentes para a gestão do cliente.
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <!-- Regularidade e Documentação Médica/Trabalhista -->
-            <div class="bg-gradient-to-br from-slate-900 to-slate-950 p-6 md:p-8 rounded-2xl border border-slate-800 relative overflow-hidden">
-                <div class="absolute -right-10 -bottom-10 text-slate-800/20 text-9xl font-black pointer-events-none"><i class="fa-solid fa-folder-open"></i></div>
-                <h3 class="text-base md:text-lg font-bold text-amber-500 mb-4 flex items-center gap-2"><i class="fa-solid fa-file-shield"></i> Regularidade e Gestão Documental</h3>
-                <p class="text-[11px] md:text-xs text-slate-400 mb-4 leading-relaxed">Trabalhamos em total conformidade jurídica e técnica para resguardar sua estrutura de riscos fiscais ou trabalhistas:</p>
+            <div class="bg-gradient-to-br from-slate-900 via-slate-950 to-slate-950 p-6 md:p-8 rounded-2xl border border-slate-800 relative overflow-hidden shadow-2xl">
+                <div class="absolute -right-10 -bottom-10 text-slate-900/40 text-9xl font-black pointer-events-none"><i class="fa-solid fa-folder-open"></i></div>
+                <h3 class="text-base md:text-lg font-bold text-blue-400 mb-4 flex items-center gap-2"><i class="fa-solid fa-file-shield"></i> Regularidade Jurídica e Documental</h3>
+                <p class="text-[11px] md:text-xs text-slate-400 mb-4 leading-relaxed">Trabalhamos em total conformidade para mitigar riscos de corresponsabilidade trabalhista ou tributária para nossos tomadores:</p>
                 <ul class="text-[11px] md:text-xs text-slate-300 space-y-2.5">
-                    <li class="flex items-center gap-2"><i class="fa-solid fa-file-medical text-amber-500/70 text-[10px]"></i> PCMSO e ASO (Saúde Ocupacional Ativa)</li>
-                    <li class="flex items-center gap-2"><i class="fa-solid fa-graduation-cap text-amber-500/70 text-[10px]"></i> Controle rigoroso de treinamentos operacionais</li>
-                    <li class="flex items-center gap-2"><i class="fa-solid fa-users-gear text-amber-500/70 text-[10px]"></i> Gestão documental completa de colaboradores</li>
-                    <li class="flex items-center gap-2"><i class="fa-solid fa-clipboard-list text-amber-500/70 text-[10px]"></i> Procedimentos totalmente padronizados</li>
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-file-medical text-blue-500/70 text-[10px]"></i> PCMSO e ASO (Saúde Ocupacional 100% em dia)</li>
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-graduation-cap text-blue-500/70 text-[10px]"></i> Controle de treinamentos e formação especializada</li>
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-users-gear text-blue-500/70 text-[10px]"></i> Gestão documental completa de todo o efetivo alocado</li>
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-clipboard-list text-blue-500/70 text-[10px]"></i> Procedimentos operacionais padrão homologados</li>
                 </ul>
             </div>
 
         </div>
     </section>
 
-    <!-- SEÇÃO FINAL INTIMIDADORA -->
+    <!-- SEÇÃO FINAL DE CONVERSÃO -->
     <section class="py-24 max-w-4xl mx-auto px-6 text-center relative">
-        <h2 class="text-2xl md:text-5xl font-black mb-4 tracking-tight">Não espere a vulnerabilidade <br><span class="text-red-500 animate-pulse">virar um prejuízo real</span>.</h2>
-        <p class="text-slate-400 text-xs md:text-base mb-10 max-w-xl mx-auto">Clique abaixo para iniciar um diagnóstico gratuito de vulnerabilidade com a nossa equipe.</p>
-        <a href="https://wa.me/5519994539764?text=Olá!%20Acessei%20o%20site%20da%20Security%20Dymi.%20Gostaria%20de%20agendar%20uma%20análise%20de%20risco%20e%20solicitar%20um%20orçamento%20para%20Campinas%20e%20região." target="_blank" class="inline-flex items-center gap-3 bg-slate-900 hover:bg-amber-500 hover:text-black text-amber-500 font-bold border border-slate-700 hover:border-amber-500 px-6 md:px-8 py-3.5 rounded-xl transition-all duration-300 shadow-2xl transform hover:scale-105 text-xs md:text-sm">
-            <i class="fa-brands fa-whatsapp text-lg text-emerald-500"></i> SOLICITAR ANÁLISE DE RISCO
+        <h2 class="text-2xl md:text-5xl font-black mb-4 tracking-tight text-white">Não espere a vulnerabilidade <br><span class="text-blue-500 animate-pulse">virar um prejuízo real</span>.</h2>
+        <p class="text-slate-400 text-xs md:text-base mb-10 max-w-xl mx-auto">Proteja seu patrimônio com quem é referência técnica em Campinas e Região. Solicite sua análise prévia de risco corporativo.</p>
+        <a href="https://wa.me/5519994539764?text=Olá!%20Acessei%20o%20site%20da%20DMYI%20Security.%20Gostaria%20de%20agendar%20uma%20análise%20de%20risco." target="_blank" class="inline-flex items-center gap-3 bg-slate-900 hover:bg-blue-600 hover:text-white text-blue-400 font-bold border border-slate-800 hover:border-blue-500 px-6 md:px-8 py-3.5 rounded-xl transition-all duration-300 shadow-2xl transform hover:scale-105 text-xs md:text-sm">
+            <i class="fa-brands fa-whatsapp text-lg text-emerald-500"></i> AGENDAR ANÁLISE DE VULNERABILIDADE
         </a>
     </section>
 
-    <!-- SEÇÃO: CANAIS DE ATENDIMENTO DIRETOS -->
+    <!-- CANAIS DE ATENDIMENTO DIRETOS -->
     <section id="contato" class="py-12 bg-slate-950 border-t border-slate-900">
         <div class="max-w-4xl mx-auto px-6 grid md:grid-cols-2 gap-6 text-center md:text-left">
             <!-- Bloco de E-mail -->
             <div class="bg-slate-900/30 border border-slate-800/50 p-5 rounded-xl flex flex-col md:flex-row items-center gap-4 hover:border-slate-700 transition-all">
-                <div class="w-11 h-11 bg-amber-500/10 text-amber-500 border border-amber-500/20 rounded-full flex items-center justify-center text-base shrink-0">
+                <div class="w-11 h-11 bg-blue-500/10 text-blue-400 border border-blue-500/20 rounded-full flex items-center justify-center text-base shrink-0">
                     <i class="fa-solid fa-envelope"></i>
                 </div>
                 <div>
                     <h4 class="text-[10px] font-bold uppercase tracking-wider text-slate-500 mb-1">E-mail Corporativo</h4>
-                    <a href="mailto:contato@securitydmyi.com.br" class="text-xs md:text-sm font-semibold text-slate-200 hover:text-amber-400 transition-colors break-all">contato@securitydmyi.com.br</a>
+                    <a href="mailto:contato@securitydmyi.com.br" class="text-xs md:text-sm font-semibold text-slate-200 hover:text-blue-400 transition-colors break-all">contato@securitydmyi.com.br</a>
                 </div>
             </div>
 
             <!-- Bloco de Telefone -->
             <div class="bg-slate-900/30 border border-slate-800/50 p-5 rounded-xl flex flex-col md:flex-row items-center gap-4 hover:border-slate-700 transition-all">
-                <div class="w-11 h-11 bg-amber-500/10 text-amber-500 border border-amber-500/20 rounded-full flex items-center justify-center text-base shrink-0">
+                <div class="w-11 h-11 bg-blue-500/10 text-blue-400 border border-blue-500/20 rounded-full flex items-center justify-center text-base shrink-0">
                     <i class="fa-solid fa-phone"></i>
                 </div>
                 <div>
                     <h4 class="text-[10px] font-bold uppercase tracking-wider text-slate-500 mb-1">Central de Atendimento</h4>
-                    <a href="tel:+5519994539764" class="text-xs md:text-sm font-bold text-slate-200 hover:text-amber-400 transition-colors">(19) 99453-9764</a>
+                    <a href="tel:+5519994539764" class="text-xs md:text-sm font-bold text-slate-200 hover:text-blue-400 transition-colors">(19) 99453-9764</a>
                 </div>
             </div>
         </div>
@@ -318,18 +357,18 @@
 
     <!-- RODAPÉ CLEAN -->
     <footer class="border-t border-slate-900/80 bg-black/40 py-8 text-center text-[10px] md:text-xs text-slate-500 backdrop-blur-sm">
-        <p>&copy; 2026 Security Dymi. Todos os direitos reservados. Atuação estratégica em Campinas e Região.</p>
+        <p>&copy; 2026 DMYI Security. Todos os direitos reservados. Atuação tática em Campinas e Região.</p>
     </footer>
 
-    <!-- BOTÃO FLUTUANTE PREMIUM -->
-    <a href="https://wa.me/5519994539764?text=Olá!%20Acessei%20o%20site%20da%20Security%20Dymi.%20Gostaria%20de%20agendar%20uma%20análise%20de%20risco%20e%20solicitar%20um%20orçamento%20para%20Campinas%20e%20região." target="_blank" class="fixed bottom-6 right-6 bg-emerald-500 hover:bg-emerald-400 text-white p-3.5 rounded-full shadow-2xl transition-all duration-300 z-50 flex items-center justify-center text-xl hover:scale-110 shadow-emerald-500/20" title="Chamar no WhatsApp">
+    <!-- BOTÃO FLUTUANTE DO WHATSAPP -->
+    <a href="https://wa.me/5519994539764?text=Olá!%20Acessei%20o%20site%20da%20DMYI%20Security.%20Gostaria%20de%20agendar%20uma%20análise%20de%20risco." target="_blank" class="fixed bottom-6 right-6 bg-emerald-500 hover:bg-emerald-400 text-white p-3.5 rounded-full shadow-2xl transition-all duration-300 z-50 flex items-center justify-center text-xl hover:scale-110 shadow-emerald-500/20" title="Chamar no WhatsApp">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
-    <!-- SCRIPT DE INTERAÇÃO DOS CARDS -->
+    <!-- SCRIPT DE EXPANSÃO DOS CARDS (SERVIÇOS E DIFERENCIAIS) -->
     <script>
-        function toggleCard(card) {
-            card.classList.toggle('card-expanded');
+        function toggleCard(element) {
+            element.classList.toggle('card-expanded');
         }
     </script>
 
