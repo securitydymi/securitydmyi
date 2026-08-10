@@ -26,7 +26,6 @@
         }
         .btn-premium { animation: pulse-subtle 3s infinite ease-in-out; }
 
-        /* Animação suave para os links do menu baseado na nova paleta azul */
         .nav-link {
             position: relative;
             transition: color 0.3s ease;
@@ -39,7 +38,7 @@
             height: 2px;
             bottom: -4px;
             left: 0;
-            background-color: #3b82f6; /* Cor Blue-500 em sintonia com a logo */
+            background-color: #3b82f6;
             transform-origin: bottom right;
             transition: transform 0.25s ease-out;
         }
@@ -48,7 +47,6 @@
             transform-origin: bottom left;
         }
 
-        /* Estilos universais de expansão (para Serviços e Diferenciais) */
         .card-content {
             max-height: 0;
             overflow: hidden;
@@ -64,7 +62,6 @@
             transform: rotate(180deg);
         }
 
-        /* Remove a barra de rolagem visual do carrossel mantendo a funcionalidade */
         .hide-scrollbar::-webkit-scrollbar {
             display: none;
         }
@@ -94,7 +91,6 @@
                 <a href="#contato" class="nav-link py-1 md:py-0 hover:text-blue-400 focus:text-blue-400 flex flex-col md:flex-row items-center justify-center gap-1"><i class="fa-solid fa-headset text-[10px]"></i> Contato</a>
             </nav>
 
-            <!-- DOIS NÚMEROS DE TELEFONE NO TOPO -->
             <div class="flex flex-wrap items-center justify-center md:justify-end gap-2 w-full md:w-auto">
                 <a href="tel:+5519994539764" class="text-[11px] font-bold text-slate-300 hover:text-blue-400 transition-colors flex items-center gap-1 bg-slate-900/60 px-2.5 py-1.5 rounded-lg border border-slate-800 shadow-inner">
                     <i class="fa-solid fa-phone text-blue-500 text-[10px]"></i> (19) 99453-9764
@@ -150,7 +146,6 @@
         </div>
     </section>
 
-    <!-- SEÇÃO DE SERVIÇOS COM CARROSSEL INTERATIVO -->
     <section id="servicos" class="py-16 bg-slate-900/40 border-t border-b border-slate-900 backdrop-blur-md">
         <div class="max-w-6xl mx-auto px-6">
             <div class="text-center mb-10">
@@ -159,7 +154,6 @@
                 <div class="w-12 h-1 bg-blue-600 mx-auto mt-3 rounded-full"></div>
             </div>
 
-            <!-- CARROSSEL DE CATEGORIAS INTERATIVO -->
             <div class="relative max-w-5xl mx-auto mb-16 group">
                 <button onclick="scrollCarousel(-300)" class="absolute -left-4 md:-left-6 top-1/2 -translate-y-1/2 z-20 bg-slate-900/90 hover:bg-blue-600 text-white border border-slate-700/80 hover:border-blue-500 w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center shadow-2xl transition-all duration-300 focus:outline-none">
                     <i class="fa-solid fa-chevron-left text-sm md:text-base"></i>
@@ -265,7 +259,6 @@
                 </button>
             </div>
 
-            <!-- CARDS DE DETALHAMENTO DE TODOS OS SERVIÇOS COM BOTAO DO WHATSAPP PROGRAMADO PARA 19981929593 -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 
                 <div id="card-condominios" onclick="toggleCard(this)" class="scroll-mt-28 bg-slate-950/60 border border-slate-800/80 p-5 rounded-xl hover:border-blue-500/40 transition-all duration-300 cursor-pointer select-none">
@@ -533,7 +526,7 @@
                         <div class="space-y-1">
                             <div><i class="fa-solid fa-check text-blue-500 mr-1"></i> Fiscalização tática de perímetros e listas</div>
                             <div><i class="fa-solid fa-check text-blue-500 mr-1"></i> Coordenação harmoniosa de filas e acessos</div>
-                            <div><i class="fa-solid fa-check text-blue-500 mr-1"></i> Equipe uniformizada altamente treinada</div>
+                            <div><i class="fa-solid fa-check text-blue-500 mr-1"></i> Equipe uniformizada highly treinada</div>
                         </div>
                         <a href="https://wa.me/5519981929593?text=Olá!%20Acessei%20o%20site%20da%20DMYI%20Security.%20Gostaria%20de%20solicitar%20um%20orçamento%20para%20Segurança%20em%20Eventos." target="_blank" onclick="event.stopPropagation();" class="inline-flex items-center justify-center gap-2 w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-2 px-3 rounded-lg text-xs transition-colors shadow-md">
                             <i class="fa-brands fa-whatsapp text-sm"></i> Cotar Segurança para Eventos
@@ -602,7 +595,7 @@
                 <h3 class="text-base font-bold text-blue-400 mb-4 flex items-center gap-2"><i class="fa-solid fa-file-shield"></i> Regularidade Jurídica e Documental</h3>
                 <p class="text-xs text-slate-400 mb-4 leading-relaxed">Trabalhamos em total conformidade para mitigar riscos de corresponsabilidade trabalhista ou tributária para nossos tomadores:</p>
                 <ul class="text-xs text-slate-300 space-y-2.5">
-                    <li class="flex items-center gap-2"><i class="fa-solid fa-file-medical text-blue-500/70 text-[10px]"></i> PCMSO e ASO (Saúde Ocupacional 100% em dia)</li>
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-file-medical text-blue-500/70 text-[10px]"></i> PGR, PCMSO e ASO (Saúde e Segurança Ocupacional 100% em dia)</li>
                     <li class="flex items-center gap-2"><i class="fa-solid fa-graduation-cap text-blue-500/70 text-[10px]"></i> Controle de treinamentos e formação especializada</li>
                     <li class="flex items-center gap-2"><i class="fa-solid fa-users-gear text-blue-500/70 text-[10px]"></i> Gestão documental completa de todo o efetivo alocado</li>
                     <li class="flex items-center gap-2"><i class="fa-solid fa-clipboard-list text-blue-500/70 text-[10px]"></i> Procedimentos operacionais padrão homologados</li>
@@ -647,7 +640,6 @@
         </div>
     </section>
 
-    <!-- RODAPÉ ATUALIZADO COM CNPJ -->
     <footer class="border-t border-slate-900/80 bg-black/40 py-8 text-center text-[10px] md:text-xs text-slate-500 backdrop-blur-sm space-y-2">
         <p>&copy; 2026 DMYI Security. Todos os direitos reservados. Atuação técnica na região de Campinas e cidades vizinhas.</p>
         <p class="font-semibold text-slate-400">CNPJ: 66.682.264/0001-80</p>
