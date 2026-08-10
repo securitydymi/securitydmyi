@@ -146,18 +146,125 @@
         </div>
     </section>
 
+    <!-- SEÇÃO DE SERVIÇOS COM CARROSSEL INTERATIVO -->
     <section id="servicos" class="py-16 bg-slate-900/40 border-t border-b border-slate-900 backdrop-blur-md">
         <div class="max-w-6xl mx-auto px-6">
-            <div class="text-center mb-8">
+            <div class="text-center mb-10">
                 <h2 class="text-2xl md:text-4xl font-bold tracking-tight text-white">Especialistas em Segurança para Diferentes Ambientes</h2>
-                <p class="text-slate-400 text-xs mt-2">Clique em um card para expandir detalhes estruturais de nossa atuação.</p>
+                <p class="text-slate-400 text-xs mt-2">Navegue pelas nossas áreas de atuação e clique nos cards abaixo para expandir detalhes.</p>
                 <div class="w-12 h-1 bg-blue-600 mx-auto mt-3 rounded-full"></div>
             </div>
 
-            <div class="max-w-5xl mx-auto mb-12">
-                <img src="FOTO2.jpeg" alt="Infográfico de Ambientes Atendidos" class="w-full h-auto rounded-xl shadow-lg border border-slate-800">
+            <!-- CARROSSEL DE CATEGORIAS SUBTITUINDO A IMAGEM ESTÁTICA -->
+            <div class="relative max-w-5xl mx-auto mb-16 group">
+                <!-- Botão Esquerda -->
+                <button onclick="scrollCarousel(-300)" class="absolute -left-4 md:-left-6 top-1/2 -translate-y-1/2 z-20 bg-slate-900/90 hover:bg-blue-600 text-white border border-slate-700/80 hover:border-blue-500 w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center shadow-2xl transition-all duration-300 focus:outline-none">
+                    <i class="fa-solid fa-chevron-left text-sm md:text-base"></i>
+                </button>
+
+                <!-- Conteúdo do Carrossel -->
+                <div id="category-carousel" class="flex gap-4 overflow-x-auto scroll-smooth hide-scrollbar py-4 px-2 snap-x snap-mandatory">
+                    
+                    <div class="snap-start shrink-0 w-44 md:w-52 bg-slate-950/80 border border-slate-800 rounded-xl p-4 text-center hover:border-blue-500/50 hover:bg-slate-900/50 transition-all shadow-lg flex flex-col items-center justify-center gap-3">
+                        <div class="w-12 h-12 rounded-full bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 text-xl">
+                            <i class="fa-solid fa-building"></i>
+                        </div>
+                        <span class="text-xs font-bold text-white uppercase tracking-wider">Condomínios</span>
+                    </div>
+
+                    <div class="snap-start shrink-0 w-44 md:w-52 bg-slate-950/80 border border-slate-800 rounded-xl p-4 text-center hover:border-blue-500/50 hover:bg-slate-900/50 transition-all shadow-lg flex flex-col items-center justify-center gap-3">
+                        <div class="w-12 h-12 rounded-full bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 text-xl">
+                            <i class="fa-solid fa-user-tie"></i>
+                        </div>
+                        <span class="text-xs font-bold text-white uppercase tracking-wider">Recepção</span>
+                    </div>
+
+                    <div class="snap-start shrink-0 w-44 md:w-52 bg-slate-950/80 border border-slate-800 rounded-xl p-4 text-center hover:border-blue-500/50 hover:bg-slate-900/50 transition-all shadow-lg flex flex-col items-center justify-center gap-3">
+                        <div class="w-12 h-12 rounded-full bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 text-xl">
+                            <i class="fa-solid fa-door-open"></i>
+                        </div>
+                        <span class="text-xs font-bold text-white uppercase tracking-wider">Portaria</span>
+                    </div>
+
+                    <div class="snap-start shrink-0 w-44 md:w-52 bg-slate-950/80 border border-slate-800 rounded-xl p-4 text-center hover:border-blue-500/50 hover:bg-slate-900/50 transition-all shadow-lg flex flex-col items-center justify-center gap-3">
+                        <div class="w-12 h-12 rounded-full bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 text-xl">
+                            <i class="fa-solid fa-helmet-safety"></i>
+                        </div>
+                        <span class="text-xs font-bold text-white uppercase tracking-wider">Obras</span>
+                    </div>
+
+                    <div class="snap-start shrink-0 w-44 md:w-52 bg-slate-950/80 border border-slate-800 rounded-xl p-4 text-center hover:border-blue-500/50 hover:bg-slate-900/50 transition-all shadow-lg flex flex-col items-center justify-center gap-3">
+                        <div class="w-12 h-12 rounded-full bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 text-xl">
+                            <i class="fa-solid fa-id-card-clip"></i>
+                        </div>
+                        <span class="text-xs font-bold text-white uppercase tracking-wider">Controle de Acesso</span>
+                    </div>
+
+                    <div class="snap-start shrink-0 w-44 md:w-52 bg-slate-950/80 border border-slate-800 rounded-xl p-4 text-center hover:border-blue-500/50 hover:bg-slate-900/50 transition-all shadow-lg flex flex-col items-center justify-center gap-3">
+                        <div class="w-12 h-12 rounded-full bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 text-xl">
+                            <i class="fa-solid fa-person-military-pointing"></i>
+                        </div>
+                        <span class="text-xs font-bold text-white uppercase tracking-wider">Vigia</span>
+                    </div>
+
+                    <div class="snap-start shrink-0 w-44 md:w-52 bg-slate-950/80 border border-slate-800 rounded-xl p-4 text-center hover:border-blue-500/50 hover:bg-slate-900/50 transition-all shadow-lg flex flex-col items-center justify-center gap-3">
+                        <div class="w-12 h-12 rounded-full bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 text-xl">
+                            <i class="fa-solid fa-shield-cat"></i>
+                        </div>
+                        <span class="text-xs font-bold text-white uppercase tracking-wider">Ronda Patrimonial</span>
+                    </div>
+
+                    <div class="snap-start shrink-0 w-44 md:w-52 bg-slate-950/80 border border-slate-800 rounded-xl p-4 text-center hover:border-blue-500/50 hover:bg-slate-900/50 transition-all shadow-lg flex flex-col items-center justify-center gap-3">
+                        <div class="w-12 h-12 rounded-full bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 text-xl">
+                            <i class="fa-solid fa-desktop"></i>
+                        </div>
+                        <span class="text-xs font-bold text-white uppercase tracking-wider">Monitoramento Eletrônico</span>
+                    </div>
+
+                    <div class="snap-start shrink-0 w-44 md:w-52 bg-slate-950/80 border border-slate-800 rounded-xl p-4 text-center hover:border-blue-500/50 hover:bg-slate-900/50 transition-all shadow-lg flex flex-col items-center justify-center gap-3">
+                        <div class="w-12 h-12 rounded-full bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 text-xl">
+                            <i class="fa-solid fa-drone"></i>
+                        </div>
+                        <span class="text-xs font-bold text-white uppercase tracking-wider">Monitoramento Aéreo / Drone</span>
+                    </div>
+
+                    <div class="snap-start shrink-0 w-44 md:w-52 bg-slate-950/80 border border-slate-800 rounded-xl p-4 text-center hover:border-blue-500/50 hover:bg-slate-900/50 transition-all shadow-lg flex flex-col items-center justify-center gap-3">
+                        <div class="w-12 h-12 rounded-full bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 text-xl">
+                            <i class="fa-solid fa-screwdriver-wrench"></i>
+                        </div>
+                        <span class="text-xs font-bold text-white uppercase tracking-wider">Manutenção de Sistemas</span>
+                    </div>
+
+                    <div class="snap-start shrink-0 w-44 md:w-52 bg-slate-950/80 border border-slate-800 rounded-xl p-4 text-center hover:border-blue-500/50 hover:bg-slate-900/50 transition-all shadow-lg flex flex-col items-center justify-center gap-3">
+                        <div class="w-12 h-12 rounded-full bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 text-xl">
+                            <i class="fa-solid fa-broom"></i>
+                        </div>
+                        <span class="text-xs font-bold text-white uppercase tracking-wider">Auxiliar de Limpeza</span>
+                    </div>
+
+                    <div class="snap-start shrink-0 w-44 md:w-52 bg-slate-950/80 border border-slate-800 rounded-xl p-4 text-center hover:border-blue-500/50 hover:bg-slate-900/50 transition-all shadow-lg flex flex-col items-center justify-center gap-3">
+                        <div class="w-12 h-12 rounded-full bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 text-xl">
+                            <i class="fa-solid fa-mug-hot"></i>
+                        </div>
+                        <span class="text-xs font-bold text-white uppercase tracking-wider">Copeira</span>
+                    </div>
+
+                    <div class="snap-start shrink-0 w-44 md:w-52 bg-slate-950/80 border border-slate-800 rounded-xl p-4 text-center hover:border-blue-500/50 hover:bg-slate-900/50 transition-all shadow-lg flex flex-col items-center justify-center gap-3">
+                        <div class="w-12 h-12 rounded-full bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 text-xl">
+                            <i class="fa-solid fa-calendar-check"></i>
+                        </div>
+                        <span class="text-xs font-bold text-white uppercase tracking-wider">Eventos</span>
+                    </div>
+
+                </div>
+
+                <!-- Botão Direita -->
+                <button onclick="scrollCarousel(300)" class="absolute -right-4 md:-right-6 top-1/2 -translate-y-1/2 z-20 bg-slate-900/90 hover:bg-blue-600 text-white border border-slate-700/80 hover:border-blue-500 w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center shadow-2xl transition-all duration-300 focus:outline-none">
+                    <i class="fa-solid fa-chevron-right text-sm md:text-base"></i>
+                </button>
             </div>
 
+            <!-- CARDS DE DETALHAMENTO DE CADA SERVIÇO -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 
                 <div onclick="toggleCard(this)" class="bg-slate-950/60 border border-slate-800/80 p-5 rounded-xl hover:border-blue-500/40 transition-all duration-300 cursor-pointer select-none">
@@ -188,7 +295,7 @@
                     <div class="card-content border-t border-slate-800/60 pt-3 text-[11px] text-slate-400 space-y-1">
                         <div><i class="fa-solid fa-check text-blue-500 mr-1"></i> Cadastro informatizado de visitantes</div>
                         <div><i class="fa-solid fa-check text-blue-500 mr-1"></i> Orientação de fluxos corporativos internos</div>
-                        <div><i class="fa-solid fa-check text-blue-500 mr-1"></i> Postura de alta confiabilidade institucional</div>
+                        <div><i class="fa-solid fa-check text-blue-500 mr-1"></i> Postura de alta confiabilidade institutional</div>
                     </div>
                 </div>
 
@@ -243,16 +350,16 @@
                 <div onclick="toggleCard(this)" class="bg-slate-950/60 border border-slate-800/80 p-5 rounded-xl hover:border-blue-500/40 transition-all duration-300 cursor-pointer select-none">
                     <div class="flex justify-between items-start">
                         <div class="w-10 h-10 bg-blue-500/10 rounded-lg flex items-center justify-center text-blue-400 text-sm mb-4 border border-blue-500/20">
-                            <i class="fa-solid fa-car"></i>
+                            <i class="fa-solid fa-shield-cat"></i>
                         </div>
                         <i class="fa-solid fa-chevron-down arrow-icon text-slate-600 transition-transform duration-300 mt-2 text-xs"></i>
                     </div>
-                    <h3 class="text-base font-bold mb-2 text-white">Monitoramento Veicular</h3>
-                    <p class="text-slate-400 text-xs leading-relaxed">Controle de entrada e saída, identificação expressiva e organização do fluxo de veículos.</p>
+                    <h3 class="text-base font-bold mb-2 text-white">Ronda Patrimonial & Vigia</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed">Presença ostensiva, fiscalização de perímetros e rondas de vigilância preventivas.</p>
                     <div class="card-content border-t border-slate-800/60 pt-3 text-[11px] text-slate-400 space-y-1">
-                        <div><i class="fa-solid fa-check text-blue-500 mr-1"></i> Registro de placas e horários de tráfego</div>
-                        <div><i class="fa-solid fa-check text-blue-500 mr-1"></i> Rondas preventivas integradas em estacionamentos</div>
-                        <div><i class="fa-solid fa-check text-blue-500 mr-1"></i> Resposta ágil a qualquer sinistro veicular</div>
+                        <div><i class="fa-solid fa-check text-blue-500 mr-1"></i> Inspeção de pontos vulneráveis do perímetro</div>
+                        <div><i class="fa-solid fa-check text-blue-500 mr-1"></i> Relatório detalhado de apontamento de rondas</div>
+                        <div><i class="fa-solid fa-check text-blue-500 mr-1"></i> Pronta resposta operacional</div>
                     </div>
                 </div>
 
@@ -370,6 +477,15 @@
     <script>
         function toggleCard(element) {
             element.classList.toggle('card-expanded');
+        }
+
+        /* Função de controle de rolagem das setas do carrossel */
+        function scrollCarousel(distance) {
+            const carousel = document.getElementById('category-carousel');
+            carousel.scrollBy({
+                left: distance,
+                behavior: 'smooth'
+            });
         }
     </script>
 
