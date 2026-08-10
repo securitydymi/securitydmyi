@@ -56,7 +56,7 @@
             opacity: 0;
         }
         .card-expanded .card-content {
-            max-height: 250px;
+            max-height: 350px;
             opacity: 1;
             margin-top: 1rem;
         }
@@ -94,11 +94,15 @@
                 <a href="#contato" class="nav-link py-1 md:py-0 hover:text-blue-400 focus:text-blue-400 flex flex-col md:flex-row items-center justify-center gap-1"><i class="fa-solid fa-headset text-[10px]"></i> Contato</a>
             </nav>
 
-            <div class="flex items-center justify-center md:justify-end gap-3 w-full md:w-auto">
-                <a href="tel:+5519994539764" class="text-xs font-bold text-slate-300 hover:text-blue-400 transition-colors flex items-center gap-1.5 bg-slate-900/60 px-3 py-1.5 rounded-lg border border-slate-800 shadow-inner">
+            <!-- DOIS NÚMEROS DE TELEFONE NO TOPO -->
+            <div class="flex flex-wrap items-center justify-center md:justify-end gap-2 w-full md:w-auto">
+                <a href="tel:+5519994539764" class="text-[11px] font-bold text-slate-300 hover:text-blue-400 transition-colors flex items-center gap-1 bg-slate-900/60 px-2.5 py-1.5 rounded-lg border border-slate-800 shadow-inner">
                     <i class="fa-solid fa-phone text-blue-500 text-[10px]"></i> (19) 99453-9764
                 </a>
-                <span class="text-[11px] font-bold bg-blue-500/10 text-blue-400 px-3 py-1.5 rounded-full border border-blue-500/20 flex items-center gap-2 shadow-sm">
+                <a href="tel:+5519981929593" class="text-[11px] font-bold text-slate-300 hover:text-blue-400 transition-colors flex items-center gap-1 bg-slate-900/60 px-2.5 py-1.5 rounded-lg border border-slate-800 shadow-inner">
+                    <i class="fa-solid fa-phone text-blue-500 text-[10px]"></i> (19) 98192-9593
+                </a>
+                <span class="text-[10px] font-bold bg-blue-500/10 text-blue-400 px-2.5 py-1.5 rounded-full border border-blue-500/20 flex items-center gap-1.5 shadow-sm">
                     <span class="w-2 h-2 rounded-full bg-blue-500 animate-ping"></span> QAP 24h
                 </span>
             </div>
@@ -151,18 +155,16 @@
         <div class="max-w-6xl mx-auto px-6">
             <div class="text-center mb-10">
                 <h2 class="text-2xl md:text-4xl font-bold tracking-tight text-white">Especialistas em Segurança para Diferentes Ambientes</h2>
-                <p class="text-slate-400 text-xs mt-2">Clique em uma categoria abaixo para ir direto para a descrição técnica do serviço.</p>
+                <p class="text-slate-400 text-xs mt-2">Clique em uma categoria para ir direto à descrição técnica e solicitar orçamento pelo WhatsApp.</p>
                 <div class="w-12 h-1 bg-blue-600 mx-auto mt-3 rounded-full"></div>
             </div>
 
-            <!-- CARROSSEL DE CATEGORIAS INTERATIVO (CHAMATIVO E CLICÁVEL) -->
+            <!-- CARROSSEL DE CATEGORIAS INTERATIVO -->
             <div class="relative max-w-5xl mx-auto mb-16 group">
-                <!-- Botão Esquerda -->
                 <button onclick="scrollCarousel(-300)" class="absolute -left-4 md:-left-6 top-1/2 -translate-y-1/2 z-20 bg-slate-900/90 hover:bg-blue-600 text-white border border-slate-700/80 hover:border-blue-500 w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center shadow-2xl transition-all duration-300 focus:outline-none">
                     <i class="fa-solid fa-chevron-left text-sm md:text-base"></i>
                 </button>
 
-                <!-- Conteúdo do Carrossel com links diretos -->
                 <div id="category-carousel" class="flex gap-4 overflow-x-auto scroll-smooth hide-scrollbar py-4 px-2 snap-x snap-mandatory">
                     
                     <a href="#card-condominios" class="snap-start shrink-0 w-44 md:w-52 bg-slate-900/80 hover:bg-blue-950/40 border border-slate-800 hover:border-blue-500 rounded-xl p-4 text-center transition-all duration-300 shadow-lg hover:shadow-blue-500/10 flex flex-col items-center justify-center gap-3 transform hover:-translate-y-1.5 group/card">
@@ -258,13 +260,12 @@
 
                 </div>
 
-                <!-- Botão Direita -->
                 <button onclick="scrollCarousel(300)" class="absolute -right-4 md:-right-6 top-1/2 -translate-y-1/2 z-20 bg-slate-900/90 hover:bg-blue-600 text-white border border-slate-700/80 hover:border-blue-500 w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center shadow-2xl transition-all duration-300 focus:outline-none">
                     <i class="fa-solid fa-chevron-right text-sm md:text-base"></i>
                 </button>
             </div>
 
-            <!-- CARDS DE DETALHAMENTO DE TODOS OS SERVIÇOS -->
+            <!-- CARDS DE DETALHAMENTO DE TODOS OS SERVIÇOS COM BOTAO DO WHATSAPP PROGRAMADO PARA 19981929593 -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 
                 <div id="card-condominios" onclick="toggleCard(this)" class="scroll-mt-28 bg-slate-950/60 border border-slate-800/80 p-5 rounded-xl hover:border-blue-500/40 transition-all duration-300 cursor-pointer select-none">
@@ -276,10 +277,15 @@
                     </div>
                     <h3 class="text-base font-bold mb-2 text-white">Condomínios</h3>
                     <p class="text-slate-400 text-xs leading-relaxed">Segurança e controle de acesso para moradores, visitantes e prestadores de serviço.</p>
-                    <div class="card-content border-t border-slate-800/60 pt-3 text-[11px] text-slate-400 space-y-1">
-                        <div><i class="fa-solid fa-check text-blue-500 mr-1"></i> Controle rigoroso de fluxos residenciais</div>
-                        <div><i class="fa-solid fa-check text-blue-500 mr-1"></i> Gestão técnica e triagem de encomendas</div>
-                        <div><i class="fa-solid fa-check text-blue-500 mr-1"></i> Monitoramento perimetral preventivo</div>
+                    <div class="card-content border-t border-slate-800/60 pt-3 text-[11px] text-slate-400 space-y-3">
+                        <div class="space-y-1">
+                            <div><i class="fa-solid fa-check text-blue-500 mr-1"></i> Controle rigoroso de fluxos residenciais</div>
+                            <div><i class="fa-solid fa-check text-blue-500 mr-1"></i> Gestão técnica e triagem de encomendas</div>
+                            <div><i class="fa-solid fa-check text-blue-500 mr-1"></i> Monitoramento perimetral preventivo</div>
+                        </div>
+                        <a href="https://wa.me/5519981929593?text=Olá!%20Acessei%20o%20site%20da%20DMYI%20Security.%20Gostaria%20de%20solicitar%20um%20orçamento%20para%20o%20serviço%20de%20Segurança%20para%20Condomínios." target="_blank" onclick="event.stopPropagation();" class="inline-flex items-center justify-center gap-2 w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-2 px-3 rounded-lg text-xs transition-colors shadow-md">
+                            <i class="fa-brands fa-whatsapp text-sm"></i> Cotar Segurança para Condomínios
+                        </a>
                     </div>
                 </div>
 
@@ -292,10 +298,15 @@
                     </div>
                     <h3 class="text-base font-bold mb-2 text-white">Recepção</h3>
                     <p class="text-slate-400 text-xs leading-relaxed">Atendimento profissional e cordial, com foco total na segurança e organização do ambiente.</p>
-                    <div class="card-content border-t border-slate-800/60 pt-3 text-[11px] text-slate-400 space-y-1">
-                        <div><i class="fa-solid fa-check text-blue-500 mr-1"></i> Cadastro informatizado de visitantes</div>
-                        <div><i class="fa-solid fa-check text-blue-500 mr-1"></i> Orientação de fluxos corporativos internos</div>
-                        <div><i class="fa-solid fa-check text-blue-500 mr-1"></i> Postura de alta confiabilidade institucional</div>
+                    <div class="card-content border-t border-slate-800/60 pt-3 text-[11px] text-slate-400 space-y-3">
+                        <div class="space-y-1">
+                            <div><i class="fa-solid fa-check text-blue-500 mr-1"></i> Cadastro informatizado de visitantes</div>
+                            <div><i class="fa-solid fa-check text-blue-500 mr-1"></i> Orientação de fluxos corporativos internos</div>
+                            <div><i class="fa-solid fa-check text-blue-500 mr-1"></i> Postura de alta confiabilidade institucional</div>
+                        </div>
+                        <a href="https://wa.me/5519981929593?text=Olá!%20Acessei%20o%20site%20da%20DMYI%20Security.%20Gostaria%20de%20solicitar%20um%20orçamento%20para%20o%20serviço%20de%20Recepção." target="_blank" onclick="event.stopPropagation();" class="inline-flex items-center justify-center gap-2 w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-2 px-3 rounded-lg text-xs transition-colors shadow-md">
+                            <i class="fa-brands fa-whatsapp text-sm"></i> Cotar Servico de Recepção
+                        </a>
                     </div>
                 </div>
 
@@ -308,10 +319,15 @@
                     </div>
                     <h3 class="text-base font-bold mb-2 text-white">Portaria</h3>
                     <p class="text-slate-400 text-xs leading-relaxed">Gestão física de portarias comerciais e residenciais com postura preventiva e foco em protocolo de normas.</p>
-                    <div class="card-content border-t border-slate-800/60 pt-3 text-[11px] text-slate-400 space-y-1">
-                        <div><i class="fa-solid fa-check text-blue-500 mr-1"></i> Aplicação rigorosa dos manuais de acesso</div>
-                        <div><i class="fa-solid fa-check text-blue-500 mr-1"></i> Registro exato de prestadores e fornecedores</div>
-                        <div><i class="fa-solid fa-check text-blue-500 mr-1"></i> Comunicação direta via central 24h</div>
+                    <div class="card-content border-t border-slate-800/60 pt-3 text-[11px] text-slate-400 space-y-3">
+                        <div class="space-y-1">
+                            <div><i class="fa-solid fa-check text-blue-500 mr-1"></i> Aplicação rigorosa dos manuais de acesso</div>
+                            <div><i class="fa-solid fa-check text-blue-500 mr-1"></i> Registro exato de prestadores e fornecedores</div>
+                            <div><i class="fa-solid fa-check text-blue-500 mr-1"></i> Comunicação direta via central 24h</div>
+                        </div>
+                        <a href="https://wa.me/5519981929593?text=Olá!%20Acessei%20o%20site%20da%20DMYI%20Security.%20Gostaria%20de%20solicitar%20um%20orçamento%20para%20o%20serviço%20de%20Portaria." target="_blank" onclick="event.stopPropagation();" class="inline-flex items-center justify-center gap-2 w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-2 px-3 rounded-lg text-xs transition-colors shadow-md">
+                            <i class="fa-brands fa-whatsapp text-sm"></i> Cotar Serviço de Portaria
+                        </a>
                     </div>
                 </div>
 
@@ -324,10 +340,15 @@
                     </div>
                     <h3 class="text-base font-bold mb-2 text-white">Obras</h3>
                     <p class="text-slate-400 text-xs leading-relaxed">Controle de acesso de colaboradores, visitantes e veículos com total segurança patrimonial.</p>
-                    <div class="card-content border-t border-slate-800/60 pt-3 text-[11px] text-slate-400 space-y-1">
-                        <div><i class="fa-solid fa-check text-blue-500 mr-1"></i> Fiscalização contra perdas de materiais</div>
-                        <div><i class="fa-solid fa-check text-blue-500 mr-1"></i> Cadastro de prestadores e terceiros</div>
-                        <div><i class="fa-solid fa-check text-blue-500 mr-1"></i> Verificação de EPIs obrigatórios no acesso</div>
+                    <div class="card-content border-t border-slate-800/60 pt-3 text-[11px] text-slate-400 space-y-3">
+                        <div class="space-y-1">
+                            <div><i class="fa-solid fa-check text-blue-500 mr-1"></i> Fiscalização contra perdas de materiais</div>
+                            <div><i class="fa-solid fa-check text-blue-500 mr-1"></i> Cadastro de prestadores e terceiros</div>
+                            <div><i class="fa-solid fa-check text-blue-500 mr-1"></i> Verificação de EPIs obrigatórios no acesso</div>
+                        </div>
+                        <a href="https://wa.me/5519981929593?text=Olá!%20Acessei%20o%20site%20da%20DMYI%20Security.%20Gostaria%20de%20solicitar%20um%20orçamento%20para%20o%20serviço%20de%20Segurança%20para%20Obras." target="_blank" onclick="event.stopPropagation();" class="inline-flex items-center justify-center gap-2 w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-2 px-3 rounded-lg text-xs transition-colors shadow-md">
+                            <i class="fa-brands fa-whatsapp text-sm"></i> Cotar Segurança para Obras
+                        </a>
                     </div>
                 </div>
 
@@ -340,10 +361,15 @@
                     </div>
                     <h3 class="text-base font-bold mb-2 text-white">Controle de Acesso</h3>
                     <p class="text-slate-400 text-xs leading-relaxed">Tecnologia e eficiência rigorosa no gerenciamento técnico de entradas e saídas.</p>
-                    <div class="card-content border-t border-slate-800/60 pt-3 text-[11px] text-slate-400 space-y-1">
-                        <div><i class="fa-solid fa-check text-blue-500 mr-1"></i> Identificação minuciosa de prestadores</div>
-                        <div><i class="fa-solid fa-check text-blue-500 mr-1"></i> Triagem técnica veicular e de crachás</div>
-                        <div><i class="fa-solid fa-check text-blue-500 mr-1"></i> Cumprimento estrito dos manuais do cliente</div>
+                    <div class="card-content border-t border-slate-800/60 pt-3 text-[11px] text-slate-400 space-y-3">
+                        <div class="space-y-1">
+                            <div><i class="fa-solid fa-check text-blue-500 mr-1"></i> Identificação minuciosa de prestadores</div>
+                            <div><i class="fa-solid fa-check text-blue-500 mr-1"></i> Triagem técnica veicular e de crachás</div>
+                            <div><i class="fa-solid fa-check text-blue-500 mr-1"></i> Cumprimento estrito dos manuais do cliente</div>
+                        </div>
+                        <a href="https://wa.me/5519981929593?text=Olá!%20Acessei%20o%20site%20da%20DMYI%20Security.%20Gostaria%20de%20solicitar%20um%20orçamento%20para%20Controle%20de%20Acesso." target="_blank" onclick="event.stopPropagation();" class="inline-flex items-center justify-center gap-2 w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-2 px-3 rounded-lg text-xs transition-colors shadow-md">
+                            <i class="fa-brands fa-whatsapp text-sm"></i> Cotar Controle de Acesso
+                        </a>
                     </div>
                 </div>
 
@@ -356,10 +382,15 @@
                     </div>
                     <h3 class="text-base font-bold mb-2 text-white">Vigia</h3>
                     <p class="text-slate-400 text-xs leading-relaxed">Vigilância visual permanente e presencial para coibir invasões, furtos ou irregularidades.</p>
-                    <div class="card-content border-t border-slate-800/60 pt-3 text-[11px] text-slate-400 space-y-1">
-                        <div><i class="fa-solid fa-check text-blue-500 mr-1"></i> Presença tática inibidora</div>
-                        <div><i class="fa-solid fa-check text-blue-500 mr-1"></i> Verificação contínua de portas e acessos</div>
-                        <div><i class="fa-solid fa-check text-blue-500 mr-1"></i> Acionamento imediato da central de apoio</div>
+                    <div class="card-content border-t border-slate-800/60 pt-3 text-[11px] text-slate-400 space-y-3">
+                        <div class="space-y-1">
+                            <div><i class="fa-solid fa-check text-blue-500 mr-1"></i> Presença tática inibidora</div>
+                            <div><i class="fa-solid fa-check text-blue-500 mr-1"></i> Verificação contínua de portas e acessos</div>
+                            <div><i class="fa-solid fa-check text-blue-500 mr-1"></i> Acionamento imediato da central de apoio</div>
+                        </div>
+                        <a href="https://wa.me/5519981929593?text=Olá!%20Acessei%20o%20site%20da%20DMYI%20Security.%20Gostaria%20de%20solicitar%20um%20orçamento%20para%20o%20serviço%20de%20Vigia." target="_blank" onclick="event.stopPropagation();" class="inline-flex items-center justify-center gap-2 w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-2 px-3 rounded-lg text-xs transition-colors shadow-md">
+                            <i class="fa-brands fa-whatsapp text-sm"></i> Cotar Serviço de Vigia
+                        </a>
                     </div>
                 </div>
 
@@ -372,10 +403,15 @@
                     </div>
                     <h3 class="text-base font-bold mb-2 text-white">Ronda Patrimonial & Vigia</h3>
                     <p class="text-slate-400 text-xs leading-relaxed">Presença ostensiva, fiscalização de perímetros e rondas de vigilância preventivas.</p>
-                    <div class="card-content border-t border-slate-800/60 pt-3 text-[11px] text-slate-400 space-y-1">
-                        <div><i class="fa-solid fa-check text-blue-500 mr-1"></i> Inspeção de pontos vulneráveis do perímetro</div>
-                        <div><i class="fa-solid fa-check text-blue-500 mr-1"></i> Relatório detalhado de apontamento de rondas</div>
-                        <div><i class="fa-solid fa-check text-blue-500 mr-1"></i> Pronta resposta operacional</div>
+                    <div class="card-content border-t border-slate-800/60 pt-3 text-[11px] text-slate-400 space-y-3">
+                        <div class="space-y-1">
+                            <div><i class="fa-solid fa-check text-blue-500 mr-1"></i> Inspeção de pontos vulneráveis do perímetro</div>
+                            <div><i class="fa-solid fa-check text-blue-500 mr-1"></i> Relatório detalhado de apontamento de rondas</div>
+                            <div><i class="fa-solid fa-check text-blue-500 mr-1"></i> Pronta resposta operacional</div>
+                        </div>
+                        <a href="https://wa.me/5519981929593?text=Olá!%20Acessei%20o%20site%20da%20DMYI%20Security.%20Gostaria%20de%20solicitar%20um%20orçamento%20para%20Ronda%20Patrimonial." target="_blank" onclick="event.stopPropagation();" class="inline-flex items-center justify-center gap-2 w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-2 px-3 rounded-lg text-xs transition-colors shadow-md">
+                            <i class="fa-brands fa-whatsapp text-sm"></i> Cotar Ronda Patrimonial
+                        </a>
                     </div>
                 </div>
 
@@ -388,10 +424,15 @@
                     </div>
                     <h3 class="text-base font-bold mb-2 text-white">Monitoramento Eletrônico</h3>
                     <p class="text-slate-400 text-xs leading-relaxed">Central de acompanhamento 24h com analíticos de vídeo e alertas em tempo real.</p>
-                    <div class="card-content border-t border-slate-800/60 pt-3 text-[11px] text-slate-400 space-y-1">
-                        <div><i class="fa-solid fa-check text-blue-500 mr-1"></i> Gestão remota de câmeras e alarmes</div>
-                        <div><i class="fa-solid fa-check text-blue-500 mr-1"></i> Detecção inteligente de intrusão</div>
-                        <div><i class="fa-solid fa-check text-blue-500 mr-1"></i> Acionamento tático imediato de apoio</div>
+                    <div class="card-content border-t border-slate-800/60 pt-3 text-[11px] text-slate-400 space-y-3">
+                        <div class="space-y-1">
+                            <div><i class="fa-solid fa-check text-blue-500 mr-1"></i> Gestão remota de câmeras e alarmes</div>
+                            <div><i class="fa-solid fa-check text-blue-500 mr-1"></i> Detecção inteligente de intrusão</div>
+                            <div><i class="fa-solid fa-check text-blue-500 mr-1"></i> Acionamento tático imediato de apoio</div>
+                        </div>
+                        <a href="https://wa.me/5519981929593?text=Olá!%20Acessei%20o%20site%20da%20DMYI%20Security.%20Gostaria%20de%20solicitar%20um%20orçamento%20para%20Monitoramento%20Eletrônico." target="_blank" onclick="event.stopPropagation();" class="inline-flex items-center justify-center gap-2 w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-2 px-3 rounded-lg text-xs transition-colors shadow-md">
+                            <i class="fa-brands fa-whatsapp text-sm"></i> Cotar Monitoramento Eletrônico
+                        </a>
                     </div>
                 </div>
 
@@ -404,10 +445,15 @@
                     </div>
                     <h3 class="text-base font-bold mb-2 text-white">Monitoramento Aéreo / Drone</h3>
                     <p class="text-slate-400 text-xs leading-relaxed">Rondas aéreas táticas para varredura de grandes áreas, terrenos e percursos de difícil acesso.</p>
-                    <div class="card-content border-t border-slate-800/60 pt-3 text-[11px] text-slate-400 space-y-1">
-                        <div><i class="fa-solid fa-check text-blue-500 mr-1"></i> Varredura perimetral com visão aérea</div>
-                        <div><i class="fa-solid fa-check text-blue-500 mr-1"></i> Mapeamento de pontos cegos ou invadidos</div>
-                        <div><i class="fa-solid fa-check text-blue-500 mr-1"></i> Suporte térmico e noturno especializado</div>
+                    <div class="card-content border-t border-slate-800/60 pt-3 text-[11px] text-slate-400 space-y-3">
+                        <div class="space-y-1">
+                            <div><i class="fa-solid fa-check text-blue-500 mr-1"></i> Varredura perimetral com visão aérea</div>
+                            <div><i class="fa-solid fa-check text-blue-500 mr-1"></i> Mapeamento de pontos cegos ou invadidos</div>
+                            <div><i class="fa-solid fa-check text-blue-500 mr-1"></i> Suporte térmico e noturno especializado</div>
+                        </div>
+                        <a href="https://wa.me/5519981929593?text=Olá!%20Acessei%20o%20site%20da%20DMYI%20Security.%20Gostaria%20de%20solicitar%20um%20orçamento%20para%20Monitoramento%20Aéreo%20com%20Drone." target="_blank" onclick="event.stopPropagation();" class="inline-flex items-center justify-center gap-2 w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-2 px-3 rounded-lg text-xs transition-colors shadow-md">
+                            <i class="fa-brands fa-whatsapp text-sm"></i> Cotar Monitoramento com Drone
+                        </a>
                     </div>
                 </div>
 
@@ -420,10 +466,15 @@
                     </div>
                     <h3 class="text-base font-bold mb-2 text-white">Manutenção de Sistemas</h3>
                     <p class="text-slate-400 text-xs leading-relaxed">Suporte preventivo e corretivo para garantir a operação contínua de CFTV, portões e alarmes.</p>
-                    <div class="card-content border-t border-slate-800/60 pt-3 text-[11px] text-slate-400 space-y-1">
-                        <div><i class="fa-solid fa-check text-blue-500 mr-1"></i> Revisão contínua de câmeras e motores</div>
-                        <div><i class="fa-solid fa-check text-blue-500 mr-1"></i> Troca e reparo agilizado de componentes</div>
-                        <div><i class="fa-solid fa-check text-blue-500 mr-1"></i> Atendimento técnico emergencial</div>
+                    <div class="card-content border-t border-slate-800/60 pt-3 text-[11px] text-slate-400 space-y-3">
+                        <div class="space-y-1">
+                            <div><i class="fa-solid fa-check text-blue-500 mr-1"></i> Revisão contínua de câmeras e motores</div>
+                            <div><i class="fa-solid fa-check text-blue-500 mr-1"></i> Troca e reparo agilizado de componentes</div>
+                            <div><i class="fa-solid fa-check text-blue-500 mr-1"></i> Atendimento técnico emergencial</div>
+                        </div>
+                        <a href="https://wa.me/5519981929593?text=Olá!%20Acessei%20o%20site%20da%20DMYI%20Security.%20Gostaria%20de%20solicitar%20um%20orçamento%20para%20Manutenção%20de%20Sistemas." target="_blank" onclick="event.stopPropagation();" class="inline-flex items-center justify-center gap-2 w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-2 px-3 rounded-lg text-xs transition-colors shadow-md">
+                            <i class="fa-brands fa-whatsapp text-sm"></i> Cotar Manutenção de Sistemas
+                        </a>
                     </div>
                 </div>
 
@@ -436,10 +487,15 @@
                     </div>
                     <h3 class="text-base font-bold mb-2 text-white">Auxiliar de Limpeza</h3>
                     <p class="text-slate-400 text-xs leading-relaxed">Higienização e conservação profissional de ambientes comuns, escritórios e condomínios.</p>
-                    <div class="card-content border-t border-slate-800/60 pt-3 text-[11px] text-slate-400 space-y-1">
-                        <div><i class="fa-solid fa-check text-blue-500 mr-1"></i> Cronograma minucioso de higienização</div>
-                        <div><i class="fa-solid fa-check text-blue-500 mr-1"></i> Produtos e equipamentos adequados</div>
-                        <div><i class="fa-solid fa-check text-blue-500 mr-1"></i> Treinamento em biossegurança e postura</div>
+                    <div class="card-content border-t border-slate-800/60 pt-3 text-[11px] text-slate-400 space-y-3">
+                        <div class="space-y-1">
+                            <div><i class="fa-solid fa-check text-blue-500 mr-1"></i> Cronograma minucioso de higienização</div>
+                            <div><i class="fa-solid fa-check text-blue-500 mr-1"></i> Produtos e equipamentos adequados</div>
+                            <div><i class="fa-solid fa-check text-blue-500 mr-1"></i> Treinamento em biossegurança e postura</div>
+                        </div>
+                        <a href="https://wa.me/5519981929593?text=Olá!%20Acessei%20o%20site%20da%20DMYI%20Security.%20Gostaria%20de%20solicitar%20um%20orçamento%20para%20Auxiliar%20de%20Limpeza." target="_blank" onclick="event.stopPropagation();" class="inline-flex items-center justify-center gap-2 w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-2 px-3 rounded-lg text-xs transition-colors shadow-md">
+                            <i class="fa-brands fa-whatsapp text-sm"></i> Cotar Auxiliar de Limpeza
+                        </a>
                     </div>
                 </div>
 
@@ -452,10 +508,15 @@
                     </div>
                     <h3 class="text-base font-bold mb-2 text-white">Copeira</h3>
                     <p class="text-slate-400 text-xs leading-relaxed">Serviços corporativos de copa, recepção de reuniões e suporte de copa diretiva.</p>
-                    <div class="card-content border-t border-slate-800/60 pt-3 text-[11px] text-slate-400 space-y-1">
-                        <div><i class="fa-solid fa-check text-blue-500 mr-1"></i> Atendimento executivo para diretoria e clientes</div>
-                        <div><i class="fa-solid fa-check text-blue-500 mr-1"></i> Organização e zelo com insumos de copa</div>
-                        <div><i class="fa-solid fa-check text-blue-500 mr-1"></i> Apresentação e discrição exemplares</div>
+                    <div class="card-content border-t border-slate-800/60 pt-3 text-[11px] text-slate-400 space-y-3">
+                        <div class="space-y-1">
+                            <div><i class="fa-solid fa-check text-blue-500 mr-1"></i> Atendimento executivo para diretoria e clientes</div>
+                            <div><i class="fa-solid fa-check text-blue-500 mr-1"></i> Organização e zelo com insumos de copa</div>
+                            <div><i class="fa-solid fa-check text-blue-500 mr-1"></i> Apresentação e discrição exemplares</div>
+                        </div>
+                        <a href="https://wa.me/5519981929593?text=Olá!%20Acessei%20o%20site%20da%20DMYI%20Security.%20Gostaria%20de%20solicitar%20um%20orçamento%20para%20o%20serviço%20de%20Copeira." target="_blank" onclick="event.stopPropagation();" class="inline-flex items-center justify-center gap-2 w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-2 px-3 rounded-lg text-xs transition-colors shadow-md">
+                            <i class="fa-brands fa-whatsapp text-sm"></i> Cotar Serviço de Copeira
+                        </a>
                     </div>
                 </div>
 
@@ -468,10 +529,15 @@
                     </div>
                     <h3 class="text-base font-bold mb-2 text-white">Eventos</h3>
                     <p class="text-slate-400 text-xs leading-relaxed">Organização, controle ostensivo de público e segurança para eventos de todos os portes.</p>
-                    <div class="card-content border-t border-slate-800/60 pt-3 text-[11px] text-slate-400 space-y-1">
-                        <div><i class="fa-solid fa-check text-blue-500 mr-1"></i> Fiscalização tática de perímetros e listas</div>
-                        <div><i class="fa-solid fa-check text-blue-500 mr-1"></i> Coordenação harmoniosa de filas e acessos</div>
-                        <div><i class="fa-solid fa-check text-blue-500 mr-1"></i> Equipe uniformizada altamente treinada</div>
+                    <div class="card-content border-t border-slate-800/60 pt-3 text-[11px] text-slate-400 space-y-3">
+                        <div class="space-y-1">
+                            <div><i class="fa-solid fa-check text-blue-500 mr-1"></i> Fiscalização tática de perímetros e listas</div>
+                            <div><i class="fa-solid fa-check text-blue-500 mr-1"></i> Coordenação harmoniosa de filas e acessos</div>
+                            <div><i class="fa-solid fa-check text-blue-500 mr-1"></i> Equipe uniformizada altamente treinada</div>
+                        </div>
+                        <a href="https://wa.me/5519981929593?text=Olá!%20Acessei%20o%20site%20da%20DMYI%20Security.%20Gostaria%20de%20solicitar%20um%20orçamento%20para%20Segurança%20em%20Eventos." target="_blank" onclick="event.stopPropagation();" class="inline-flex items-center justify-center gap-2 w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-2 px-3 rounded-lg text-xs transition-colors shadow-md">
+                            <i class="fa-brands fa-whatsapp text-sm"></i> Cotar Segurança para Eventos
+                        </a>
                     </div>
                 </div>
 
@@ -549,7 +615,7 @@
     <section class="py-16 max-w-4xl mx-auto px-6 text-center relative">
         <h2 class="text-2xl md:text-5xl font-black mb-4 tracking-tight text-white">Não espere a vulnerabilidade <br><span class="text-blue-500 animate-pulse">virar um prejuízo real</span>.</h2>
         <p class="text-slate-400 text-xs md:text-sm mb-8 max-w-xl mx-auto">Proteja seu patrimônio com quem é referência técnica em Campinas e Região. Solicite sua análise prévia de risco corporativo.</p>
-        <a href="https://wa.me/5519994539764?text=Olá!%20Acessei%20o%20site%20da%20DMYI%20Security.%20Gostaria%20de%20agendar%20uma%20análise%20de%20risco." target="_blank" class="inline-flex items-center gap-3 bg-slate-900 hover:bg-blue-600 hover:text-white text-blue-400 font-bold border border-slate-800 hover:border-blue-500 px-6 md:px-8 py-3.5 rounded-xl transition-all duration-300 shadow-2xl transform hover:scale-105 text-xs md:text-sm">
+        <a href="https://wa.me/5519981929593?text=Olá!%20Acessei%20o%20site%20da%20DMYI%20Security.%20Gostaria%20de%20agendar%20uma%20análise%20de%20risco." target="_blank" class="inline-flex items-center gap-3 bg-slate-900 hover:bg-blue-600 hover:text-white text-blue-400 font-bold border border-slate-800 hover:border-blue-500 px-6 md:px-8 py-3.5 rounded-xl transition-all duration-300 shadow-2xl transform hover:scale-105 text-xs md:text-sm">
             <i class="fa-brands fa-whatsapp text-lg text-emerald-500"></i> AGENDAR ANÁLISE DE VULNERABILIDADE
         </a>
     </section>
@@ -572,17 +638,22 @@
                 </div>
                 <div>
                     <h4 class="text-[10px] font-bold uppercase tracking-wider text-slate-500 mb-1">Central de Atendimento</h4>
-                    <a href="tel:+5519994539764" class="text-xs md:text-sm font-bold text-slate-200 hover:text-blue-400 transition-colors">(19) 99453-9764</a>
+                    <div class="flex flex-col gap-0.5">
+                        <a href="tel:+5519994539764" class="text-xs md:text-sm font-bold text-slate-200 hover:text-blue-400 transition-colors">(19) 99453-9764</a>
+                        <a href="tel:+5519981929593" class="text-xs md:text-sm font-bold text-slate-200 hover:text-blue-400 transition-colors">(19) 98192-9593</a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="border-t border-slate-900/80 bg-black/40 py-8 text-center text-[10px] md:text-xs text-slate-500 backdrop-blur-sm">
+    <!-- RODAPÉ ATUALIZADO COM CNPJ -->
+    <footer class="border-t border-slate-900/80 bg-black/40 py-8 text-center text-[10px] md:text-xs text-slate-500 backdrop-blur-sm space-y-2">
         <p>&copy; 2026 DMYI Security. Todos os direitos reservados. Atuação técnica na região de Campinas e cidades vizinhas.</p>
+        <p class="font-semibold text-slate-400">CNPJ: 66.682.264/0001-80</p>
     </footer>
 
-    <a href="https://wa.me/5519994539764?text=Olá!%20Acessei%20o%20site%20da%20DMYI%20Security.%20Gostaria%20de%20agendar%20uma%20análise%20de%20risco." target="_blank" class="fixed bottom-6 right-6 bg-emerald-500 hover:bg-emerald-400 text-white p-3.5 rounded-full shadow-2xl transition-all duration-300 z-50 flex items-center justify-center text-xl hover:scale-110 shadow-emerald-500/20" title="Chamar no WhatsApp">
+    <a href="https://wa.me/5519981929593?text=Olá!%20Acessei%20o%20site%20da%20DMYI%20Security.%20Gostaria%20de%20agendar%20uma%20análise%20de%20risco." target="_blank" class="fixed bottom-6 right-6 bg-emerald-500 hover:bg-emerald-400 text-white p-3.5 rounded-full shadow-2xl transition-all duration-300 z-50 flex items-center justify-center text-xl hover:scale-110 shadow-emerald-500/20" title="Chamar no WhatsApp">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
@@ -591,7 +662,6 @@
             element.classList.toggle('card-expanded');
         }
 
-        /* Função de controle de rolagem das setas do carrossel */
         function scrollCarousel(distance) {
             const carousel = document.getElementById('category-carousel');
             carousel.scrollBy({
